@@ -1,4 +1,4 @@
 HTML-Tags
 =========
 
-*HTML Tags SENG2021 Project Repo*
+HTML Tags SENG2021 Project Repo
