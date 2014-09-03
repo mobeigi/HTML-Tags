@@ -1,5 +1,5 @@
 /*
-* View Trip
+* Trip View
 */
 
 var map;
