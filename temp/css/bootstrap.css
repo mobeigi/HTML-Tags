@@ -895,11 +895,16 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	padding: 0;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	background-color: #fff;
+	margin-top: 0px;
 }
 input,
 button,
@@ -927,7 +932,19 @@ figure {
   margin: 0;
 }
 img {
-  vertical-align: middle;
+	vertical-align: middle;
+	width: auto;
+	padding: 0;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	display: inherit;
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	position: static;
+	height: 45px;
 }
 .img-responsive,
 .thumbnail > img,
@@ -4548,11 +4565,13 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: #CCEAED;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+	color: inherit;
+	top: -15px;
+	text-align: center;
 }
 .jumbotron p {
   margin-bottom: 15px;
