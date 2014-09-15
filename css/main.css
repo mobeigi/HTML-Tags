@@ -1,9 +1,10 @@
-div.image {
+div.logo-image {
     content:url(/img/tripblack.png);
     max-width:160%; 
     max-height:160%; 
     position: relative;
     top: -15px;
+    left: -18px;
 }
 .navbar-default {
 	background-color: #ccffff;
