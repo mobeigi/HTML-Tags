@@ -2,36 +2,55 @@
 * Trip View
 */
 
-// This example creates a custom overlay called ImageOverlay, containing
-// a U.S. Geological Survey (USGS) image of the relevant area on the map.
-
 // Set the custom overlay object's prototype to a new instance
 // of OverlayView. In effect, this will subclass the overlay class.
 // Note that we set the prototype to an instance, rather than the
 // parent class itself, because we do not wish to modify the parent class.
 
 var overlay;
+var overlay2;
 ImageOverlay.prototype = new google.maps.OverlayView();
 
 // Initialize the map and the custom overlay.
 
 function initialize() {
   var mapOptions = {
-    zoom: 18,
-    center: new google.maps.LatLng(62.323907, -150.109291),
+    zoom: 10,
+    center: new google.maps.LatLng(62.303907, -150.109291),
    };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+  //Image 1
   var swBound = new google.maps.LatLng(62.303907, -150.159291);
   var neBound = new google.maps.LatLng(62.323907, -150.109291);
   var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
-  // The photograph to be placed over the map
-  var srcImage = 'http://fc07.deviantart.net/fs71/f/2012/165/c/8/teemo_skin_by_yurixy-d53itci.png';
+  // Collects links to be displayed on the map
+  var srcImage = 'http://images.techtimes.com/data/images/full/4061/bill-gates-wealthiest-person.jpg?w=600';
   
+  //Image 2
+  var swBound2 = new google.maps.LatLng(62.323907, -150.289291);
+  var neBound2 = new google.maps.LatLng(62.34907, -150.119291);
+  var bounds2 = new google.maps.LatLngBounds(swBound2, neBound2);
+
+  // Collects links to be displayed on the map
+  var srcImage2 = 'http://upload.wikimedia.org/wikipedia/commons/7/77/Deepsea.JPG';
+
   // Create object to contain the overlay image, the bounds of the image and a reference to the map
   overlay = new ImageOverlay(bounds, srcImage, map);
+  overlay2 = new ImageOverlay(bounds2, srcImage2, map);
+  
+  //Add lines
+  var myTrip=[bounds,bounds2];
+  var flightPath=new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#FF0000",
+  strokeOpacity:0.8,
+  strokeWeight:2
+  });
+
+flightPath.setMap(map);
 }
 
 /** @constructor */
@@ -65,16 +84,18 @@ ImageOverlay.prototype.onAdd = function() {
   // Create the img element and attach it to the div.
   var img = document.createElement('img');
   img.src = this.image_;
-  img.style.width = '100%';
-  img.style.height = '100%';
+  img.style.width = '80px';
+  img.style.height = '80px';
+  img.style.border = '2px solid #000';
   img.style.position = 'absolute';
   div.appendChild(img);
 
   this.div_ = div;
-
+  
   // Add the element to the "overlayLayer" pane.
   var panes = this.getPanes();
   panes.overlayLayer.appendChild(div);
+  
 };
 
 ImageOverlay.prototype.draw = function() {
