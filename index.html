@@ -30,16 +30,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/index.html"><div class="logo-image"></div></a>
+              <a class="navbar-brand"><img class="logo-image" src="/img/tripblack.png"></a>
             </div>
     <!--        Username and password and navbar links-->
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">    
                 <ul class="nav navbar-nav ">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link2</a></li>
-                    <li><a href="#">Link2</a></li>
-                    <li><a href="#">Link2</a></li>
-                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Tutorial</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" role="form">
                     <div class="form-group">
@@ -56,38 +54,27 @@
  
 <div class="jumbotron">
     <div class="container">
+        <div class="col-lg-12 text-center">
+        <h1>Welcome to TripTags</h1>
+        </div>
         <div class="row">
-              <div class="col-lg-6">
+<!--              <div class="col-lg-10">-->
                 <div class="input-group">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control text-center" placeholder="Where would you like to see?">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button">Go!</button>
                   </span>
                 </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
+<!--              </div> /.col-lg-6 -->
             </div><!-- /.row -->   
         </div>
 </div>  
 
       <div class="row marketing">
-              <div class="container">
-        <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Its time to choose</h2>
-                    <h4>How many photos would you like to see</h4>
-                    <div ng-controller="flickrController">
-                        <form ng-submit="listImages()">
-                            <input type="text" style="text-align:center; color:black" placeholder="0" ng-model="numImages"> 
-                            <button type="submit" class="page-scroll btn btn-l">Search</button>
-                            <br><br><br><br>
-                        </form>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 portfolio-item" ng-repeatx    ="image in images">
-                                <center><img src="{{image}}"></center>
-                                <br>
-                            </div>
-                        </div>   
-                    </div>
-          </div>
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <img class="concept" src="img/concept.jpg">
+            </div>
       </div>
 
       <div class="footer">

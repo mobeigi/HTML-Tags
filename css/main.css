@@ -1,10 +1,16 @@
-div.logo-image {
-    content:url(/img/tripblack.png);
-    max-width:160%; 
-    max-height:160%; 
+.logo-image {
+/*    content:url(/img/tripblack.png);*/
+    height: 160%;
     position: relative;
     top: -15px;
     left: -18px;
+}
+.concept{
+    height: 10%;
+    position: relative;
+}
+.welcome, h1{
+    text-align: center;
 }
 .navbar-default {
 	background-color: #ccffff;
