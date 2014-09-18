@@ -69,8 +69,7 @@ class postgres {
 	private function _pg_debug($query, $params) {
 		echo preg_replace_callback('/\$(\d+)\b/', function($match) use ($params) {
 			$key = ($match[1] - 1);
-			 pg_escape_literal($this->pg_connect_id, $params[$key]);
-			return(is_null($params[$key]) ? 'NULL' : $params[$key]);
+			return(is_null($params[$key]) ? 'NULL' : @pg_escape_literal($this->pg_connect_id, $params[$key]));
 		}, $query);
 	}
 }

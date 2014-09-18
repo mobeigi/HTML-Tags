@@ -32,4 +32,9 @@ ALTER TABLE image_groups (
 	cover_image varchar(10) references images(image_id)
 );';
 $pg->_pg_query($query);
+$query = '
+CREATE TABLE comments (
+	comment_id serial primary key,
+	image_id varchar(10) references images(image_id) on delete cascade,	
+);';
 ?>
