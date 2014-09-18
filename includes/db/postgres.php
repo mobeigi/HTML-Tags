@@ -25,6 +25,7 @@ class postgres {
 			$this->pg_connect_id = @pg_connect($connection_string);
 		return true;
 	}
+	//INSERT, UPDATE, DELETE
 	public function _pg_transaction($status) {	
 		switch($status) {
 			case 'begin':

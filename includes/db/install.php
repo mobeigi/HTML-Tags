@@ -1,10 +1,17 @@
 <?php
 
-include_once('postgres.php');
+include_once('postgres.php')
+/**
+$host
+$username
+$password
+$database
+$port
+**/
 
 $pg = new postgres();
 
-$pg->_pg_connect();
+$pg->_pg_connect($host, $username, $password, $database, $port);
 
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups');
@@ -12,29 +19,29 @@ $pg->_pg_query('DROP TABLE IF EXISTS images');
 
 $query = '
 CREATE TABLE trips (
-	trip_id varchar(10) serial primary key,
-);'
-$pg->_pg_query($query);
+	trip_id varchar(10) SERIAL PRIMARY KEY,
+)'
+$pg->_pg_query($query)
 $query = '
 CREATE TABLE image_groups (
-	group_id varchar(10) serial primary key, 
-	trip_id varchar(10) references trips(trip_id) not null on delete cascade,	
-);';
-$pg->_pg_query($query);
+	group_id varchar(10) SERIAL PRIMARY KEY, 
+	trip_id varchar(10) REFERENCES trips(trip_id) NOT NULL ON DELETE CASCADE,	
+)';
+$pg->_pg_query($query)
 $query = '
 CREATE TABLE images (
-	image_id varchar(10) serial primary key,
-	group_id varchar(10) references image_groups(group_id) on delete cascade,
-);';
-$pg->_pg_query($query);
+	image_id varchar(10) SERIAL PRIMARY KEY,
+	group_id varchar(10) REFERENCES image_groups(group_id) ON DELETE CASCADE,
+)';
+$pg->_pg_query($query)
 $query = '
 ALTER TABLE image_groups (
-	cover_image varchar(10) references images(image_id)
-);';
-$pg->_pg_query($query);
+	ADD cover_image varchar(10) REFERENCES images(image_id)
+)';
+$pg->_pg_query($query)
 $query = '
 CREATE TABLE comments (
-	comment_id serial primary key,
-	image_id varchar(10) references images(image_id) on delete cascade,	
-);';
+	comment_id SERIAL PRIMARY KEY,
+	image_id varchar(10) REFERENCES images(image_id) ON DELETE CASCADE,	
+)';
 ?>
