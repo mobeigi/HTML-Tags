@@ -1,6 +1,8 @@
 <?php
 error_reporting(E_ALL);
 
+echo "start";
+
 include_once('postgres.php');
 $host = "23.102.176.176";
 $username = "azureuser";
