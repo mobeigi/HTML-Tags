@@ -1,3 +1,24 @@
+<?php
+include_once('postgres.php');
+$host = "23.102.176.176";
+$username = "azureuser";
+$password = "YJ7dMgOCPSsM1dI";
+$database = "test";
+$port = 5432;
+
+$pg = new postgres();
+
+$pg->_pg_connect($host, $username, $password, $database, $port);
+
+$pg->_pg_query("INSERT INTO trips VALUES ('Italy', 'me and my friends go to italy!');");
+
+$res = $pg->_pg_query("SELECT name, description FROM trips");
+
+echo $res[0];
+
+die;
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
