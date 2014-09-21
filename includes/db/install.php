@@ -1,13 +1,11 @@
 <?php
 
 include_once('postgres.php')
-/**
-$host
-$username
-$password
-$database
-$port
-**/
+$host = "23.102.176.176";
+$username = "azureuser";
+$password = "YJ7dMgOCPSsM1dI";
+$database = "test";
+$port = 5432;
 
 $pg = new postgres();
 
