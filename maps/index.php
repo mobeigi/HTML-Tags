@@ -20,8 +20,6 @@ $res = $pg->_pg_query("SELECT name, description FROM trips");
 
 echo $res[0];
 
-die;
-
 ?>
 <!DOCTYPE html>
 <html>
