@@ -1,3 +1,9 @@
+<?php
+$con = pg_connect("host=23.102.176.176 port=5432 dbname=mary user=triptags password=RLSfTv3Ewx") or die('connection failed');
+
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
