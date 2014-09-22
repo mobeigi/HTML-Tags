@@ -15,6 +15,9 @@
  <!--        Username and password and navbar links-->
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 				 <ul class="nav navbar-nav">
+                      <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
+					       <li><a href="#">Profile</a></li>
+                      <?php } 
 					  <li><a href="#">Tutorial</a></li>
 					  <li><a href="#">Help</a></li>
 					  <li><a href="#">Contact</a></li>
