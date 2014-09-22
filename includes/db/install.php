@@ -9,9 +9,16 @@ $database = 'test';
 $port = 5432;
 
 $pg = new postgres();
-
+if(!function_exists('pg_connect')) {
+	print 'fatal error: undefined function pg_connect()';
+	return false;
+}
 $pg->_pg_connect($host, $username, $password, $database, $port);
 
+if(!function_exists('pg_query')) {
+	print 'fatal error: undefined function pg_query()';
+	return false;
+}
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups');
 $pg->_pg_query('DROP TABLE IF EXISTS images');
