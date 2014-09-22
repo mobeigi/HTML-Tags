@@ -82,28 +82,30 @@
     <input type="text" id="trip_name" placeholder="" class="form-control" style="
     display: inline-block;
     "></td>
-    </tr><br>
-
+    </tr>
+    <br />
     <tr>
     <td class="col1">
     <label>Trip comments:</label></td>
     <td class="col2">
     <textarea rows="5" class="form-control"></textarea> </td>
     </tr>
+    </tbody>
+    </table>
         
-        
-        <label>Can be viewed by:</label>
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                Friends
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Everyone</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Friends</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Only me</a></li>
-            </ul>
-        </div>
+    
+    <label>Can be viewed by:</label>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            Friends
+        <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Everyone</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Friends</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Only me</a></li>
+        </ul>
+    </div>
         
     
     <!-- Create Image Groups -->
