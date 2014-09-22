@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Create Trip</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    <!-- Make sure navigation bar doesn't overlap with content -->
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <!-- Import the bootstrap files -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+<div class="container">
+    
+    <!-- Navigation bar -->
+    
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+ <!--       mobile menu to expand-->
+			<div class="navbar-default">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				 <span class="sr-only">Toggle navigation</span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#"><img src="/img/tripblack.png" class="logo-image"></a>
+			</div>
+ <!--        Username and password and navbar links-->
+			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+				 <ul class="nav navbar-nav">
+					  <li><a href="#">Tutorial</a></li>
+					  <li><a href="#">Help</a></li>
+					  <li><a href="#">Contact</a></li>
+					  <li><a href="#">About</a></li>
+				 </ul>
+				 <form class="navbar-form navbar-right" role="form">
+					  <button type="submit" class="btn btn-success">Log out</button>
+				 </form>
+			</div><!--/.navbar-collapse -->
+		 </div>
+	  </nav>
+    
+    
+    <!-- User input for the trip details -->
+    <h1>Trip Details</h1> 
+    <div class="jumbotron">
+
+        <label>Trip name:</label>
+        <input type="text" id="trip_name" placeholder="" class="form-control">
+        <br>
+        
+        <label>Trip comments:</label>
+        <textarea rows="5" class="form-control"></textarea>
+        <br>
+        
+        <label>Can be viewed by:</label>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Friends
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Everyone</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Friends</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Only me</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+<!-- ################################################################################-->
+<!-- ################################################################################-->
+
+    <!-- Create Image Groups -->
+    <h1>Image Groups</h1>
+    <div class="jumbotron">
+    
+        <button class="btn btn-sm" type="button">Create New Image Group</button>
+        
+    </div>
+    
+    <!-- Select Cover photo for the trip -->
+    <div class="jumbotron">
+        <h1>Cover Photo</h1>
+    </div>
+    <p>Select cover photo</p>
+
+
+</div>
+
+</body>
+
+</html>
+
