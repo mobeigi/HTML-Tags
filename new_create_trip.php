@@ -33,10 +33,11 @@
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
-            border-color: #000000 -moz-use-text-color #FFFFFF;
-            border-style: solid none;
-            border-width: 5px 0;
-            margin: 18px 0;
+            border: 2px solid #E4E4E4;
+        }
+        
+        h2 {
+            margin-top: 40px;
         }
         
         th {
@@ -75,7 +76,6 @@
    <?php include_once "/includes/navbar.php"; ?>
     
     <!-- User input for the trip details -->
-    <hr>
     <h2>Trip Details</h2> 
     <hr>
   
@@ -108,9 +108,8 @@
     </table>
         
     <!-- Create Image Groups -->
-    <hr>
     <h2 style="display:inline-flex">Image Groups</h2>
-    <button style="float:right;margin-top:15px;"type="push" class="btn btn-default">Import Image Group</button>
+    <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
     
         <div class="row">
@@ -138,7 +137,6 @@
         
     
     <!-- Select Cover photo for the trip -->
-    <hr>
     <h2>Cover Photo</h2>
     <hr>
 
