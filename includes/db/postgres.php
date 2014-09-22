@@ -9,20 +9,19 @@ class postgres {
 	public function _pg_connect($host, $username, $password, $database, $port = false) {
 		$connection_string = '';
 		if($host)
-			$connection_string .= "user=$username";	
+			$connection_string .= "user=$username ";	
 		if($password)
-			$connection_string .= "password=$password";
+			$connection_string .= "password=$password ";
 		if($host) {
-			$connection_string .= "host=$host";
+			$connection_string .= "host=$host ";
 			if($port) 
-				$connection_string .= "port=$port";
+				$connection_string .= "port=$port ";
 		}
 		if($database)
-			$connection_string .= "dbname=$database";
+			$connection_string .= "dbname=$database ";
 		if(!function_exists('pg_connect'))
 			return false; 
-		 else 
-			$this->pg_connect_id = @pg_connect($connection_string);
+		$this->pg_connect_id = pg_connect($connection_string);
 		return true;
 	}
 	//INSERT, UPDATE, DELETE
@@ -43,12 +42,12 @@ class postgres {
 	// _pg_query($query, $arg1 .. $argn)
 	public function _pg_query($query) {
 		if(func_num_args() == 1)
-			return @pg_query($this->pg_connect_id, $query);
+			return pg_query($this->pg_connect_id, $query);
 		else {
 			$args = func_get_args();
 			$params = array_splice($args, 1);
 			$this->_pg_debug($query, $params);
-			return @pg_query_params($this->pg_connect_id, $query, $params);
+			return pg_query_params($this->pg_connect_id, $query, $params);
 		}
 	}
 	// _pg_real_escape($string)	
