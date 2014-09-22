@@ -1,3 +1,10 @@
+<?php
+
+$con = pg_connect("host=23.102.176.176 port=5432 dbname=test user=azureuser password=YJ7dMgOCPSsM1dI") or die('connection failed');
+
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
