@@ -43,6 +43,15 @@
             text-align: left;
         } 
 
+        #tripdetails td.col1 {
+            width: 15%;
+            vertical-align: top;
+        }
+        
+        #tripdetails td.col2 {
+            width: 85%;
+        }
+        
     </style>
 
 </head>
@@ -64,15 +73,23 @@
     <hr>
     <h2>Trip Details</h2> 
     <hr>
+  
+    <table id = "tripdetails" style="width:100%">
+    <tbody><tr>
+    <td class="col1">
+    <label>Trip Name:</label></td>
+    <td class="col2">
+    <input type="text" id="trip_name" placeholder="" class="form-control" style="
+    display: inline-block;
+    "></td>
+    </tr><br>
 
-    
-        <label>Trip name:</label>
-        <input type="text" id="trip_name" placeholder="" class="form-control">
-        <br>
-        
-        <label>Trip comments:</label>
-        <textarea rows="5" class="form-control"></textarea>
-        <br>
+    <tr>
+    <td class="col1">
+    <label>Trip comments:</label></td>
+    <td class="col2">
+    <textarea rows="5" class="form-control"></textarea> </td>
+    </tr>
         
         
         <label>Can be viewed by:</label>
