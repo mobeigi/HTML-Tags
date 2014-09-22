@@ -43,6 +43,11 @@
             text-align: left;
         } 
 
+        #tripdetails {
+            width: 100%;
+            line-height: 50px;
+        }
+        
         #tripdetails td.col1 {
             width: 15%;
             vertical-align: top;
@@ -74,7 +79,7 @@
     <h2>Trip Details</h2> 
     <hr>
   
-    <table id = "tripdetails" style="width:100%">
+    <table id = "tripdetails">
     <tbody><tr>
     <td class="col1">
     <label>Trip Name:</label></td>
