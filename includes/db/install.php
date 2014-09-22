@@ -8,9 +8,9 @@ $password = 'RLSfTv3Ewx';
 $database = 'test';
 $port = 5432;
 $pg = new postgres();
-echo 'attempting to connect to db';
 $pg->_pg_connect($host, $username, $password, $database, $port);
-echo 'dropping all tables';
+
+echo pg_last_error($pg->pg_connect_id);
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups');
 $pg->_pg_query('DROP TABLE IF EXISTS images');
