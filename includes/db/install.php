@@ -9,7 +9,6 @@ $database = 'test';
 $port = 5432;
 
 if(!function_exists('pg_connect')) {
-	echo 'nsfhesoiwfj';
 	return false;
 }
 $pg = new postgres();
