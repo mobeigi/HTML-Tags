@@ -1,8 +1,12 @@
 .logo-image {
-    height: 160%;
     position: relative;
-    top: -15px;
-    left: -18px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 35px;
+    margin-left: 5px;
+    margin-top: -12px;
 }
 .concept{
     height: 200px;
