@@ -142,7 +142,7 @@
     <h2>Cover Photo</h2>
     <hr>
 
-        <div class="row" align="center">
+        <div class="row" align="center" style="margin-bottom: 12px;">
             <button type="push" class="btn btn-default">Select an image</button>
             <button type="push" class="btn btn-default">Upload an image</button>
         </div> 
