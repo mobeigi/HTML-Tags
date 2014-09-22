@@ -98,24 +98,15 @@
     <td class="col1">
     <label>Can be viewed by:</label></td>
     <td class="col2">
-        <select class="form-control">
+        <select class="form-control" style="width: 150px;">
         <option value="everyone">Everyone</option>
         <option value="friends" selected="selected" >Friends</option>
-        <option value="onlyme</">Only Me</option>
+        <option value="onlyme">Only Me</option>
         </select>
     </tr>
     </tbody>
     </table>
         
-        
-        <select class="form-control">
-    <option value="one">One</option>
-    <option value="two">Two</option>
-    <option value="three">Three</option>
-    <option value="four">Four</option>
-    <option value="five">Five</option>
-</select>
-    
     <!-- Create Image Groups -->
     <hr>
     <h2>Image Groups</h2><button type="push" class="btn btn-default">Import Image Group</button>
