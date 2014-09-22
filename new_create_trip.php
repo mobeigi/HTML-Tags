@@ -88,30 +88,33 @@
     display: inline-block;
     "></td>
     </tr>
-    <br />
     <tr>
     <td class="col1">
     <label>Trip comments:</label></td>
     <td class="col2">
     <textarea rows="5" class="form-control"></textarea> </td>
     </tr>
+    <tr>
+    <td class="col1">
+    <label>Can be viewed by:</label></td>
+    <td class="col2">
+        <select class="form-control">
+        <option value="everyone">Everyone</option>
+        <option value="friends" selected="selected" >Friends</option>
+        <option value="onlyme</">Only Me</option>
+        </select>
+    </tr>
     </tbody>
     </table>
         
-    
-    <label>Can be viewed by:</label>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-            Friends
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Everyone</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Friends</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Only me</a></li>
-        </ul>
-    </div>
         
+        <select class="form-control">
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>
     
     <!-- Create Image Groups -->
     <hr>
