@@ -7,7 +7,7 @@ $username = 'azureuser';
 $password = 'RLSfTv3Ewx';
 $database = 'test';
 $port = 5432;
-
+echo 'attempting to connect to db';
 $pg = new postgres();
 
 $pg->_pg_connect($host, $username, $password, $database, $port);
