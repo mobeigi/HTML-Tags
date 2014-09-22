@@ -1,11 +1,3 @@
-<?php
-
-phpinfo();
-
-die;
-
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
