@@ -8,6 +8,10 @@ $password = 'RLSfTv3Ewx';
 $database = 'test';
 $port = 5432;
 
+if(!function_exists('pg_connect')) {
+	echo 'nsfhesoiwfj';
+	return false;
+}
 $pg = new postgres();
 $pg->_pg_connect($host, $username, $password, $database, $port);
 
