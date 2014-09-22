@@ -7,9 +7,8 @@ $username = 'azureuser';
 $password = 'RLSfTv3Ewx';
 $database = 'test';
 $port = 5432;
-echo 'attempting to connect to db';
 $pg = new postgres();
-
+echo 'attempting to connect to db';
 $pg->_pg_connect($host, $username, $password, $database, $port);
 echo 'dropping all tables';
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
