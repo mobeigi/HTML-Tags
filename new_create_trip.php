@@ -145,8 +145,7 @@
         <div class="row" align="center">
             <button type="push" class="btn btn-default">Select an image</button>
             <button type="push" class="btn btn-default">Upload an image</button>
-        </div>  
-        <
+        </div> 
             <a href="#" class="thumbnail" style="width: 160px; margin: 0 auto;margin-bottom: 15px;">
                 <img src="./img/create_image_group_icon.png">
             </a>
