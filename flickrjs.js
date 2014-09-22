@@ -16,11 +16,14 @@ function(data){
         });
     });
     
+    $scope.images = baseImages;
+    $scope.images.length = 3;
+    
     //Function to display the correct number of photos
-    $scope.listImages = function () {
-        $scope.images = [];
-        $scope.images = baseImages;
-        $scope.images.length = 3;
+//    $scope.listImages = function () {
+//        $scope.images = [];
+//        $scope.images = baseImages;
+//       
 //        if($scope.numImages > baseImages.length){
 //            alert("Sorry I dont have that many photos");
 //            $scope.images.length = 0;
@@ -33,8 +36,7 @@ function(data){
 //            alert("Please enter a whole number");
 //            $scope.images.length = 0;
 //        }
-
-
-    }
-
+//
+//
+//    }
 });
