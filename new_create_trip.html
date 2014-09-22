@@ -10,19 +10,41 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    
-    <!-- Make sure navigation bar doesn't overlap with content -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/main.css">
     <style>
         body {
             padding-top: 50px;
             padding-bottom: 20px;
+            padding-right: 20px;
         }
+        
+        textarea {
+            resize: none;
+        }
+        
+        hr {
+            -moz-border-bottom-colors: none;
+            -moz-border-image: none;
+            -moz-border-left-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-top-colors: none;
+            border-color: #000000 -moz-use-text-color #FFFFFF;
+            border-style: solid none;
+            border-width: 5px 0;
+            margin: 18px 0;
+        }
+        
+        th {
+            text-align: left;
+        } 
+
     </style>
 
 </head>
 
 <body>
+    
     
     <!-- Import the bootstrap files -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
@@ -44,13 +66,14 @@
 			  </button>
 			  <a class="navbar-brand" href="#"><img src="/img/tripblack.png" class="logo-image"></a>
 			</div>
- <!--        Username and password and navbar links-->
+            <!--  Username and password and navbar links-->
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 				 <ul class="nav navbar-nav">
-					  <li><a href="#">Tutorial</a></li>
-					  <li><a href="#">Help</a></li>
-					  <li><a href="#">Contact</a></li>
-					  <li><a href="#">About</a></li>
+                    <li><a href="#">Profile</a></li>
+				    <li><a href="#">Tutorial</a></li>
+				    <li><a href="#">Help</a></li>
+				    <li><a href="#">Contact</a></li>
+				    <li><a href="#">About</a></li>
 				 </ul>
 				 <form class="navbar-form navbar-right" role="form">
 					  <button type="submit" class="btn btn-success">Log out</button>
@@ -59,11 +82,12 @@
 		 </div>
 	  </nav>
     
-    
     <!-- User input for the trip details -->
-    <h1>Trip Details</h1> 
-    <div class="jumbotron">
+    <hr>
+    <h2>Trip Details</h2> 
+    <hr>
 
+    
         <label>Trip name:</label>
         <input type="text" id="trip_name" placeholder="" class="form-control">
         <br>
@@ -71,6 +95,7 @@
         <label>Trip comments:</label>
         <textarea rows="5" class="form-control"></textarea>
         <br>
+        
         
         <label>Can be viewed by:</label>
         <div class="dropdown">
@@ -85,26 +110,56 @@
             </ul>
         </div>
         
-    </div>
     
-<!-- ################################################################################-->
-<!-- ################################################################################-->
-
     <!-- Create Image Groups -->
-    <h1>Image Groups</h1>
-    <div class="jumbotron">
+    <hr>
+    <h2>Image Groups</h2><button type="push" class="btn btn-default">Import Image Group</button>
+    <hr>
     
-        <button class="btn btn-sm" type="button">Create New Image Group</button>
+        <div class="row">
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>              
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+        </div>
         
-    </div>
     
     <!-- Select Cover photo for the trip -->
-    <div class="jumbotron">
-        <h1>Cover Photo</h1>
-    </div>
-    <p>Select cover photo</p>
+    <hr>
+    <h2>Cover Photo</h2>
+    <hr>
 
+        <div class="row" align="center">
+            <button type="push" class="btn btn-default">Select an image</button>
+            <button type="push" class="btn btn-default">Upload an image</button>
+        </div>  
+            <a href="#" class="thumbnail">
+                <img src="./img/create_image_group_icon.png">
+            </a>
 
+    <!-- Finalisation buttons -->
+    <div class="row" align="right">
+        <button type="push" class="btn">Cancel</button>
+        <button type="push" class="btn btn-success">Save Trip</button>
+        <button type="push" class="btn btn-success">Preview Trip</button>
+    </div>  
+    
 </div>
 
 </body>
