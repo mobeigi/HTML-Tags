@@ -21,16 +21,16 @@
 					  <li><a href="#">About</a></li>
 				 </ul>
                  <form class="navbar-form navbar-right" role="form">
-                 <?php if (isset($loggedIn) && ($loggedIn == false)) { ?>
-					  <div class="form-group">
+                 <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
+					  <button type="submit" class="btn btn-success">Log out</button>
+                 <?php } else { ?>
+                      <div class="form-group">
 							<input type="text" placeholder="Email" class="form-control">
 					  </div>
 					  <div class="form-group">
 							<input type="password" placeholder="Password" class="form-control">
 					  </div>
 					  <button type="submit" class="btn btn-success">Sign in</button>
-                 <?php } else { ?>
-                    <button type="submit" class="btn btn-success">Log out</button>
                  <?php } ?>
                  </form>
 			</div><!--/.navbar-collapse -->
