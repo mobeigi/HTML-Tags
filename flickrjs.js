@@ -1,4 +1,6 @@
-function flickrController($scope){
+var viewPageApp = angular.module('viewPageApp',[]);
+
+viewPageApp.controller('flickrController', function ($scope){
     //my API key for Flickr
     var apiKey = '9fe6d098f0ecd8855f5429ca8b9b4624';
     var album = '72157647658516722';
@@ -17,7 +19,22 @@ function(data){
     //Function to display the correct number of photos
     $scope.listImages = function () {
         $scope.images = [];
-        $scope.images = baseImages.slice();
-		$scope.images.length = 3;
+        $scope.images = baseImages;
+        $scope.images.length = 3;
+//        if($scope.numImages > baseImages.length){
+//            alert("Sorry I dont have that many photos");
+//            $scope.images.length = 0;
+//        } else if($scope.numImages < 0 ){
+//            alert("Please enter a value greater than 0");
+//            $scope.images.length = 0;
+//        } else if ($scope.numImages % 1 === 0) {
+//            $scope.images.length = $scope.numImages;
+//        }else {
+//            alert("Please enter a whole number");
+//            $scope.images.length = 0;
+//        }
+
+
     }
-}
+
+});
