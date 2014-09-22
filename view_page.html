@@ -19,6 +19,22 @@
                 padding-bottom: 20px;
             }
         </style>
+        
+     <style>
+      #map-canvas {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      }
+    </style>
+        
+    <!-- load tripviewer -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="maps/tripview.js"></script>
   </head>
     
     <body>
@@ -55,14 +71,7 @@
         </nav>
 
 		 <section id="main_body" class="bg-light-gray">
-			<div class="container-fluid">
-				<div id="pane" class="col-md-3">
-				 hello
-				</div>
-				<div id="map" class="col-md-9">
-					helloooo
-				</div>
-			</div>
+			<div id="map-canvas"></div>
     	</section>
     
     <!--       scripts              -->
