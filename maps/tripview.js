@@ -11,7 +11,6 @@
 */
 
 
-
 // Set the custom overlay object's prototype to a new instance
 // of OverlayView. In effect, this will subclass the overlay class.
 // Note that we set the prototype to an instance, rather than the
@@ -36,6 +35,16 @@ function initialize() {
   
   //Collect required images in a call to the database
   //TODO: Loop and DB call
+  
+  //Get static images in a loop
+  var j;
+  var links[];
+  for (j=1; j <= 8; j++) {
+    links.push('featured1/' + j + '.jpg');
+  }
+  
+  console.log(codeAddress("sydney opera house"));
+  
 
   //Image 1
   var swBound = new google.maps.LatLng(62.303907, -150.159291);
@@ -43,7 +52,7 @@ function initialize() {
   var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
   // Collects links to be displayed on the map
-  var srcImage = 'http://images.techtimes.com/data/images/full/4061/bill-gates-wealthiest-person.jpg?w=600';
+  var srcImage = 'featured1/1.jpg';
   
   //Image 2
   var swBound2 = new google.maps.LatLng(62.343907, -150.169291);
@@ -222,5 +231,20 @@ ImageOverlay.prototype.onRemove = function() {
   this.div_.parentNode.removeChild(this.div_);
   this.div_ = null;
 };
+
+
+
+geocoder = new google.maps.Geocoder();
+function codeAddress(address) {
+geocoder.geocode( { 'address': address}, function(results, status) {
+  if (status == google.maps.GeocoderStatus.OK) {
+    //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
+    
+    return results[0].geometry.location.LatLng();
+  } else {
+    alert("Geocode was not successful for the following reason: " + status);
+  }
+});
+}
 
 google.maps.event.addDomListener(window, 'load', initialize);
