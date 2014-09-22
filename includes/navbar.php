@@ -21,7 +21,7 @@
 					  <li><a href="#">About</a></li>
 				 </ul>
                  <form class="navbar-form navbar-right" role="form">
-                 <?php if ($loggedIn == false) { ?>
+                 <?php if (isset($loggedIn) && ($loggedIn == false)) { ?>
 					  <div class="form-group">
 							<input type="text" placeholder="Email" class="form-control">
 					  </div>
