@@ -50,7 +50,7 @@ function initialize() {
   var links = [];
   
   for (j=1; j <= 8; j++) {
-    links.push('featured1/' + j + '.jpg');
+    links.push('img/featured1/' + j + '.jpg');
   }
 
   var sw;
