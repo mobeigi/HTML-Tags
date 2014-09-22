@@ -56,35 +56,9 @@
     
 <div class="container">
     
-    <!-- Navigation bar -->
-    
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container-fluid">
- <!--       mobile menu to expand-->
-			<div class="navbar-default">
-			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				 <span class="sr-only">Toggle navigation</span>
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#"><img src="/img/tripblack.png" class="logo-image"></a>
-			</div>
-            <!--  Username and password and navbar links-->
-			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-				 <ul class="nav navbar-nav">
-                    <li><a href="#">Profile</a></li>
-				    <li><a href="#">Tutorial</a></li>
-				    <li><a href="#">Help</a></li>
-				    <li><a href="#">Contact</a></li>
-				    <li><a href="#">About</a></li>
-				 </ul>
-				 <form class="navbar-form navbar-right" role="form">
-					  <button type="submit" class="btn btn-success">Log out</button>
-				 </form>
-			</div><!--/.navbar-collapse -->
-		 </div>
-	  </nav>
+   <!-- include navbar -->
+   <?php $loggedIn = true; ?>
+   <?php include_once "/includes/navbar.php"; ?>
     
     <!-- User input for the trip details -->
     <hr>

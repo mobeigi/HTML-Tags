@@ -20,7 +20,8 @@
 					  <li><a href="#">Contact</a></li>
 					  <li><a href="#">About</a></li>
 				 </ul>
-				 <form class="navbar-form navbar-right" role="form">
+                 <form class="navbar-form navbar-right" role="form">
+                 <?php if ($loggedIn == false) { ?>
 					  <div class="form-group">
 							<input type="text" placeholder="Email" class="form-control">
 					  </div>
@@ -28,7 +29,10 @@
 							<input type="password" placeholder="Password" class="form-control">
 					  </div>
 					  <button type="submit" class="btn btn-success">Sign in</button>
-				 </form>
+                 <?php } else { ?>
+                    <button type="submit" class="btn btn-success">Log out</button>
+                 <?php } ?>
+                 </form>
 			</div><!--/.navbar-collapse -->
 		 </div>
 	  </nav>
