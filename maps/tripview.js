@@ -16,10 +16,15 @@
 // Note that we set the prototype to an instance, rather than the
 // parent class itself, because we do not wish to modify the parent class.
 
+var map;
+var geocoder;
+
 //Store trip tags in an array for easy access
 var triptags = [];
 
 ImageOverlay.prototype = new google.maps.OverlayView();
+
+
 
 // Initialize the map and the custom overlays
 function initialize() {
@@ -31,65 +36,65 @@ function initialize() {
     center: new google.maps.LatLng(62.303907, -150.109291),
    };
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  
+  geocoder = new google.maps.Geocoder();
+  
+  
   
   //Collect required images in a call to the database
   //TODO: Loop and DB call
   
   //Get static images in a loop
   var j;
-  var links[];
+  var links = [];
+  
   for (j=1; j <= 8; j++) {
     links.push('featured1/' + j + '.jpg');
   }
-  
-  console.log(codeAddress("sydney opera house"));
-  
 
-  //Image 1
-  var swBound = new google.maps.LatLng(62.303907, -150.159291);
-  var neBound = new google.maps.LatLng(62.323907, -150.109291);
-  var bounds = new google.maps.LatLngBounds(swBound, neBound);
-
-  // Collects links to be displayed on the map
-  var srcImage = 'featured1/1.jpg';
+  var sw;
+  var ne;
+  var bounds = [];
   
-  //Image 2
-  var swBound2 = new google.maps.LatLng(62.343907, -150.169291);
-  var neBound2 = new google.maps.LatLng(62.363907, -150.119291);
-  var bounds2 = new google.maps.LatLngBounds(swBound2, neBound2);
-
-  // Collects links to be displayed on the map
-  var srcImage2 = 'http://images.techtimes.com/data/images/full/4061/bill-gates-wealthiest-person.jpg?w=600';
+  //Images
+  sw = new google.maps.LatLng(-32.8948358302915, 115.8457735197085);
+  ne = new google.maps.LatLng(-31.8921378697085, 116.8484714802915);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
   
-  //Image 3
-  var swBound3 = new google.maps.LatLng(62.343907, -149.969291);
-  var neBound3 = new google.maps.LatLng(62.363907, -149.909291);
-  var bounds3 = new google.maps.LatLngBounds(swBound3, neBound3);
+  sw = new google.maps.LatLng(-26.137487, 130.378899);
+  ne = new google.maps.LatLng(-25.133487, 131.381899);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
 
-  // Collects links to be displayed on the map
-  var srcImage3 = 'http://thinkoskar.com/wp-content/uploads/2012/08/Teemo-Time.jpg';
+  sw = new google.maps.LatLng(-26.320370, 133.982449);
+  ne = new google.maps.LatLng(-25.316370, 134.985449);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
+  
+  sw = new google.maps.LatLng(-32.944844, 144.924832);
+  ne = new google.maps.LatLng(-31.944844, 145.924832);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
+  
+  sw = new google.maps.LatLng(-34.8563188, 151.2158898);
+  ne = new google.maps.LatLng(-33.8563188, 152.2158898);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
+  
+  sw = new google.maps.LatLng(-34.056696, 152.109890);
+  ne = new google.maps.LatLng(-33.056696, 153.109890);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
+  
+  sw = new google.maps.LatLng(-28.481130, 153.296414);
+  ne = new google.maps.LatLng(-27.481130, 154.296414);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
+  
+  sw = new google.maps.LatLng(-22.996178, 149.648953);
+  ne = new google.maps.LatLng(-21.996178, 150.648953);
+  bounds.push(new google.maps.LatLngBounds(sw, ne));
 
-  
-  
   // Create object to contain the overlay image, the bounds of the image and a reference to the map
-  triptags.push(new ImageOverlay(bounds, srcImage, map));
-  triptags.push(new ImageOverlay(bounds2, srcImage2, map));
-  triptags.push(new ImageOverlay(bounds3, srcImage3, map));
+  for (j=0; j < 8; j++) {	
+    triptags.push(new ImageOverlay(bounds[j], links[j], map));
+  }
  
- /*
- 
-  var markerA = new google.maps.Marker({
-  
-    			position: new google.maps.LatLng( swBound.lat(), ((swBound.lng() + neBound.lng())/2)),
-    			map: map, 
-                title:"Kappa toop tip"
-    		});
-    
- */
-
-
- http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=1|FFDB58|000000
  
   /*
   *  Main Loop through triptag elements
@@ -139,7 +144,6 @@ function initialize() {
   
   //Ensure map fits tripBounds
   map.fitBounds(tripBounds);
-  
 }
 
 /** @constructor 
@@ -232,19 +236,18 @@ ImageOverlay.prototype.onRemove = function() {
   this.div_ = null;
 };
 
+/*
+function codeAddress(address, callback) {
 
-
-geocoder = new google.maps.Geocoder();
-function codeAddress(address) {
 geocoder.geocode( { 'address': address}, function(results, status) {
   if (status == google.maps.GeocoderStatus.OK) {
-    //In this case it creates a marker, but you can get the lat and lng from the location.LatLng
-    
-    return results[0].geometry.location.LatLng();
+    callback(results[0].geometry.location);
   } else {
     alert("Geocode was not successful for the following reason: " + status);
   }
 });
+
 }
+*/
 
 google.maps.event.addDomListener(window, 'load', initialize);
