@@ -7,6 +7,7 @@ $username = 'azureuser';
 $password = 'RLSfTv3Ewx';
 $database = 'test';
 $port = 5432;
+
 $pg = new postgres();
 $pg->_pg_connect($host, $username, $password, $database, $port);
 
@@ -14,7 +15,7 @@ echo pg_last_error($pg->pg_connect_id);
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups');
 $pg->_pg_query('DROP TABLE IF EXISTS images');
-echo 'c1';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 CREATE TABLE trips (
 	trip_id varchar(10) SERIAL PRIMARY KEY,
@@ -22,7 +23,7 @@ CREATE TABLE trips (
 	description varchar(256), 
 )';
 $pg->_pg_query($query);
-echo 'c2';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 CREATE TABLE image_groups (
 	group_id varchar(10) SERIAL PRIMARY KEY, 
@@ -32,7 +33,7 @@ CREATE TABLE image_groups (
 	latitude float(10) NOT NULL
 )';
 $pg->_pg_query($query);
-echo 'c3';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 CREATE TABLE images (
 	image_id varchar(10) SERIAL PRIMARY KEY,
@@ -40,24 +41,24 @@ CREATE TABLE images (
 	description varchar(256),
 )';
 $pg->_pg_query($query);
-echo 'c4';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 ALTER TABLE trips (
 	ADD cover_image varchar(10) REFERENCES images(image_id)
 )';
 $pg->_pg_query($query);
-echo 'c5';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 ALTER TABLE image_groups (
 	ADD cover_image varchar(10) REFERENCES images(image_id)
 )';
 $pg->_pg_query($query);
-echo 'c6';
+echo pg_last_error($pg->pg_connect_id);
 $query = '
 CREATE TABLE comments (
 	comment_id SERIAL PRIMARY KEY,
 	image_id varchar(10) REFERENCES images(image_id) ON DELETE CASCADE,	
 )';
 $pg->_pg_query($query);
-echo 'c7';
+echo pg_last_error($pg->pg_connect_id);
 ?>
