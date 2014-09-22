@@ -39,6 +39,7 @@
     
     <body>
       <!-- insert navbar -->
+      <?php $tripViewer = true; ?>
       <?php include_once("includes/navbar.php"); ?>
 
 		 <section id="main_body" class="bg-light-gray">

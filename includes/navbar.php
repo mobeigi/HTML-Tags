@@ -21,6 +21,9 @@
 					  <li><a href="#">About</a></li>
 				 </ul>
                  <form class="navbar-form navbar-right" role="form">
+                 <?php if (isset($tripViewer) && ($tripViewer == true) { ?>
+                    <button type="push" class="btn btn-default">Share trip</button>
+                 <?php } ?>
                  <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
 					  <button type="submit" class="btn btn-success">Log out</button>
                  <?php } else { ?>
