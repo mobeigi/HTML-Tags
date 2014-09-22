@@ -1,6 +1,6 @@
 
     <!DOCTYPE html >
-<html lang="en" ng-app="">
+<html lang="en" ng-app>
 <head>
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -68,19 +68,29 @@
 			</div><!-- /.row -->
 	  </div>
  </div>
-
-	  <div id="main_body" class="container">
+   <section id="portfolio">
+	  <div class="container">
 			<br>
 			<h1 class="text-left">Featured Trips:</h1>
-		  <div class="row">
-		  <div class="col-lg-4"></div>
-			<div class="col-lg-4"></div>
-			  <div class="col-lg-4"></div>
+		 <div ng-controller="flickrController">
+			<form ng-submit="listImages()">
+                            <input type="text" style="text-align:center; color:black" placeholder="0" ng-model="numImages"> 
+                            <br><br>
+                            <button type="submit" class="page-scroll btn btn-xl">Show Me</button>
+                            <br><br><br><br>
+                        </form>
+			<div class="row">
+					 <div class="col-md-6" ng-repeat="image in images">
+						  <center><img src="{{image}}"></center>
+						  <br>
+					 </div>
+				</div>   
 		  </div>
-	  </div>
-	  <div class="footer">
-		 <p><center>&copy; TripTags 2014</center></p>
-	  </div>
+		</div>
+   </section>
+   <footer>
+	  <p><center>&copy; TripTags 2014</center></p>
+   </footer>   
 
  <!--       scripts              -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
