@@ -2,11 +2,15 @@
 
 include_once('postgres.php');
 
-$host = '23.102.176.176';
-$username = 'azureuser';
-$password = 'RLSfTv3Ewx';
-$database = 'test';
-$port = 5432;
+/**
+
+$host = 
+$username = 
+$password = 
+$database = 
+$port = 
+
+**/
 
 $pg = new postgres();
 if(!function_exists('pg_connect')) {
