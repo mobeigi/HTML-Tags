@@ -109,7 +109,8 @@
         
     <!-- Create Image Groups -->
     <hr>
-    <h2>Image Groups</h2><button type="push" class="btn btn-default">Import Image Group</button>
+    <h2 style="display:inline-flex">Image Groups</h2>
+    <button style="float:right;margin-top:15px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
     
         <div class="row">
