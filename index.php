@@ -13,6 +13,18 @@
  <link rel="stylesheet" href="css/main.css">
 <!--    fonts       -->
  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    <!-- load tripviewer -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="maps/tripview.js"></script>
+
+    <!-- lightbox -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="maps/imagegroupview.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -40,7 +52,12 @@
  </div>
    <section id="featured-trips">
 	  <div class="container">
-			<br>
+            <!-- embedded featured public trip -->
+            <div id="map-canvas" style="width: 960px;height: 520px;margin: 0 auto;"></div>
+			<!-- hidden link block -->
+            <div id="hiddenTripTags" style="visibility:hidden;"></div>
+            
+            <br>
 			<h1 class="text-left">Featured Trips:</h1>
             <br>
           <div class="row">
@@ -72,17 +89,6 @@
     <br>
    <footer>
 	  <p><center>&copy; TripTags 2014</center></p>
-   </footer>   
-
- <!--       scripts              -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
-	<script type="text/javascript" src="flickrjs.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-<!--    tripview script -->
-    <script src="maps/tripview.js"></script>
+   </footer>
 </body>
 </html>
