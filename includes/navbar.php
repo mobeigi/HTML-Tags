@@ -26,7 +26,7 @@
                  <form class="navbar-form navbar-right" role="form">
                  <?php if (isset($tripViewer) && ($tripViewer == true)) { ?>
                      
-                    <!-- Button trigger modal -->
+                    <!-- Button trigger share link modal -->
                     <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
                       Share Trip
                     </button>                     

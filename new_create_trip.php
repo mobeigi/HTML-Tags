@@ -47,15 +47,40 @@
         #tripdetails {
             width: 100%;
             line-height: 50px;
-        }
-        
+        }  
         #tripdetails td.col1 {
             width: 15%;
             vertical-align: top;
-        }
-        
+        }   
         #tripdetails td.col2 {
             width: 85%;
+        }
+        
+        #imageGroupDetails1 {
+            width: 100%;
+            line-height: 50px;
+        }       
+        #imageGroupDetails1 td.col1 {
+            width: 30%;
+            vertical-align: top;
+        }
+        #imageGroupDetails1 td.col2 {
+            width: 55%;
+        }
+        
+        #imageGroupDetails2 {
+            width: 100%;
+            line-height: 50px;
+        }       
+        #imageGroupDetails2 td.col1 {
+            width: 30%;
+            vertical-align: top;
+        }
+        #imageGroupDetails2 td.col2 {
+            width: 50%;
+        }
+        #imageGroupDetails2 td.col3 {
+            width: 5%;
         }
         
     </style>
@@ -115,23 +140,23 @@
         <div class="row">
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
-                    <img src="./img/create_image_group_icon.png">
+                    <img src="./img/featured1/1.jpg">
                 </a>
             </div>            
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
-                    <img src="./img/create_image_group_icon.png">
+                    <img src="./img/featured1/2.jpg">
                 </a>
             </div>            
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
-                    <img src="./img/create_image_group_icon.png">
+                    <img src="./img/featured1/3.jpg">
                 </a>
             </div>              
             <div class="col-md-3 col-md-2">
-                <a href="#" class="thumbnail">
-                    <img src="./img/create_image_group_icon.png">
-                </a>
+                    <a href="#crImageGroupModal" role="button" data-toggle="modal" class="thumbnail">   
+                        <img src="./img/create_image_group_icon.png">
+                    </a>
             </div>            
         </div>
         
@@ -154,6 +179,57 @@
         <button type="push" class="btn btn-success">Save Trip</button>
         <button type="push" class="btn btn-success">Preview Trip</button>
     </div>  
+    
+    
+    <!-- Modal Windows -->
+    
+    <!-- Upload Image Group modal window -->
+    <div class="modal fade" id="crImageGroupModal" tabindex="-1" role="dialog" aria-labelledby="crImageGroupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="crImageGroupModalLabel">Create a new image group</h4>
+          </div>
+          <div class="modal-body">
+
+            <!-- content -->
+            <table id = "imageGroupDetails1">
+            <tbody><tr>
+            <td class="col1">
+            <label>Image Group Name:</label></td>
+            <td class="col2">
+            <input type="text" id="trip_name" placeholder="" class="form-control" style="
+            display: inline-block;
+            "></td>
+            </tr>
+            </tbody>
+            </table>
+              
+            <table id = "imageGroupDetails2">
+            <tbody><tr>             
+            <td class="col1">
+            <label>Location:</label></td>
+            <td class="col2">
+            <input type="text" id="trip_name" placeholder="" class="form-control" style="
+            display: inline-block;
+            "></td>
+            <td class="col3" align="center">
+                <img src="./img/small_trip_tag.png">
+            </td>
+            </tr>
+            </tbody>
+            </table>
+
+              
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 </div>
 
