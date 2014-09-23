@@ -87,19 +87,28 @@
     }
  }
 
- </script> 
- 
+ </script>
  </head>
 
 <body>
-<a href="img/featured1/1.jpg" data-lightbox="image-1" data-title="Trip tag 3">Image #1</a>
-<a href="img/featured1/2.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/3.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/4.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/5.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/6.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/7.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-<a href="img/featured1/8.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+
+<!-- hidden link block -->
+<div style="visibility:hidden;">
+<a id="triptag1" href="img/featured1/1.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag2" href="img/featured1/2.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag3" href="img/featured1/3.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag4" href="img/featured1/4.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag5" href="img/featured1/5.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag6" href="img/featured1/6.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag7" href="img/featured1/7.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+<a id="triptag8" href="img/featured1/8.jpg" data-lightbox="image-1" data-title="My Trip Name!"></a>
+</div>
+
+<!-- trigger -->
+<script type="text/javascript">
+$('#1').trigger('click');
+</script>
+
 </body>
 
 </html>

@@ -18,6 +18,7 @@
 
 var map;
 var geocoder;
+var triptag = 1;
 
 //Store trip tags in an array for easy access
 var triptags = [];
@@ -48,9 +49,18 @@ function initialize() {
   //Get static images in a loop
   var j;
   var links = [];
+  var hiddenTripTags = document.getElementById("hiddenTripTags");
   
   for (j=1; j <= 8; j++) {
     links.push('img/featured1/' + j + '.jpg');
+    
+    //Add image trips
+    var a = document.createElement('a');
+    a.id = 'triptag' + j;
+    a.href = 'img/featured1/' + j + '.jpg';
+    a.setAttribute("data-lightbox", "trip-1");
+    a.setAttribute("data-title", "My Trip Name!");
+    hiddenTripTags.appendChild(a);
   }
 
   var sw;
@@ -195,10 +205,15 @@ ImageOverlay.prototype.onAdd = function() {
   // set this as locally scoped var so event does not get confused
   var me = this;
   
+  var tag = '#triptag' + triptag;
+  
   //Attach a click listerner to this image, invoking lightbox onclick
   google.maps.event.addDomListener(div, 'dblclick', function() {
-    window.location="http://www.google.com";
+    $(tag).trigger('click');
 });
+
+  //Increment trip tag number
+ ++triptag;
   
 };
 
