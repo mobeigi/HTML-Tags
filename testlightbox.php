@@ -23,9 +23,9 @@
  <!-- Lightbox modal viewer control script --> 
  <script>
  //Sets main image to provided image url
- function setMainImage(url) {
+ function setMainImage(obj) {
     var img = document.getElementById("lbc-image");
-    img.src = url;
+    img.src = obj.src;
  }
  
  //Load side panel pictures
@@ -37,13 +37,13 @@
     
     var firstImg = document.createElement("img");
     firstImg.src = document.getElementById("lbc-image").src;
-    firstImg.onclick = function() { setMainImage(firstImg.src); };
+    firstImg.onclick = function() { setMainImage(firstImg); };
     sideDiv.appendChild(firstImg);
     
-    for (i = 0; i < 3; ++i) {
+    for (i = 1; i < 4; ++i) {
         var img = document.createElement("img");
         img.src = "img/placeholder.png";
-        img.onclick = function() { setMainImage(img.src); };
+        img.onclick = function() { setMainImage(img); };
         sideDiv.appendChild(img);
     }
  }
