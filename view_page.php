@@ -57,5 +57,26 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
         <script src="http://code.jquery.com/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        
+    <!-- Share link modal window -->
+        
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Trip Link</h4>
+          </div>
+          <div class="modal-body">
+              <p>Give the following link to your friends:</p>
+              <p>http://triptags.azurewebsites.net/view_page.php?trip=19292</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </body>
 </html>
