@@ -23,9 +23,14 @@
  </head>
 
 <body>
-<a href="img/concept.jpg" data-lightbox="image-1" data-title="Trip tag 2">Image #1</a>
-<a href="img/concept.jpg" data-lightbox="image-1" data-title="Trip tag 3">Image #1</a>
-<a href="img/concept.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/1.jpg" data-lightbox="image-1" data-title="Trip tag 3">Image #1</a>
+<a href="img/featured1/2.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/3.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/4.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/5.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/6.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/7.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
+<a href="img/featured1/8.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
 
 </body>
 

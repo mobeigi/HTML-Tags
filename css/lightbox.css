@@ -28,7 +28,7 @@ body:after {
 .lightbox .lb-image {
   display: block;
   float: left;
-  height: auto;
+  height: 510px;
   width: 75%;
   border: 2px solid;
   -webkit-border-radius: 3px;
@@ -116,11 +116,13 @@ button.lb-bottompanel {
 }
 
 .lb-nav {
+  margin-top: 76px;
+  height: 510px;
   position: absolute;
+  margin-left: 50px;
   top: 0;
   left: 0;
-  height: 80%;
-  width: 80%;
+  width: 72%;
   z-index: 10;
 }
 
