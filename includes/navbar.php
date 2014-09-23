@@ -25,7 +25,26 @@
 				 </ul>
                  <form class="navbar-form navbar-right" role="form">
                  <?php if (isset($tripViewer) && ($tripViewer == true)) { ?>
-                    <button type="push" class="btn btn-default">Share trip</button>
+                     
+                    <!-- Button to trigger share link modal -->
+                    <a href="#myModal" role="button" class="btn" data-toggle="modal">Share Trip</a>
+
+                    <!-- Share Link Modal -->
+                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel">Trip Link</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>Give the following link to your friends:</p>
+                            <p>http://triptags.azurewebsites.net/view_page.php?trip=19292</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        </div>
+                    </div>
+                     
+                     
                  <?php } ?>
                  <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
 					  <button type="submit" class="btn btn-success">Log out</button>
