@@ -124,6 +124,7 @@ button.lb-bottompanel {
   display: inline-block;
   width: 85%;
   vertical-align: bottom;
+  resize: none;
 }
 
 .lb-bottompanel-box #comments button {

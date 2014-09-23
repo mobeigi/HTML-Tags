@@ -58,7 +58,12 @@
   //Load comments box with static comment for n ow
  function loadComments(commentText) {
     var botPanel = document.getElementById("lbc-bottompanel-box");
-    botPanel.innerHTML = '<div id="comments"><img src="img/noprofilepic.png" /><p>' + commentText + '</p><br /><textarea rows="1"></textarea><button>Submit</button></div>';
+    if (commentText == "") {
+        botPanel.innerHTML = '<div id="comments"><p style="margin-left:0px">There are no comments yet. Why not leave one?</p><br /><textarea id="text-input" rows="1"></textarea><button onclick="loadComments(document.getElementById(\'text-input\').value);">Submit</button></div>';
+    }
+    else {
+        botPanel.innerHTML = '<div id="comments"><img src="img/noprofilepic.png" /><p>' + commentText + '</p><br /><textarea id="text-input" rows="1"></textarea><button onclick="loadComments(document.getElementById(\'text-input\').value);">Submit</button></div>';
+    }
  }
 
  </script> 
