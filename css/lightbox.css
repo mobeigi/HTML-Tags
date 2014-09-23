@@ -80,6 +80,11 @@ body:after {
   display: inline-block;
 }
 
+.lb-sidepanel img {
+  max-width: 120px;
+  margin-top: 10px;
+}
+
 .lb-bottompanel {
   line-height: initial;
   width: 75%;
@@ -96,6 +101,36 @@ button.lb-bottompanel {
   padding: 6px;
 }
 
+.lb-bottompanel .lb-bottompanel-box {
+  border: 2px solid;
+  min-height: 90px;
+  padding: 6px;
+}
+
+.lb-bottompanel-box #comments {
+  padding: 5px;
+}
+
+.lb-bottompanel-box #comments img {
+ max-height: 20px;
+}
+
+.lb-bottompanel-box #comments p {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.lb-bottompanel-box #comments textarea {
+  display: inline-block;
+  width: 85%;
+  vertical-align: bottom;
+}
+
+.lb-bottompanel-box #comments button {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: bottom;
+}
 
 .lb-loader {
   position: absolute;

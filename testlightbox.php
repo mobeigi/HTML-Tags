@@ -19,7 +19,50 @@
 
  <link href="css/lightbox.css" rel="stylesheet" />
  
-  
+ 
+ <!-- Lightbox modal viewer control script --> 
+ <script>
+ //Sets main image to provided image url
+ function setMainImage(url) {
+    var img = document.getElementById("lbc-image");
+    img.src = url;
+ }
+ 
+ //Load side panel pictures
+ function loadSidePanel() {
+    /* Load 4 images into side panel */
+    var i;
+    var sideDiv = document.getElementById("lbc-sidepanel");
+    sideDiv.innerHTML = "<h4>Group images:</h4>";
+    
+    var firstImg = document.createElement("img");
+    firstImg.src = document.getElementById("lbc-image").src;
+    firstImg.onclick = function() { setMainImage(firstImg.src); };
+    sideDiv.appendChild(firstImg);
+    
+    for (i = 0; i < 3; ++i) {
+        var img = document.createElement("img");
+        img.src = "img/placeholder.png";
+        img.onclick = function() { setMainImage(img.src); };
+        sideDiv.appendChild(img);
+    }
+ }
+ 
+ //Load description box
+ function loadDescription(description) {
+    //Get bottom panel box
+    var botPanel = document.getElementById("lbc-bottompanel-box");
+    botPanel.innerHTML = '<div id="description"><p>' + description + '</p></div>';
+ }
+ 
+  //Load comments box with static comment for n ow
+ function loadComments(commentText) {
+    var botPanel = document.getElementById("lbc-bottompanel-box");
+    botPanel.innerHTML = '<div id="comments"><img src="img/noprofilepic.png" /><p>' + commentText + '</p><br /><textarea rows="1"></textarea><button>Submit</button></div>';
+ }
+
+ </script> 
+ 
  </head>
 
 <body>
@@ -31,7 +74,6 @@
 <a href="img/featured1/6.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
 <a href="img/featured1/7.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
 <a href="img/featured1/8.jpg" data-lightbox="image-1" data-title="Trip tag 4">Image #1</a>
-
 </body>
 
 </html>
