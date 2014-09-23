@@ -63,7 +63,7 @@
           <div class="row">
             <div class="col-lg-4 text-center"> <img src="img/homepage_featured/canada.jpg"><p>Calm and comforting Canada</p></div>
             <div class="col-lg-4 text-center"> <img src="img/homepage_featured/japan.jpg"><p>Journeying through joyous Japan</p> </div>
-            <div class="col-lg-4 text-center"><img src="img/homepage_featured/england.jpg">Exlporing the wonders of elderly England </div>
+            <div class="col-lg-4 text-center"><img src="img/homepage_featured/england.jpg">Exploring the wonders of elderly England </div>
 
           </div>
 
