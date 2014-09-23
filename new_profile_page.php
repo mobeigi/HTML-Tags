@@ -31,10 +31,15 @@
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
-            border-color: #000000 -moz-use-text-color #FFFFFF;
-            border-style: solid none;
-            border-width: 5px 0;
-            margin: 18px 0;
+            border: 2px solid #E4E4E4;
+        }
+        
+        h1 {
+            text-align: left;
+        }
+        
+        h3 {
+            margin-top: 20px;
         }
         
         th {
@@ -56,44 +61,20 @@
     
     <!-- Navigation bar -->
     
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	  <div class="container-fluid">
- <!--       mobile menu to expand-->
-			<div class="navbar-default">
-			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				 <span class="sr-only">Toggle navigation</span>
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
-				 <span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#"><img src="/img/tripblack.png" class="logo-image"></a>
-			</div>
-            <!--  Username and password and navbar links-->
-			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-				 <ul class="nav navbar-nav">
-                    <li><a href="#">Profile</a></li>
-				    <li><a href="#">Tutorial</a></li>
-				    <li><a href="#">Help</a></li>
-				    <li><a href="#">Contact</a></li>
-				    <li><a href="#">About</a></li>
-				 </ul>
-				 <form class="navbar-form navbar-right" role="form">
-					  <button type="submit" class="btn btn-success">Log out</button>
-				 </form>
-			</div><!--/.navbar-collapse -->
-		 </div>
-	  </nav>
+   <!-- include navbar -->
+   <?php $loggedIn = true; ?>
+   <?php include_once "/includes/navbar.php"; ?>
         
     
     <!-- Welcome message -->
-    <hr>
-    <h2>Welcome, name!</h2>
-    <button type="push" class="btn btn-default">Create New Trip</button>
+    <h1>Welcome, name!</h1>
     <hr>
 
     
-    <h3>My trips:</h3>
-    
+    <h3 style="display:inline-flex">My Trips:</h3>
+    <a href="http://triptags.azurewebsites.net/new_create_trip.php">
+    <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
+    </a>
     <div class="row">
         <div class="col-md-3 col-md-2">
             <a href="#" class="thumbnail">
@@ -119,7 +100,6 @@
         
     
     <!-- Select Cover photo for the trip -->
-    <hr>
     <h2>Recently Viewed Trips</h2>
     <hr>
     
