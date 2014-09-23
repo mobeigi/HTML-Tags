@@ -48,8 +48,25 @@
     }
  }
  
+ //Load title for image group
+ function loadTitle(title) {
+    if (typeof title === 'undefined') {
+        title = "";
+    }
+    
+    //Get bottom panel box
+    var titleDiv = document.getElementById("lbc-title");
+    
+    //First childnode is h2 element
+    titleDiv.childNodes[0].innerHTML = title;
+ }
+ 
  //Load description box
  function loadDescription(description) {
+     if (typeof description === 'undefined') {
+        description = "";
+    }
+    
     //Get bottom panel box
     var botPanel = document.getElementById("lbc-bottompanel-box");
     botPanel.innerHTML = '<div id="description"><p>' + description + '</p></div>';
@@ -57,6 +74,10 @@
  
   //Load comments box with static comment for n ow
  function loadComments(commentText) {
+    if (typeof commentText === 'undefined') {
+        commentText = "";
+    }
+    
     var botPanel = document.getElementById("lbc-bottompanel-box");
     if (commentText == "") {
         botPanel.innerHTML = '<div id="comments"><p style="margin-left:0px">There are no comments yet. Why not leave one?</p><br /><textarea id="text-input" rows="1"></textarea><button onclick="loadComments(document.getElementById(\'text-input\').value);">Submit</button></div>';
