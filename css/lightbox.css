@@ -87,7 +87,7 @@ body:after {
 }
 
 .lb-bottompanel {
-  line-height: initial;
+  line-height: 20px;
   width: 75%;
   text-align: left;
 }

@@ -16,7 +16,7 @@
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 				 <ul class="nav navbar-nav">
                       <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
-					       <li><a href="http://triptags.azurewebsites.net/new_profile_page.html">Profile</a></li>
+					       <li><a href="http://triptags.azurewebsites.net/new_profile_page.php">Profile</a></li>
                       <?php } ?>
 					  <li><a href="#">Tutorial</a></li>
 					  <li><a href="#">Help</a></li>
