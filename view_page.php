@@ -59,8 +59,6 @@
         <script src="js/bootstrap.min.js"></script>
         
     <!-- Share link modal window -->
-        
-    <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -70,7 +68,7 @@
           </div>
           <div class="modal-body">
               <p>Give the following link to your friends:</p>
-              <p>http://triptags.azurewebsites.net/view_page.php?trip=19292</p>
+              <input type="text" id="trip_name" value="http://triptags.azurewebsites.net/view_page.php?trip=19292" style="width: 100%; text-align: center" readonly>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -78,5 +76,5 @@
         </div>
       </div>
     </div>
-    </body>
+        
 </html>
