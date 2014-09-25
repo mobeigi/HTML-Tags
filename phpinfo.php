@@ -1,6 +1,6 @@
 <?php
 if(!function_exists('pg_version')) {
-	print 'pg_version not defined';
+	die();
 }
 pg_version();
 ?>
