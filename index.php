@@ -19,9 +19,9 @@
 				<div class="col-lg-2"></div>
 				<!--              <div class="col-lg-10">-->
 				<div class="col-lg-8 input-group">
-					<input type="text" class="form-control text-center" placeholder="Where would you like to see?">
+					<input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Go!</button>
+						<button class="btn btn-default" type="button">Explore!</button>
 					</span>
 				 </div><!-- /input-group -->
 				<div class="col-lg-2"></div>
