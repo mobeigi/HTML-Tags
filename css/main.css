@@ -9,6 +9,10 @@ footer {
     
 }
 
+footer a {
+    color: #FFF;
+}
+
 
 .logo-image {
     position: relative;
