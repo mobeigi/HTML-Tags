@@ -1,7 +1,13 @@
+#featured-trips .container #="map-canvas {
+    border: 2px solid; 
+    width: 960px;
+    height: 520px;
+    margin: 0 auto;
+}
+
 #index_search {
     font-size: 20px;
 }
-
 footer {
     background-color: #313131;
     color: white;

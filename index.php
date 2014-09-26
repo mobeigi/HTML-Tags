@@ -32,7 +32,7 @@
    <section id="featured-trips">
 	  <div class="container">
             <!-- embedded featured public trip -->
-            <div id="map-canvas" style="width: 960px;height: 520px;margin: 0 auto;"></div>
+            <div id="map-canvas"></div>
 			<!-- hidden link block -->
             <div id="hiddenTripTags" style="visibility:hidden;"></div>
             
