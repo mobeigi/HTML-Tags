@@ -46,28 +46,12 @@
 
           </div>
 
-
-<!--   attempt at using flickr to pull in photos
-		 <div ng-controller="flickrController">
-            <div class="col-md-6" ng-repeat="image in images">
-          
-                <center><img src="{{image}}"></center>
-             
-                <br>
-            </div>
-			<form ng-submit="listImages()">
-                <input type="text" style="text-align:center; color:black" placeholder="0" ng-model="numImages"> 
-                <br><br>
-                <button type="submit" class="page-scroll btn btn-xl">Show Me</button>
-                <br><br><br><br>
-            </form>
-		  </div>
--->
 		</div>
-   </section>
+</section>
     <br>
-   <footer>
-	  <p><center>&copy; TripTags 2014</center></p>
-   </footer>
+    
+    <!-- include footer -->
+    <?php include_once "/includes/footer.php"; ?>
+    
 </body>
 </html>
