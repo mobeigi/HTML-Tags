@@ -21,7 +21,7 @@ footer p {
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 100px;
+    width: auto;
     height: 35px;
     margin-left: 5px;
     margin-top: -12px;
