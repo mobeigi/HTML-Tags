@@ -4015,7 +4015,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #85eaff;
+  background-color: #EFEFEF;
   color: #555555;
 }
 @media (max-width: 767px) {
