@@ -8,7 +8,7 @@
 				 <span class="icon-bar"></span>
 				 <span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="/"><img src="/img/tripblack.png" class="logo-image"></a>
+			  <a class="navbar-brand" href="/"><img src="/img/logo/white.png" class="logo-image"></a>
 			</div>
             
             
@@ -16,7 +16,7 @@
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 				 <ul class="nav navbar-nav">
                       <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
-					       <li><a href="#">Profile</a></li>
+					       <li><a href="http://triptags.azurewebsites.net/new_profile_page.php">Profile</a></li>
                       <?php } ?>
 					  <li><a href="#">Tutorial</a></li>
 					  <li><a href="#">Help</a></li>
@@ -25,7 +25,12 @@
 				 </ul>
                  <form class="navbar-form navbar-right" role="form">
                  <?php if (isset($tripViewer) && ($tripViewer == true)) { ?>
-                    <button type="push" class="btn btn-default">Share trip</button>
+                     
+                    <!-- Button trigger share link modal -->
+                    <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                      Share Trip
+                    </button>                     
+                     
                  <?php } ?>
                  <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
 					  <button type="submit" class="btn btn-success">Log out</button>
