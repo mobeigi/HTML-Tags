@@ -45,7 +45,7 @@
     <!-- load tripviewer -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="maps/tripview.js"></script>
+    <script src="js/tripview.js"></script>
     
      <!-- lightbox -->
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
