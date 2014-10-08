@@ -1,18 +1,9 @@
-
-    <!DOCTYPE html >
+<!DOCTYPE html >
 <html lang="en" ng-app="viewPageApp">
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- <title>TripTags</title>
- <meta name="description" content="">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--      bootstrap css-->
- <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--      custom css -->
- <link rel="stylesheet" href="css/main.css">
-<!--    fonts       -->
- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<title>TripTags</title>
+<!-- include header -->
+<?php include_once "/includes/header.php"; ?>
 </head>
 
 <body>
@@ -28,9 +19,9 @@
 				<div class="col-lg-2"></div>
 				<!--              <div class="col-lg-10">-->
 				<div class="col-lg-8 input-group">
-					<input type="text" class="form-control text-center" placeholder="Where would you like to see?">
+					<input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Go!</button>
+						<button class="btn btn-default" type="button">Explore!</button>
 					</span>
 				 </div><!-- /input-group -->
 				<div class="col-lg-2"></div>
@@ -40,49 +31,27 @@
  </div>
    <section id="featured-trips">
 	  <div class="container">
-			<br>
+            <!-- embedded featured public trip -->
+            <div id="map-canvas"></div>
+			<!-- hidden link block -->
+            <div id="hiddenTripTags" style="visibility:hidden;"></div>
+            
+            <br>
 			<h1 class="text-left">Featured Trips:</h1>
             <br>
           <div class="row">
             <div class="col-lg-4 text-center"> <img src="img/homepage_featured/canada.jpg"><p>Calm and comforting Canada</p></div>
             <div class="col-lg-4 text-center"> <img src="img/homepage_featured/japan.jpg"><p>Journeying through joyous Japan</p> </div>
-            <div class="col-lg-4 text-center"><img src="img/homepage_featured/england.jpg">Exlporing the wonders of elderly England </div>
+            <div class="col-lg-4 text-center"><img src="img/homepage_featured/england.jpg">Exploring the wonders of elderly England </div>
 
           </div>
 
-
-<!--   attempt at using flickr to pull in photos
-		 <div ng-controller="flickrController">
-            <div class="col-md-6" ng-repeat="image in images">
-          
-                <center><img src="{{image}}"></center>
-             
-                <br>
-            </div>
-			<form ng-submit="listImages()">
-                <input type="text" style="text-align:center; color:black" placeholder="0" ng-model="numImages"> 
-                <br><br>
-                <button type="submit" class="page-scroll btn btn-xl">Show Me</button>
-                <br><br><br><br>
-            </form>
-		  </div>
--->
 		</div>
-   </section>
+</section>
     <br>
-   <footer>
-	  <p><center>&copy; TripTags 2014</center></p>
-   </footer>   
-
- <!--       scripts              -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
-	<script type="text/javascript" src="flickrjs.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-<!--    tripview script -->
-    <script src="maps/tripview.js"></script>
+    
+    <!-- include footer -->
+    <?php include_once "/includes/footer.php"; ?>
+    
 </body>
 </html>

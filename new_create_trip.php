@@ -134,43 +134,10 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2>
-    <button style="float:right;margin-top:45px;"type="push" class="btn btn-default" data-toggle="modal" data-target="#importImGroup">Import Image Group</button>
-    
-    <!-- Import Image Group modal window -->
-    <div class="modal fade" id="importImGroup" tabindex="-1" role="dialog" aria-labelledby="importImGroupLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="importImGroupLabel">Import Image Group</h4>
-      </div>
-      <div class="modal-body">
-         <form class="form-inline" role="form">
-          <div class="form-group">
-            <label for="imGroupSource">Choose a source:</label>
-            <input class="form-control" id="email">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd">
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox"> Remember me</label>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success" data-dismiss="modal">Import</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+    <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
     
-        <div class="row" align="center">
+        <div class="row">
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
                     <img src="./img/featured1/1.jpg">
