@@ -2,17 +2,10 @@
 <!DOCTYPE html >
 <html lang="en" ng-app>
   <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>TripTags</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--      bootstrap css-->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--      custom css -->
-        <link rel="stylesheet" href="css/main.css">
-<!--    fonts       -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+        <?php include_once("includes/header.php"); ?>
+       
         <style>
             body {
                 padding-top: 50px;
@@ -30,28 +23,6 @@
       width: 100%;
       }
     </style>
-        
-        
-    <!--       scripts              -->
-     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
-    <script type="text/javascript" src="flickrjs.js"></script> 
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-        
-        
-    <!-- load tripviewer -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/tripview.js"></script>
-    
-     <!-- lightbox -->
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script src="maps/imagegroupview.js"></script>
-    <link href="css/lightbox.css" rel="stylesheet" />
 
   </head>
     
