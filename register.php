@@ -7,6 +7,10 @@
     <meta charset="utf-8">
 
     <title>Register</title>
+    
+    <!-- include header -->
+    <?php include_once "/includes/header.php"; ?>
+    </head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,47 +29,36 @@
     <!-- Import the bootstrap files -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
-<div class="container">
-    
-   <!-- include navbar -->
+       
+    <!-- include navbar -->
    <?php $loggedIn = true; ?>
    <?php include_once "/includes/navbar.php"; ?>
     
-    <!-- User input for the trip details -->
-    <h2>Register</h2> 
+<div class="container"> 
+    <!-- Heading -->
+    <h2>Register</h2>
     <hr>
-  
-    <table id = "tripdetails">
-    <tbody><tr>
-    <td class="col1">
-    <label>Trip Name:</label></td>
-    <td class="col2">
-    <input type="text" id="trip_name" placeholder="" class="form-control" style="
-    display: inline-block;
-    "></td>
-    </tr>
-    <tr>
-    <td class="col1">
-    <label>Trip comments:</label></td>
-    <td class="col2">
-    <textarea rows="5" class="form-control"></textarea> </td>
-    </tr>
-    <tr>
-    <td class="col1">
-    <label>Can be viewed by:</label></td>
-    <td class="col2">
-        <select class="form-control" style="width: 150px;">
-        <option value="everyone">Everyone</option>
-        <option value="friends" selected="selected" >Friends</option>
-        <option value="onlyme">Only Me</option>
-        </select>
-    </tr>
-    </tbody>
-    </table>
-        
+    
+<form role="form">
+    <div class="form-group">
+        <label for="userEmail">Email address</label>
+        <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="userPassword">Password</label>
+        <input type="password" name="userPassword" class="form-control" id="userPassword" placeholder="Password">
+    </div>
 
+    <div class="row" align="right" style="margin-bottom: 12px;">
+        <button type="submit" name="cancel" class="btn btn-default">Cancel</button>
+        <button type="submit" name="register" class="btn btn-success">Register</button>
+    </div>
+</form>
+        
 </div>
+    
+<!-- include footer -->
+<?php include_once "/includes/footer.php"; ?>
 
 </body>
 
