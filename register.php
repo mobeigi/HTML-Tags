@@ -29,12 +29,20 @@
     <!-- Import the bootstrap files -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-       
+    
+<div class="container"> 
     <!-- include navbar -->
    <?php $loggedIn = true; ?>
    <?php include_once "/includes/navbar.php"; ?>
     
-<div class="container"> 
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8"></div>
+
+        <div class="col-lg-2"></div>
+    </div>
+    
     <!-- Heading -->
     <h2>Register</h2>
     <hr>
@@ -56,9 +64,6 @@
 </form>
         
 </div>
-    
-<!-- include footer -->
-<?php include_once "/includes/footer.php"; ?>
 
 </body>
 
