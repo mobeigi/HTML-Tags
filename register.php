@@ -1,6 +1,7 @@
 <!-- Code to process the form -->
 <?php
     $userEmail = $_POST['userEmail'];
+    print($userEmail);
 
     $connection_string = "user=azureuser password=RLSfTv3Ewx";
     $connection_string .= " host=23.102.176.176";
@@ -60,7 +61,7 @@
     <h2>Register</h2>
     <hr>
     
-<form role="form" action="register.php">
+<form role="form" action="register.php" method="post">
     <div class="form-group">
         <label for="userEmail">Email address</label>
         <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
