@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="css/main.css">
 <!--    font to be used for the web page (Open Sans)-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+        }
+        
         
     </style>
 
