@@ -2,7 +2,7 @@
 <?php
     $userEmail = $_POST['userEmail'];
 
-    $connection_string = "user=azureuser password=YJ7dMgOCPSsM1dI";
+    $connection_string = "user=azureuser password=RLSfTv3Ewx";
     $connection_string .= " host=23.102.176.176";
     $connection_string .= " port=5432";
     $connection_string .= " dbname=test";
