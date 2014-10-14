@@ -32,16 +32,7 @@
     
 <div class="container"> 
     <!-- include navbar -->
-   <?php $loggedIn = true; ?>
-   <?php include_once "/includes/navbar.php"; ?>
-    
-    <div class="row">
-        <div class="col-lg-2"></div>
-
-        <div class="col-lg-8"></div>
-
-        <div class="col-lg-2"></div>
-    </div>
+    <?php include_once "/includes/navbar.php"; ?>
     
     <!-- Heading -->
     <h2>Register</h2>
