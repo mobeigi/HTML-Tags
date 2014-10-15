@@ -9,7 +9,7 @@ if(!function_exists('pg_connect')) {
 $host = '20.102.176.176';
 $username = 'azureuser';
 $database = 'test';
-$password = 'YJ7dMgOCPSsM1dI';
+$password = 'RLSfTv3Ewx';
 $port = '5432';
 $pg->_pg_connect($host, $username, $password, $database, $port);
 
