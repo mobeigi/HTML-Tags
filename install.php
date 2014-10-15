@@ -31,7 +31,7 @@ $pg->_pg_query($query);
 $query = '
 CREATE TABLE image_groups (
 	group_id serial PRIMARY KEY, 
-	trip_id varchar(10) REFERENCES trips(trip_id) NOT NULL,	
+	trip_id integer REFERENCES trips(trip_id) NOT NULL,	
 	name varchar(64) NOT NULL,
 	longitude float(10) NOT NULL,
 	latitude float(10) NOT NULL
@@ -41,19 +41,19 @@ $pg->_pg_query($query);
 $query = '
 CREATE TABLE images (
 	image_id serial PRIMARY KEY,
-	group_id varchar(10) REFERENCES image_groups(group_id),
+	group_id integer REFERENCES image_groups(group_id),
 	description varchar(256)
 )';
 $pg->_pg_query($query);
-$query = 'ALTER TABLE trips ADD COLUMN cover_image varchar(10) REFERENCES images(image_id)';
+$query = 'ALTER TABLE trips ADD COLUMN cover_image integer REFERENCES images(image_id)';
 $pg->_pg_query($query);
-$query = 'ALTER TABLE image_groups ADD COLUMN cover_image varchar(10) REFERENCES images(image_id)';
+$query = 'ALTER TABLE image_groups ADD COLUMN cover_image integer REFERENCES images(image_id)';
 $pg->_pg_query($query);
 // INSERT INTO comments (comment_id, image_id) VALUES ($?)
 $query = '
 CREATE TABLE comments (
 	comment_id serial PRIMARY KEY,
-	image_id varchar(10) REFERENCES images(image_id)
+	image_id integer REFERENCES images(image_id)
 )';
 $pg->_pg_query($query);
 // INSERT INTO users (user_id, user_email, user_name, user_password, profile_picture) VALUES ($?)
@@ -63,9 +63,9 @@ CREATE TABLE users (
 	user_email varchar(64),
 	user_name varchar(64),
 	user_password varchar(64),
-	profile_picture varchar(10) REFERENCES images (image_id)
+	profile_picture integer REFERENCES images (image_id)
 )';
 $pg->_pg_query($query);
-$query = 'ALTER TABLE trips ADD COLUMN owner_id varchar(10) REFERENCES users(user_id)';
+$query = 'ALTER TABLE trips ADD COLUMN owner_id integer REFERENCES users(user_id)';
 $pg->_pg_query($query);
 ?>
