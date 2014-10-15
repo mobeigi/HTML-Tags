@@ -25,7 +25,7 @@ $query = '
 CREATE TABLE trips (
 	trip_id varchar(10) PRIMARY KEY,
 	name varchar(64) NOT NULL,
-	description varchar(256),
+	description varchar(256)
 )';
 $pg->_pg_query($query);
 $query = '
