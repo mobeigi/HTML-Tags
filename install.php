@@ -6,6 +6,11 @@ $pg = new postgres();
 if(!function_exists('pg_connect')) {
 	return false;
 }
+$host = '20.102.176.176';
+$username = 'azureuser';
+$database = 'test';
+$password = 'YJ7dMgOCPSsM1dI';
+$port = '5432';
 $pg->_pg_connect($host, $username, $password, $database, $port);
 
 if(!function_exists('pg_query')) {
@@ -14,12 +19,13 @@ if(!function_exists('pg_query')) {
 $pg->_pg_query('DROP TABLE IF EXISTS images');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups');
 $pg->_pg_query('DROP TABLE IF EXISTS trips');
+$pg->_pg_query('DROP TABLE IF EXISTS users');
 
 $query = '
 CREATE TABLE trips (
 	trip_id varchar(10) PRIMARY KEY,
 	name varchar(64) NOT NULL,
-	description varchar(256)
+	description varchar(256),
 )';
 $pg->_pg_query($query);
 $query = '
@@ -47,5 +53,16 @@ CREATE TABLE comments (
 	comment_id varchar(10) PRIMARY KEY,
 	image_id varchar(10) REFERENCES images(image_id)
 )';
+$pg->_pg_query($query);
+$query = '
+CREATE TABLE users (
+	user_id varchar(10) PRIMARY KEY,
+	user_email varchar(64),
+	user_name varchar(64),
+	user_password varchar(64),
+	profile_picture varchar(10) REFERENCES images (image_id)
+)';
+$pg->_pg_query($query);
+$query('ALTER TABLE trips ADD COLUMNS owner_id varchar(10) REFERENCES users(user_id)');
 $pg->_pg_query($query);
 ?>
