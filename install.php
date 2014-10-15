@@ -6,7 +6,7 @@ $pg = new postgres();
 if(!function_exists('pg_connect')) {
 	return false;
 }
-$host = '20.102.176.176';
+$host = '23.102.176.176';
 $username = 'azureuser';
 $database = 'test';
 $password = 'RLSfTv3Ewx';
@@ -63,6 +63,6 @@ CREATE TABLE users (
 	profile_picture varchar(10) REFERENCES images (image_id)
 )';
 $pg->_pg_query($query);
-$query('ALTER TABLE trips ADD COLUMNS owner_id varchar(10) REFERENCES users(user_id)');
+$query('ALTER TABLE trips ADD COLUMN owner_id varchar(10) REFERENCES users(user_id)');
 $pg->_pg_query($query);
 ?>
