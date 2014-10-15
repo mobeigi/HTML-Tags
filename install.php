@@ -16,10 +16,10 @@ $pg->_pg_connect($host, $username, $password, $database, $port);
 if(!function_exists('pg_query')) {
 	return false;
 }
-$pg->_pg_query('DROP TABLE IF EXISTS images');
-$pg->_pg_query('DROP TABLE IF EXISTS image_groups');
-$pg->_pg_query('DROP TABLE IF EXISTS trips');
-$pg->_pg_query('DROP TABLE IF EXISTS users');
+$pg->_pg_query('DROP TABLE IF EXISTS users CASCADE');
+$pg->_pg_query('DROP TABLE IF EXISTS images CASCADE');
+$pg->_pg_query('DROP TABLE IF EXISTS image_groups CASCADE');
+$pg->_pg_query('DROP TABLE IF EXISTS trips CASCADE');
 
 $query = '
 CREATE TABLE trips (
