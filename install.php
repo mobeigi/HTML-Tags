@@ -63,6 +63,6 @@ CREATE TABLE users (
 	profile_picture varchar(10) REFERENCES images (image_id)
 )';
 $pg->_pg_query($query);
-$query('ALTER TABLE trips ADD COLUMN owner_id varchar(10) REFERENCES users(user_id)');
+$query = 'ALTER TABLE trips ADD COLUMN owner_id varchar(10) REFERENCES users(user_id)';
 $pg->_pg_query($query);
 ?>
