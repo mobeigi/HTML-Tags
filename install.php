@@ -20,6 +20,7 @@ $pg->_pg_query('DROP TABLE IF EXISTS users CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS images CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS trips CASCADE');
+$pg->_pg_query('DROP TABLE IF EXISTS comments CASCADE');
 
 $query = '
 CREATE TABLE trips (
