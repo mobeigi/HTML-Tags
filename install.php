@@ -17,6 +17,7 @@ $pg->_pg_query('DROP TABLE IF EXISTS images CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS trips CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS comments CASCADE');
+$pg->_pg_query('DROP TABLE IF EXISTS users CASCADE');
 // $pg_connect_id = pg_connect($connection_string);
 // $query = "INSERT INTO trips (trip_id, name, description, owner_id, cover_image) VAlUES ($1, $2, $3, $4, $5)"
 // pg_query_params($pg_connect_id, $query, $var1 ... $varn);
