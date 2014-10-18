@@ -5,7 +5,7 @@
 */
 
 //Ensure source is not empty
-if(isset($src)) {
+if(!isset($src)) {
   $errorMessage .= "<li>Example error.</li>";
   exit(1);
 }
