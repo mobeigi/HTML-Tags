@@ -9,7 +9,7 @@ $src = $_POST['source'];
 $errorMessage = "";
 
 //Ensure source is not empty
-if(!isset(src)) {
+if(empty(src)) {
   $errorMessage .= "<li>Example error.</li>";
 }
 
