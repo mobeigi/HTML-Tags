@@ -156,7 +156,7 @@
             <button type="push" class="btn btn-default">Upload an image</button>
         </div> 
             <a href="#" class="thumbnail" style="width: 160px; margin: 0 auto;margin-bottom: 15px;">
-                <img src="./img/create_image_group_icon.png">
+                <img src="./img/create_image_group_icon.jpg">
             </a>
 
     <!-- Finalisation buttons -->
@@ -216,7 +216,7 @@
               if ($('#image_group_name').val() != "" &&
                   $('#image_group_location').val() ) {
                   
-              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
+              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
               
