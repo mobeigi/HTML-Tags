@@ -110,7 +110,7 @@
     <td class="col1">
     <label>Trip Name:</label></td>
     <td class="col2">
-    <input type="text" id="trip_name" placeholder="" class="form-control" style="
+    <input type="text" id="trip_name" name="trip_name" placeholder="" class="form-control" style="
     display: inline-block;
     "></td>
     </tr>
@@ -213,7 +213,7 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="text" id="trip_name" name="trip_name" placeholder="" class="form-control" style="
+            <input type="text" id="trip_name" placeholder="" class="form-control" style="
             display: inline-block;
             "></td>
             <td class="col3" align="center">
