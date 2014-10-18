@@ -15,7 +15,7 @@ if(empty(src)) {
 
 //Switch through different valid sources
 switch($src) {
-case "create_trip"
+case "create_trip":
   echo "test1";
   break;
   
