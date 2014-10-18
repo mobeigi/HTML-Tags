@@ -4,15 +4,16 @@
 * 
 */
 
-//Find source of form
-$src = $_POST['source'];
 $errorMessage = "";
 
 //Ensure source is not empty
-if(!isset($src)) {
+if(!isset($_POST['source'])) {
   $errorMessage .= "<li>Example error.</li>";
   exit(1);
 }
+
+//Find source of form
+$src = $_POST['source'];
 
 //Switch through different valid sources
 switch($src) {
