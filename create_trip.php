@@ -139,22 +139,7 @@
     <hr>
     <p id ="image_group_error" class="error" ></p>
         <div id="image_groups" class="row">
-            <div class="col-md-3 col-md-2">
-                <a href="#" class="thumbnail">
-                    <img src="./img/featured1/1.jpg">
-                </a>
-            </div>            
-            <div class="col-md-3 col-md-2">
-                <a href="#" class="thumbnail">
-                    <img src="./img/featured1/2.jpg">
-                </a>
-            </div>            
-            <div class="col-md-3 col-md-2">
-                <a href="#" class="thumbnail">
-                    <img src="./img/featured1/3.jpg">
-                </a>
-            </div>              
-            <div class="col-md-3 col-md-2">
+            <div id="create_image_group_block" class="col-md-3 col-md-2">
                     <a href="#crImageGroupModal" role="button" data-toggle="modal" class="thumbnail">   
                         <img src="./img/create_image_group_icon.png">
                     </a>
@@ -230,7 +215,8 @@
             $("#create_image_group_btn").click(function(){
               if ($('#image_group_name').val() != "" &&
                   $('#image_group_location').val() ) {
-              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
+                  
+              $("#create_image_group_block").insertBefore("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
               
@@ -246,10 +232,6 @@
               else {
               $('#image_group_error').text("Error adding image group. Some required data was missing, please try again.");
               }
-            });
-            
-            $("#create_image_group_btn").click(function(){
-            
             });
             
           });
