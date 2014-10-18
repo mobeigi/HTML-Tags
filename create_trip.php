@@ -104,6 +104,7 @@
     <h2>Trip Details</h2> 
     <hr>
   
+    <form action="/functions/form_processor.php" method="post">
     <table id = "tripdetails">
     <tbody><tr>
     <td class="col1">
@@ -176,7 +177,7 @@
     <!-- Finalisation buttons -->
     <div class="row" align="right" style="margin-bottom: 12px;">
         <button type="push" class="btn">Cancel</button>
-        <button type="push" class="btn btn-success">Save Trip</button>
+        <button type="submit" class="btn btn-success">Save Trip</button>
         <button type="push" class="btn btn-success">Preview Trip</button>
     </div>  
     
@@ -230,6 +231,8 @@
         </div>
       </div>
     </div>
+    
+    </form>
     
 </div>
 
