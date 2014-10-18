@@ -7,7 +7,7 @@
 //Ensure source is not empty
 if(isset($src)) {
   $errorMessage .= "<li>Example error.</li>";
-  exit 1;
+  exit(1);
 }
 
 //Find source of form
