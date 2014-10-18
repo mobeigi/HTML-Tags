@@ -116,15 +116,15 @@
     </tr>
     <tr>
     <td class="col1">
-    <label>Trip comments:</label></td>
+    <label>Trip Description:</label></td>
     <td class="col2">
-    <textarea rows="5" class="form-control"></textarea> </td>
+    <textarea name="trip_desc" rows="5" class="form-control"></textarea> </td>
     </tr>
     <tr>
     <td class="col1">
     <label>Can be viewed by:</label></td>
     <td class="col2">
-        <select class="form-control" style="width: 150px;">
+        <select name="trip_privacy" class="form-control" style="width: 150px;">
         <option value="everyone">Everyone</option>
         <option value="friends" selected="selected" >Friends</option>
         <option value="onlyme">Only Me</option>
