@@ -22,6 +22,8 @@ $src = $_POST['source'];
 
 //Switch through different valid sources
 switch($src) {
+
+//Create Trip Page
 case "create_trip":
   //Collect variables
   $tripName = $_POST['trip_name'];
