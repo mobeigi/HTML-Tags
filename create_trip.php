@@ -137,6 +137,8 @@
     <h2 style="display:inline-flex">Image Groups</h2>
     <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
+    <p id ="image_group_error"></p>
+    
         <div id="image_groups" class="row">
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
@@ -226,6 +228,8 @@
           <script>
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
+              if ($('#image_group_name').val() != "" &&
+                  $('#image_group_location').val() ) {
               $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
@@ -233,6 +237,15 @@
               //Clear Image contents
               $('#image_group_name').val("");
               $('#image_group_location').val("");
+              
+              //Clear previous errors
+              $('#image_group_error').text("");
+              
+              }
+              //Show error
+              else {
+              $('#image_group_error').text("Error adding image group. Some required data was missing, please try again.");
+              }
             });
             
             $("#create_image_group_btn").click(function(){
