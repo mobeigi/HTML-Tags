@@ -226,14 +226,19 @@
           <script>
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
-              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a></div><input type=\"hidden\" name=\"image_group_name\" value=\"" 
-              + $('#image_group_name').val() + "\" /><input type=\"hidden\" name=\"image_group_location\" value=\"" 
-              + $('#image_group_location').val() + "\" />");
+              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
+              + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
+              + $('#image_group_location').val() + "\" /></div>");
               
               //Clear Image contents
               $('#image_group_name').val("");
               $('#image_group_location').val("");
             });
+            
+            $("#create_image_group_btn").click(function(){
+            
+            });
+            
           });
           </script>
           
