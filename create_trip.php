@@ -103,7 +103,7 @@
     <!-- User input for the trip details -->
     <h2>Trip Details</h2> 
     <hr>
-  
+    
     <form action="/functions/form_processor.php" method="post">
     <table id = "tripdetails">
     <tbody><tr>
@@ -137,8 +137,7 @@
     <h2 style="display:inline-flex">Image Groups</h2>
     <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
-    
-        <div class="row">
+        <div id="image_groups" class="row">
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
                     <img src="./img/featured1/1.jpg">
@@ -201,7 +200,7 @@
             <td class="col1">
             <label>Image Group Name:</label></td>
             <td class="col2">
-            <input type="text" id="trip_name" placeholder="" class="form-control" style="
+            <input type="text" id="image_group_name" placeholder="" class="form-control" style="
             display: inline-block;
             "></td>
             </tr>
@@ -213,7 +212,7 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="text" id="trip_name" placeholder="" class="form-control" style="
+            <input type="text" id="image_group_location" placeholder="" class="form-control" style="
             display: inline-block;
             "></td>
             <td class="col3" align="center">
@@ -222,12 +221,21 @@
             </tr>
             </tbody>
             </table>
-
-              
           </div>
+          
+          <script>
+          $(document).ready(function(){
+            $("#create_image_group_btn").click(function(){
+              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#crImageGroupModal\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img src=\"./img/create_image_group_icon.png\"></a></div><input type=\"hidden\" name=\"image_group_name\" value=\"" 
+              + $('#image_group_name').val() + "\" /><input type=\"hidden\" name=\"image_group_location\" value=\"" 
+              + $('#image_group_location').val() + "\" />");
+            });
+          });
+          </script>
+          
           <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-success" data-dismiss="modal">Create</button>
+              <button type="button" id="create_image_group_btn" class="btn btn-success" data-dismiss="modal">Create</button>
           </div>
         </div>
       </div>

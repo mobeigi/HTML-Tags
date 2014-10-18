@@ -33,15 +33,15 @@ case "create_trip":
   //Validate data
   if(empty($tripName)) {
       $errorMessage .= "<li>You forgot to enter a trip name.</li>";
-      //exit(1);
+      exit(1);
    }
   if(empty($tripDesc)) {
     $errorMessage .= "<li>You forgot to enter a description.</li>";
-    //exit(1);
+    exit(1);
   }
   if(empty($tripPrivacy)) {
     $errorMessage .= "<li>You forgot to select a privacy level.</li>";
-    //exit(1);
+    exit(1);
   }
   
   //Test output
