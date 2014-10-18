@@ -226,7 +226,7 @@
           <script>
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
-              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#crImageGroupModal\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img src=\"./img/featured1/2.jpg\"></a></div><input type=\"hidden\" name=\"image_group_name\" value=\"" 
+              $("#image_groups").append("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/featured1/3.jpg\"></a></div><input type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" />");
               
