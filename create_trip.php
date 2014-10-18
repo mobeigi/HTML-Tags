@@ -141,7 +141,7 @@
         <div id="image_groups" class="row">
             <div id="create_image_group_block" class="col-md-3 col-md-2">
                     <a href="#crImageGroupModal" role="button" data-toggle="modal" class="thumbnail">   
-                        <img src="./img/create_image_group_icon.png">
+                        <img src="./img/create_image_group.jpg">
                     </a>
             </div>            
         </div>
@@ -156,7 +156,7 @@
             <button type="push" class="btn btn-default">Upload an image</button>
         </div> 
             <a href="#" class="thumbnail" style="width: 160px; margin: 0 auto;margin-bottom: 15px;">
-                <img src="./img/create_image_group_icon.jpg">
+                <img src="./img/create_image_group.jpg">
             </a>
 
     <!-- Finalisation buttons -->
