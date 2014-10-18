@@ -137,8 +137,7 @@
     <h2 style="display:inline-flex">Image Groups</h2>
     <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
-    <p id ="image_group_error"></p>
-    
+    <p id ="image_group_error" class="error" ></p>
         <div id="image_groups" class="row">
             <div class="col-md-3 col-md-2">
                 <a href="#" class="thumbnail">
@@ -225,6 +224,7 @@
             </table>
           </div>
           
+          <!-- Script to add image groups to form for processing -->
           <script>
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){

@@ -1,21 +1,26 @@
+.error {
+  color: #F00;
+  font-weight: bold;
+}
+
 #featured-trips .container #map-canvas {
-    border: 2px solid; 
-    width: 960px;
-    height: 520px;
-    margin: 0 auto;
+  border: 2px solid; 
+  width: 960px;
+  height: 520px;
+  margin: 0 auto;
 }
 
 #index_search {
-    font-size: 20px;
+  font-size: 20px;
 }
 footer {
-    background-color: #313131;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-top: 3px solid;
-    border-top-color: #C4C4C4;
-    text-decoration: none;
+  background-color: #313131;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 3px solid;
+  border-top-color: #C4C4C4;
+  text-decoration: none;
     
 }
 footer a {
@@ -26,28 +31,28 @@ footer p {
 }
 
 .logo-image {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: auto;
-    height: 35px;
-    margin-left: 5px;
-    margin-top: -12px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: auto;
+  height: 35px;
+  margin-left: 5px;
+  margin-top: -12px;
 }
 .concept{
-    height: 200px;
-    position: relative;
+  height: 200px;
+  position: relative;
 }
 .welcome, h1{
-    text-align: center;
+  text-align: center;
 }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-    font-family: 'Open Sans', sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  font-family: 'Open Sans', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
