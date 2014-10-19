@@ -10,10 +10,10 @@ print_r($rows);
 for($i=0;$i!=$num_rows;$i++){
 	print '<tr><td>';
 	print $row[$i]['name'];
-	print '</td><td>'
+	print '</td><td>';
 	print $row[$i]['description'];
-	print '</td><td>'
+	print '</td><td>';
 	print $row[$i]['privacy'];
-	print '</td></tr>'
+	print '</td></tr>';
 }
 ?>
