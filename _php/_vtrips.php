@@ -6,7 +6,7 @@ print '<table><tr>';
 print '<td>name</td>';
 print '<td>desc</td>';
 print '<td>privacy</td>';
-foreach ($i as $rows) {
+foreach ($rows as $i) {
 	print "<tr>";
 	print "<td>$row[$i][0]</td>";
 	print "<td>$row[$i][1]</td>";
