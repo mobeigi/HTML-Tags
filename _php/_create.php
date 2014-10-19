@@ -13,6 +13,6 @@ print $trip_privacy;
 $query = 'INSERT INTO trips (name, description, privacy) VALUES ($1, $2, $3)';
 $pg->_pg_transaction('begin');
 $result = $pg->_pg_query($query, $trip_name, $trip_description, $trip_privacy);
-if(!$result) $pg->transaction('rollback');
+print $result;
 $pg->_pg_transaction('commit');
 ?>
