@@ -45,6 +45,9 @@ class postgres {
 	public function _pg_fetch_all($result) {
 		return @pg_fetch_all($this->pg_connect_id, $result);
 	}
+	public function _pg_num_rows($result) {
+		return @pg_num_rows($this->pg_connect_id, $result);
+	}
 	// _pg_query($query, $arg1 .. $argn)
 	public function _pg_query($query) {
 		if(func_num_args() == 1)
