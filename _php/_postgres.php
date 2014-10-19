@@ -43,7 +43,7 @@ class postgres {
 		return pg_fetch_row($this->pg_connect_id, $query);
 	}
 	public function _pg_fetch_all($result) {
-		return pg_fetch_all($this->pg_connect_id, $result);
+		return pg_fetch_all($result);
 	}
 	public function _pg_num_rows($result) {
 		return pg_num_rows($this->pg_connect_id, $result);
