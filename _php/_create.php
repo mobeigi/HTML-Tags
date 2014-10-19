@@ -10,12 +10,9 @@ print $trip_name;
 print $trip_description;
 print $trip_privacy;
 
-return false
-/* 
 $query = 'INSERT INTO trips (name, description, privacy) VALUES ($1, $2, $3)';
 $pg->_pg_transaction('begin');
 $result = $pg->_pg_query($query, $trip_name, $trip_description, $trip_privacy);
 if(!$result) $pg->transaction('rollback');
 $pg->_pg_transaction('commit');
-*/
 ?>
