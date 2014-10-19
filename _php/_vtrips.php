@@ -1,8 +1,10 @@
 <?php
 include('_session.php');
 $result = $pg->_pg_query('SELECT * FROM trips');
+if(!$result) print 'something went wrong';
 $rows = $pg->_pg_fetch_all($result);
 $num_rows = $pg->_pg_num_rows($result);
+print $num_rows;
 print '<table border=0 margin=0><tr>';
 print '<td>name</td>';
 print '<td>desc</td>';
