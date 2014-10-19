@@ -9,6 +9,8 @@ print '<table border=0 margin=0><tr>';
 print '<td>name</td>';
 print '<td>desc</td>';
 print '<td>privacy</td>';
+
+print $rows;
 for($i = 0; $i != $num_rows; $i++) {
 	print "<tr>";
 	print "<td>$rows[$i][0]</td>";
