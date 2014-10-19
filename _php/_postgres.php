@@ -40,13 +40,13 @@ class postgres {
 		return true;
 	}
 	public function _pg_fetch_row($result) {
-		return @pg_fetch_row($this->pg_connect_id, $query);
+		return pg_fetch_row($this->pg_connect_id, $query);
 	}
 	public function _pg_fetch_all($result) {
-		return @pg_fetch_all($this->pg_connect_id, $result);
+		return pg_fetch_all($this->pg_connect_id, $result);
 	}
 	public function _pg_num_rows($result) {
-		return @pg_num_rows($this->pg_connect_id, $result);
+		return pg_num_rows($this->pg_connect_id, $result);
 	}
 	// _pg_query($query, $arg1 .. $argn)
 	public function _pg_query($query) {
