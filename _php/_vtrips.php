@@ -10,7 +10,7 @@ print '<td>name</td>';
 print '<td>desc</td>';
 print '<td>privacy</td>';
 
-print_r $rows;
+print_r($rows);
 for($i = 0; $i != $num_rows; $i++) {
 	print "<tr>";
 	print "<td>$rows[$i][0]</td>";
