@@ -13,7 +13,8 @@ $query = '
 CREATE TABLE trips (
 	trip_id serial PRIMARY KEY,
 	name varchar(64) NOT NULL,
-	description varchar(256)
+	description varchar(256),
+	privacy integer
 )';
 $pg->_pg_query($query);
 // INSERT INTO image_groups(group_id, trip_id, name, longitude, latitude, cover_image) VALUES ($?)
