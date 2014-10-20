@@ -1,6 +1,7 @@
 <?php
 include ('_session.php');
 
+if(!isset($_SESSION['user_id'])) header('location: http://triptags.azurewebsites.net/');
 if(empty($_POST['trip_name'])) return false;
 $trip_name = $_POST['trip_name'];
 $trip_description = $_POST['trip_desc'];
