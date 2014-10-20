@@ -2,16 +2,14 @@
 if (isset($_POST['submitbtn'])) {
     $j = 0; //Variable for indexing uploaded image 
     
-    $target_path = "uploads/"; //Declaring Path for uploaded images
+    $upload_dir = "uploads/"; //Declaring Path for uploaded images
     for ($i = 0; $i < count($_FILES['file']['name']); $i++) {//loop to get individual element from the array
 
         $validextensions = array("jpeg", "jpg", "png");  //Extensions which are allowed
         $ext = explode('.', basename($_FILES['file']['name'][$i]));//explode file name from dot(.) 
         $file_extension = end($ext); //store extensions in the variable
         
-        echo $_FILES['file']['name'][$i] . "|";
-        
-		$target_path = $target_path . md5(uniqid()) . "." . $ext[count($ext) - 1];//set the target path with a new name of image
+		$target_path = $upload_dir . md5(uniqid()) . "." . $ext[count($ext) - 1];//set the target path with a new name of image
         $j = $j + 1;//increment the number of uploaded images according to the files in array       
       
 	  if (in_array($file_extension, $validextensions)) {
