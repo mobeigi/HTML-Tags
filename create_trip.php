@@ -91,6 +91,7 @@
     
     <!-- file upload -->
     <script src="js/jquery.fileuploadmulti.min.js"></script>
+    <link href="css/uploadfilemulti.css" rel="stylesheet">
 </head>
 
 <body>
