@@ -1,35 +1,28 @@
 <?php
-$output_dir = "uploads/";
-
-if(isset($_FILES["imagefile"]))
-{
-	$ret = array();
-  
-	$error =$_FILES["imagefile"]["error"];
-  
-	//You need to handle  both cases
-	//If Any browser does not support serializing of multiple files using FormData() 
-  
-	if(!is_array($_FILES["imagefile"]["name"])) //single file
-	{
- 	 	$fileName = $_FILES["imagefile"]["name"];
- 		move_uploaded_file($_FILES["imagefile"]["tmp_name"],$output_dir.$fileName);
-    	$ret[]= $fileName;
-	}
-	else  //Multiple files, file[]
-	{
-	  $fileCount = count($_FILES["imagefile"]["name"]);
-	  for($i=0; $i < $fileCount; $i++)
-	  {
-	  	$fileName = $_FILES["imagefile"]["name"][$i];
-		move_uploaded_file($_FILES["imagefile"]["tmp_name"][$i],$output_dir.$fileName);
-	  	$ret[]= $fileName;
-	  }
-	
-	}
-    echo json_encode($ret);
- }
- 
- exit();
- 
+if (isset($_POST['submitbtn'])) {
+    $j = 0; //Variable for indexing uploaded image 
+    
+	$upload_dir = "uploads/"; //Declaring Path for uploaded images
+    for ($i = 0; $i < count($_FILES['file']['name']); $i++) {//loop to get individual element from the array
+       
+       $validextensions = array("jpeg", "jpg", "png");  //Extensions which are allowed
+        $ext = explode('.', basename($_FILES['file']['name'][$i]));//explode file name from dot(.) 
+        $file_extension = end($ext); //store extensions in the variable
+        
+		$target_path = $upload_dir . md5(uniqid()) . "." . $ext[count($ext) - 1];//set the target path with a new name of image
+        $j = $j + 1;//increment the number of uploaded images according to the files in array       
+      
+	  if (in_array($file_extension, $validextensions)) {
+            if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
+                echo $j. ') <span id="noerror">Image uploaded successfully!</span><br/><br/>';
+            } else {//if file was not moved.
+                echo $j. ') <span id="error">Please try again!</span><br/><br/>';
+            }
+        } else {//if file size and file type was incorrect.
+            echo $j. ') <span id="error">Invalid file Type.</span><br/><br/>';
+        }
+    }
+    
+    exit();
+    
 ?>
