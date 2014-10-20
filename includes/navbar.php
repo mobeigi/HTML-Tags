@@ -41,10 +41,10 @@
                  <?php } else { ?>
                       <form action="/_php/_login.php" method="post">
                           <div class="form-group">
-                                <input type="text" id="userEmail" placeholder="Email" class="form-control">
+                                <input type="text" name="userEmail" placeholder="Email" class="form-control">
                           </div>
                           <div class="form-group">
-                                <input type="password" id="userPassword" placeholder="Password" class="form-control">
+                                <input type="password" name="userPassword" placeholder="Password" class="form-control">
                           </div>
                           <button type="submit" class="btn btn-success">Log in</button>
                       </form>
