@@ -7,7 +7,7 @@ $password = $_POST['userPassword'];
 if(empty($username)) return false;
 if(empty($password)) return false;
 
-$query = 'SELECT user_id, user_email, user_password FROM users WHERE user_email = $?';
+$query = 'SELECT user_id, user_email, user_password FROM users WHERE user_email = $1';
 
 $result = $pg->_pg_query($query, $username);
 $num = $pg->_pg_num_rows($result);
