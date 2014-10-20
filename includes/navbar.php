@@ -1,3 +1,5 @@
+<?php include("../_php/_session.php"); ?>
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
  <!--        mobile menu to expand-->
