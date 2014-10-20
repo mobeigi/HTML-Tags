@@ -66,6 +66,11 @@
     
     <!-- Welcome message -->
     <!-- retrieve the name --> 
+    <?php
+        $userEmail = $_SESSION['user_id'];
+        print "<h1>Welcome, $userEmail!</h1>\n";
+        print "<hr>\n";
+    ?>
     <h1>Welcome, name!</h1>
     <hr>
 
