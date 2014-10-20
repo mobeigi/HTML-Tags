@@ -90,8 +90,8 @@
     <script src="js/bootstrap.min.js"></script>
     
     <!-- file upload -->
-    <script src="js/jquery.fileuploadmulti.min.js"></script>
-    <link href="css/uploadfilemulti.css" rel="stylesheet">
+    <script src="js/upload.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/file_upload.css"
 </head>
 
 <body>
@@ -258,35 +258,19 @@
           <div class="modal-body">
 
             <!-- content -->
-            <div id="mulitplefileuploader">Upload</div>
-
-            <div id="status"></div>
-            <script>
-            $(document).ready(function()
-            {
-            var settings = {
-                url: "functions/image_upload.php",
-                method: "POST",
-                allowedTypes:"jpg,png,gif",
-                fileName: "myfile",
-                multiple: true,
-                onSuccess:function(files,data,xhr)
-                {
-                    $("#status").html("<font color='green'>Upload was successful.</font>");
-                    },
-                    afterUploadAll:function()
-                    {
-                      //do nothing
-                    },
-                onError: function(files,status,errMsg)
-                {        
-                    $("#status").html("<font color='red'>Upload has failed.</font>");
-                }
-            }
-            $("#mulitplefileuploader").uploadFile(settings);
-             
-            });
-            </script>
+            <form enctype="multipart/form-data" action="" method="post">
+                    First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
+                    <hr/>
+                    <div id="filediv">
+                    <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
+                    
+                    <input type="submit" value="Upload File" name="submit" id="upload" class="upload"/>
+                </form>
+                <br/>
+                <br/>
+				<!-------Including PHP Script here------>
+                <?php include "functions/image_upload.php"; ?>
+            
           </div>
           
           <div class="modal-footer">
