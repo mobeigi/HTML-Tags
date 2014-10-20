@@ -98,8 +98,6 @@
 <body>
     
 <div class="container">
-  <div class="col-md-4"> </div>
-  <div class="col-md-4">
    <!-- include navbar -->
    <?php $loggedIn = true; ?>
    <?php include_once "/includes/navbar.php"; ?>
