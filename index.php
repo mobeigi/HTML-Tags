@@ -18,11 +18,14 @@
 			<div class="row">
 				<div class="col-lg-2"></div>
 				<!--              <div class="col-lg-10">-->
-				<div class="col-lg-8 input-group">
-					<input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
+				<div class="col-lg-8">
+                    <p>Easily create and share cherished memories and journeys from either around town or around the world.</p>
+					<!--
+                    <input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button">Explore!</button>
 					</span>
+                    -->
 				 </div><!-- /input-group -->
 				<div class="col-lg-2"></div>
 				 <!--              </div> /.col-lg-6 -->
