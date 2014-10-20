@@ -47,6 +47,10 @@
         } 
 
     </style>
+    
+        
+    <!-- Connect to DB -->
+    <?php include("/_php/_session.php"); ?>
 
 </head>
 
@@ -58,15 +62,11 @@
     <script src="js/bootstrap.min.js"></script>
     
 <div class="container">
-    
-    <!-- Navigation bar -->
+
     
    <!-- include navbar -->
    <?php include_once "/includes/navbar.php"; 
     print $_SESSION['user_id']; ?>
-    
-    <!-- connect to database -->
-    <?php include("_php/_session.php"); ?>
         
     
     <!-- Welcome message -->
