@@ -276,7 +276,7 @@
             Upload your image 
            
             <div id="filediv">
-            <input name="file[]" type="file" id="file"/>
+            <input name="file" type="file" id="file" />
             </div><br/>
             
             <input type="submit" value="Upload File" name="submitbtn" id="submitbtn" class="upload"/>
