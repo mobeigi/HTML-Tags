@@ -35,17 +35,19 @@
                      
                  <?php } ?>
                  <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
-					  <form action="/_php/logout.php">
+					  <form action="/_php/_logout.php">
                         <button type="submit" class="btn btn-success">Log out</button>
                       </form>
                  <?php } else { ?>
-                      <div class="form-group">
-							<input type="text" placeholder="Email" class="form-control">
-					  </div>
-					  <div class="form-group">
-							<input type="password" placeholder="Password" class="form-control">
-					  </div>
-					  <button type="submit" class="btn btn-success">Sign in</button>
+                      <form action="/_php/_login.php">
+                          <div class="form-group">
+                                <input type="text" placeholder="Email" class="form-control">
+                          </div>
+                          <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control">
+                          </div>
+                          <button type="submit" class="btn btn-success">Log in</button>
+                      </form>
                  <?php } ?>
                  </form>
 			</div><!--/.navbar-collapse -->
