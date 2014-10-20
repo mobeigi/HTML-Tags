@@ -34,7 +34,7 @@
                     </button>                     
                      
                  <?php } ?>
-                 <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
+                 <?php if (isset($_session['user_id']) { ?>
 					  <form action="/_php/_logout.php">
                         <button type="submit" class="btn btn-success">Log out</button>
                       </form>
