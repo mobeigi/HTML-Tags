@@ -36,11 +36,11 @@
                      
                  <?php } ?>
                  <?php if (isset($_SESSION['user_id'])) { ?>
-					  <form action="/_php/_logout.php">
+					  <form class="navbar-form navbar-right" action="/_php/_logout.php">
                         <button type="submit" class="btn btn-success">Log out</button>
                       </form>
                  <?php } else { ?>
-                      <form action="/_php/_login.php" method="post">
+                      <form class="navbar-form navbar-right" action="/_php/_login.php" method="post">
                           <div class="form-group">
                                 <input type="text" name="userEmail" placeholder="Email" class="form-control">
                           </div>
