@@ -17,7 +17,9 @@
 				 <ul class="nav navbar-nav">
                       <?php if (isset($loggedIn) && ($loggedIn == true)) { ?>
 					       <li><a href="http://triptags.azurewebsites.net/new_profile_page.php">Profile</a></li>
-                      <?php } ?>
+                      <?php } else { 
+                    print '<li><ahref="http://triptags.azurewebsites.net/register.php">Register</a></li>';
+                      }?>
 					  <li><a href="#">Tutorial</a></li>
 					  <li><a href="#">Help</a></li>
 					  <li><a href="#">Contact</a></li>
