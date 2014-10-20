@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Upload Image Without Page Refresh!</title>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.form.js"></script>
 
         <script type="text/javascript" >
