@@ -1,6 +1,6 @@
 //This script logs off the user
 <?php
-    print($_SESSION['user_id']);
+    include("/_session.php");
     unset($_SESSION['user_id']);
     session_destroy();
 ?>
