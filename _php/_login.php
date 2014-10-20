@@ -11,7 +11,7 @@ $query = 'SELECT user_id, user_email, user_password FROM users WHERE user_email 
 $result = $pg->_pg_query($query, $username);
 $num = $pg->_pg_num_rows($result);
 // user doesnt exist.
-if($num == 0) return false;
+if($num == 0) header("location: http://triptags.azurewebsites.net/");
 
 $row = pg_fetch_assoc($result);
 print "row[]: " . $row['user_password'];
