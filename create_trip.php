@@ -140,10 +140,10 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2> 
-        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> 
-            <span class="glyphicon glyphicon-question-sign"> 
-            </span>
-        </button>
+        <a id="CreateImageHelp" type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> 
+            <script>$('#CreateImageHelp').tooltip();</script>
+            <span class="glyphicon glyphicon-question-sign"></span>
+        </a>
     <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
     <hr>
     <p id ="image_group_error" class="error" ></p>
