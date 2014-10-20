@@ -259,19 +259,7 @@
           <div class="modal-body">
 
             <!-- content -->
-            <script type="text/javascript" >
-          $(document).ready(function() {
-          $('#submit_image_upload').click(function() {
-          $("#viewimage").html('');
-          $("#viewimage").html('<img src="img/loading.gif" />');
-          $(".uploadform").ajaxForm({
-          target: '#viewimage'
-          }).submit();
-          });
-          });
-          </script>
-
-            <form enctype="multipart/form-data" action="functions/image_upload.php" method="post">
+            <form enctype="multipart/form-data" action="" method="post">
                     First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
                     <hr/>
                     <div id="filediv">
@@ -282,6 +270,8 @@
                 <br/>
                 <br/>
             
+            <!-------Including PHP Script here------>
+            <?php include "functions/image_upload.php"; ?>
           </div>
           
           <div class="modal-footer">
