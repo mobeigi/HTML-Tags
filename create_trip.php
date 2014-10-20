@@ -276,7 +276,7 @@
                     },
                     afterUploadAll:function()
                     {
-                      alert(files);
+                      //do nothing
                     },
                 onError: function(files,status,errMsg)
                 {        

@@ -20,10 +20,10 @@ if(isset($_FILES["myfile"]))
             $ImageName      = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
             $NewImageName = $ImageName.'-'.$RandomNum.'.'.$ImageExt;
  
-                move_uploaded_file($_FILES["myfile"]["tmp_name"],$output_dir. $NewImageName);
-                 //echo "<br> Error: ".$_FILES["myfile"]["error"];
- 
-                     $ret[$fileName]= $output_dir.$NewImageName;
+            move_uploaded_file($_FILES["myfile"]["tmp_name"],$output_dir. $NewImageName);
+             //echo "<br> Error: ".$_FILES["myfile"]["error"];
+
+            $ret[$fileName]= $output_dir.$NewImageName;
         }
         else
         {
