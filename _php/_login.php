@@ -23,5 +23,5 @@ if(strcmp($row['user_password'],$password) == 0) {
 else {
 	print 'UNSUCCESSFUL!';
 }
-//header("location: http://triptags.azurewebsites.net/profile.php");
+header("location: http://triptags.azurewebsites.net/profile.php");
 ?>
