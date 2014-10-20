@@ -18,7 +18,7 @@
 				<div class="col-lg-8">
                     			<div class="text-center">
 				<br><br><br><h1>Welcome to TripTags</h1><br>
-                <h3>Easily create and share cherished memories and journeys from around town or around the world</h3>
+                <h3>Easily create and share cherished memories and journeys from around town or around the world</h3><br>
 			</div>
 					<!--
                     <input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
