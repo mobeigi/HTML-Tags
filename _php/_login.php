@@ -15,7 +15,6 @@ if($num == 0) return false;
 
 $row = $pg->_pg_fetch_row($result);
 if($row['password'] == $password) {
-	session_start();
 	$_SESSION['user_id'] = $row['user_id'];
 }
 else {
