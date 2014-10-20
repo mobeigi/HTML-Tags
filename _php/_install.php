@@ -32,7 +32,8 @@ $query = '
 CREATE TABLE images (
 	image_id serial PRIMARY KEY,
 	group_id integer REFERENCES image_groups(group_id),
-	description varchar(256)
+	description varchar(256),
+	path varchar(256)
 )';
 $pg->_pg_query($query);
 $query = 'ALTER TABLE trips ADD COLUMN cover_image integer REFERENCES images(image_id)';
