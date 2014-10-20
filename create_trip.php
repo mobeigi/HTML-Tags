@@ -273,7 +273,7 @@
                 multiple: true,
                 onSuccess:function(files,data,xhr)
                 {
-                    $("#status").html("<font color='green'>Upload is success</font>");
+                    $("#status").html("<font color='green'>Upload was successful.</font>");
                     },
                     afterUploadAll:function()
                     {
@@ -281,7 +281,7 @@
                     },
                 onError: function(files,status,errMsg)
                 {        
-                    $("#status").html("<font color='red'>Upload is Failed</font>");
+                    $("#status").html("<font color='red'>Upload has failed.</font>");
                 }
             }
             $("#mulitplefileuploader").uploadFile(settings);
