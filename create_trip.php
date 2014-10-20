@@ -275,7 +275,8 @@
             </script>
                   
             <form class="uploadform" method="post" enctype="multipart/form-data" 
-            action=''>
+            action='functions/image_upload.php'>
+            
             Upload your image 
            
             <div id="filediv">
@@ -287,9 +288,6 @@
             </form>
             <!-- The uploaded image will display here -->
             <div id='viewimage'></div>
-            
-            <?php include_once('/functions/image_upload.php'); ?>
-            
             
             <!--
             <form class="uploadform" enctype="multipart/form-data" action="functions/image_upload.php" method="post">
