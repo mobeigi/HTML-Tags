@@ -13,7 +13,7 @@ $num = $pg->_pg_num_rows($result);
 // user doesnt exist.
 if($num == 0) return false;
 
-$row = $pg->_pg_fetch_row($result);
+$row = pg_fetch_assoc($result);
 print "row[]: " . $row['user_password'];
 print "user[]: " .$password;
 if(strcmp($row['user_password'],$password) == 0) {
