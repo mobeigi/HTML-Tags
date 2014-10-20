@@ -262,7 +262,7 @@
           <div class="modal-body">
 
             <!-- content -->
-            <script type="text/javascript" >
+            <!--<script type="text/javascript" >
             $(document).ready(function() {
             $('#submitbtn').click(function() {
             $("#viewimage").html('');
@@ -273,9 +273,10 @@
             });
             });
             </script>
+            -->
                   
             <form class="uploadform" method="post" enctype="multipart/form-data" 
-            action='functions/image_upload.php'>
+            action=''>
             
             Upload your image 
            
@@ -288,6 +289,8 @@
             </form>
             <!-- The uploaded image will display here -->
             <div id='viewimage'></div>
+            
+            <?php include_once('functions/image_upload.php'); ?>
             
             <!--
             <form class="uploadform" enctype="multipart/form-data" action="functions/image_upload.php" method="post">
