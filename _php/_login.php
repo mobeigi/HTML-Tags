@@ -1,5 +1,6 @@
 <?php
 include('_session.php');
+print_r($_POST);
 $username = $_POST['userEmail'];
 $password = $_POST['userPassword'];
 
