@@ -14,12 +14,12 @@ if (isset($_POST['submit'])) {
       
 	  if (in_array($file_extension, $validextensions)) {
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
-                echo $j. ').<span id="noerror">Image uploaded successfully!.</span><br/><br/>';
+                echo $j. ') <span id="noerror">Image uploaded successfully!</span><br/><br/>';
             } else {//if file was not moved.
-                echo $j. ').<span id="error">please try again!.</span><br/><br/>';
+                echo $j. ') <span id="error">Please try again!</span><br/><br/>';
             }
         } else {//if file size and file type was incorrect.
-            echo $j. ').<span id="error">***Invalid file Size or Type***</span><br/><br/>';
+            echo $j. ') <span id="error">Invalid file Type.</span><br/><br/>';
         }
     }
 }
