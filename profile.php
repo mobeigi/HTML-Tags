@@ -62,7 +62,8 @@
     <!-- Navigation bar -->
     
    <!-- include navbar -->
-   <?php include_once "/includes/navbar.php"; ?>
+   <?php include_once "/includes/navbar.php"; 
+    print $_SESSION['user_id']; ?>
     
     <!-- connect to database -->
     <?php include("_php/_session.php"); ?>
