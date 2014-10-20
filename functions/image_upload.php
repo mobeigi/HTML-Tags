@@ -2,7 +2,7 @@
 $file_formats = array("jpg", "png", "gif", "bmp"); // Set File format
 $filepath = "uploads/";
 
-if ($_POST['submitbtn']=="Submit") {
+if ($_POST['submit_image_upload']=="Submit") {
   $name = $_FILES['imagefile']['name'];
   $size = $_FILES['imagefile']['size'];
 
