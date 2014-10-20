@@ -1,18 +1,3 @@
-<!-- Code to process the form -->
-<?php
-    $userEmail = $_POST['userEmail'];
-    print($userEmail);
-
-    $connection_string = "user=azureuser password=RLSfTv3Ewx";
-    $connection_string .= " host=23.102.176.176";
-    $connection_string .= " port=5432";
-    $connection_string .= " dbname=test";
-    $pg_connection_id = pg_connect($connection_string);
-
-    $query = "SELECT * FROM TRIPS";
-    pg_query($pg_connection_id, $query);
-?>
-
 <!DOCTYPE html>
 
 <html>
@@ -61,7 +46,7 @@
     <h2>Register</h2>
     <hr>
     
-<form role="form" action="register.php" method="post">
+<form role="form" action="_php/_register.php" method="post">
     <div class="form-group">
         <label for="userEmail">Email address</label>
         <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">

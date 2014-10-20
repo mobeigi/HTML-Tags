@@ -23,7 +23,7 @@
 					  <li><a href="#">Contact</a></li>
 					  <li><a href="#">About</a></li>
 				 </ul>
-                 <form class="navbar-form navbar-right" role="form">
+                 <form class="navbar-form navbar-right" role="form" action="_php/_login.php" method="post">
                  <?php if (isset($tripViewer) && ($tripViewer == true)) { ?>
                      
                     <!-- Button trigger share link modal -->
