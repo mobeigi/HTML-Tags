@@ -273,8 +273,14 @@
                   
             <form class="uploadform" method="post" enctype="multipart/form-data" 
             action='functions/image_upload.php'>
-            Upload your image <input type="file" name="imagefile" />
-            <input type="submit" value="Submit" name="submitbtn" id="submitbtn">
+            Upload your image 
+           
+            <div id="filediv">
+            <input name="file[]" type="file" id="file"/>
+            </div><br/>
+            
+            <input type="submit" value="Upload File" name="submitbtn" id="submitbtn" class="upload"/>
+            
             </form>
             <!-- The uploaded image will display here -->
             <div id='viewimage'></div>
