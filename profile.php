@@ -66,7 +66,7 @@
     
    <!-- include navbar -->
    <?php include_once "/includes/navbar.php"; 
-    print $_SESSION['user_id']; ?>
+    print_r($_SESSION); ?>
         
     
     <!-- Welcome message -->
