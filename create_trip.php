@@ -84,15 +84,16 @@
         }
         
     </style>
-
+    
+   <!-- Import the bootstrap files -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- file upload -->
+    <script src="js/jquery.fileuploadmulti.min.js"></script>
 </head>
 
 <body>
-    
-    
-    <!-- Import the bootstrap files -->
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     
 <div class="container">
     
@@ -251,12 +252,42 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="addImagesToImageGroupLabel">Create a new image group</h4>
+            <h4 class="modal-title" id="addImagesToImageGroupLabel">Upload Images to Image Group</h4>
           </div>
           <div class="modal-body">
 
             <!-- content -->
-            <p>test</p>
+            <div id="mulitplefileuploader">Upload</div>
+ 
+            <div id="status"></div>
+            <script>
+             
+            $(document).ready(function()
+            {
+             
+            var settings = {
+                url: "upload.php",
+                method: "POST",
+                allowedTypes:"jpg,png,gif,doc,pdf,zip",
+                fileName: "myfile",
+                multiple: true,
+                onSuccess:function(files,data,xhr)
+                {
+                    $("#status").html("<font color='green'>Upload is success</font>");
+                    },
+                    afterUploadAll:function()
+                    {
+                            alert("all images uploaded!!");
+                    },
+                onError: function(files,status,errMsg)
+                {        
+                    $("#status").html("<font color='red'>Upload is Failed</font>");
+                }
+            }
+            $("#mulitplefileuploader").uploadFile(settings);
+             
+            });
+            </script>
           </div>
           
           <div class="modal-footer">
