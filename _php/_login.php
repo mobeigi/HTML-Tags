@@ -22,14 +22,5 @@ if($row['password'] == $password) {
 else {
 	return false;
 }
-
-
-// $_SESSION['user_id'];
-
-// ... (owner_id) VALUE ($1)
-// $pg->_pg_query($query, .. $_SESSION['user_id']);
-// select ..  from trips where owner_id = $user_id;
-// select * from image_groups where trip_id = $trip_id;
-// select image_id,path from images where group_id = $image_group_id;
-// row[1]['trip_id']
+header("location: http://triptags.azurewebsites.net/profile.php");
 ?>
