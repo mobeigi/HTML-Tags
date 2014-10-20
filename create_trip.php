@@ -271,7 +271,7 @@
             });
             </script>
             <div id='viewimage'></div>
-            <form class="uploadform" enctype="multipart/form-data" action="" method="post">
+            <form class="uploadform" enctype="multipart/form-data" action="functions/image_upload.php" method="post">
               First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
               <hr/>
               <div id="filediv">
@@ -281,9 +281,6 @@
             </form>
             <br/>
             <br/>
-            
-            <!-------Including PHP Script here------>
-            <?php include "functions/image_upload.php"; ?>
           </div>
           
           <div class="modal-footer">
