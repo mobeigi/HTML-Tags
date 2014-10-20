@@ -170,7 +170,7 @@
     
     <!-- Modal Windows -->
     
-    <!-- Upload Image Group modal window -->
+    <!-- Add Image Group modal window -->
     <div class="modal fade" id="crImageGroupModal" tabindex="-1" role="dialog" aria-labelledby="crImageGroupModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -216,7 +216,7 @@
               if ($('#image_group_name').val() != "" &&
                   $('#image_group_location').val() ) {
                   
-              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\"><a href=\"#\" class=\"thumbnail\"><img src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
+              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
               
@@ -240,6 +240,28 @@
           <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
               <button type="button" id="create_image_group_btn" class="btn btn-success" data-dismiss="modal">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add images to Image Group modal window -->
+    <div class="modal fade" id="addImagesToImageGroup" tabindex="-1" role="dialog" aria-labelledby="addImagesToImageGroupLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="addImagesToImageGroupLabel">Create a new image group</h4>
+          </div>
+          <div class="modal-body">
+
+            <!-- content -->
+            <p>test</p>
+          </div>
+          
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" id="save_changes_btn" class="btn btn-success" data-dismiss="modal">Save Changes</button>
           </div>
         </div>
       </div>
