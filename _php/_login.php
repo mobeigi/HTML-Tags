@@ -1,7 +1,7 @@
 <?php
 include('_session.php');
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['userEmail'];
+$password = $_POST['userPassword'];
 
 if(empty($username)) return false;
 if(empty($password)) return false;
