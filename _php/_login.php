@@ -19,9 +19,9 @@ print "user[]: " .$password;
 if(strcmp($row['user_password'],$password) == 0) {
 	print $row['user_id'];
 	$_SESSION['user_id'] = $row['user_id'];
+	header("location: http://triptags.azurewebsites.net/profile.php");
 }
 else {
-	print 'UNSUCCESSFUL!';
+	header("location: http://triptags.azurewebsites.net/");
 }
-header("location: http://triptags.azurewebsites.net/profile.php");
 ?>
