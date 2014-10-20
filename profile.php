@@ -72,9 +72,6 @@
         print "<h1>Welcome, $userEmail!</h1>\n";
         print "<hr>\n";
     ?>
-    <h1>Welcome, name!</h1>
-    <hr>
-
     
     <h3 style="display:inline-flex">My Trips:</h3>
     <a href="http://triptags.azurewebsites.net/create_trip.php">
