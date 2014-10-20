@@ -140,6 +140,8 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2> 
+                    <span class="glyphicon glyphicon-question-sign"></span>
+
         <a id="CreateImageHelp" type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Tooltip on right"> 
             <script>$('#CreateImageHelp').tooltip();</script>
             <span class="glyphicon glyphicon-question-sign"></span>
