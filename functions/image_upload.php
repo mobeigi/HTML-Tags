@@ -1,7 +1,7 @@
 <?php
 $output_dir = "uploads/";
 
-if ($_POST['submitbtn']=="Submit")
+if(isset($_FILES["imagefile"]))
 {
 	$ret = array();
   
