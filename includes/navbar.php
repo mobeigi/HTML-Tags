@@ -28,7 +28,7 @@
                     <li><a href="#">About</a></li>
 				 </ul>
 
-                 <?php if (isset($_SESSION['user_id'])){ ?>
+                 <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>
                      
                     <!-- Button trigger share link modal -->
                     <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
