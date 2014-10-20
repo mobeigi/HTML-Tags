@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit_image_upload'])) {
     $j = 0; //Variable for indexing uploaded image 
     
 	$upload_dir = "uploads/"; //Declaring Path for uploaded images
@@ -22,5 +22,7 @@ if (isset($_POST['submit'])) {
             echo $j. ') <span id="error">Invalid file Type.</span><br/><br/>';
         }
     }
+    
+    exit();
 }
 ?>
