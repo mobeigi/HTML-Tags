@@ -140,7 +140,10 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2> 
-        <button type="button" id="CreateImageHelp" class="btn btn-default btn-lg" data-toggle="tooltip" data-placement="right" title="Help for image group"> 
+        <button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star"></span> Star
+</button>
+        <button type="button" id="CreateImageHelp" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Help for image group"> 
             <script>$('#CreateImageHelp').tooltip();</script>
             <span class="glyphicon glyphicon-question-sign"></span>
         </button>
