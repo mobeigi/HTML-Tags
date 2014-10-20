@@ -272,7 +272,8 @@
           </script>
 
             <form class="uploadform" method="post" enctype="multipart/form-data" action='functions/image_upload.php'>
-            Upload your image <input type="file" name="imagefile" />
+            Upload your image 
+            <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
             <input type="submit" value="Submit" name="submit_image_upload" id="submitbtn">
             </form>
             <!-- The uploaded image will display here -->
