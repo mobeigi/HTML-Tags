@@ -286,6 +286,8 @@
             
             </form>
             <!-- The uploaded image will display here -->
+            <br />
+            <br />
             <div id='viewimage'></div>
             
           </div>
