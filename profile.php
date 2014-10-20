@@ -68,6 +68,7 @@
     <!-- retrieve the name --> 
     <?php
         $userEmail = $_SESSION['user_id'];
+        print $_SESSION['user_id'];
         print "<h1>Welcome, $userEmail!</h1>\n";
         print "<hr>\n";
     ?>
