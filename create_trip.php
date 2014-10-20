@@ -140,7 +140,7 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2> 
-        <button type="button" id="CreateImageHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Help for image group"> 
+        <button type="button" id="CreateImageHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Image Groups contain photographs of a general location to highlight the experiences you want to share."> 
             <script>$('#CreateImageHelp').tooltip();</script>
                 <strong>?</strong>
         </button>
