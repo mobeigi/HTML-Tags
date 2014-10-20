@@ -19,7 +19,9 @@
 				<div class="col-lg-2"></div>
 				<!--              <div class="col-lg-10">-->
 				<div class="col-lg-8">
-                    <center>Easily create and share cherished memories and journeys from around town or around the world</center>
+                    <div class="text-center">
+                    <h5>Easily create and share cherished memories and journeys from around town or around the world</h5>
+                    </div>
 					<!--
                     <input type="text" id="index_search" class="form-control text-center" placeholder="Where would you like to see?">
 					<span class="input-group-btn">
