@@ -11,7 +11,7 @@ for($i=0;$i!=$num_rows;$i++){
 	foreach(array_keys($rows[$i]) as $key) {
 		print '<tr><td>';
 		print $rows[$i][$key];
-		print '</td><td>';
+		print '</td></tr>';
 	}
 }
 print '</table>'
