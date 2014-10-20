@@ -1,9 +1,8 @@
 <?php
 $output_dir = "uploads/";
- echo "<script type='text/javascript'>alert('1');</script>";
-if(isset($_FILES["myfile"]))
+
+if(1)
 {
-    echo "<script type='text/javascript'>alert('2');</script>";
     $ret = array();
  
     $error =$_FILES["myfile"]["error"];
