@@ -259,16 +259,28 @@
           <div class="modal-body">
 
             <!-- content -->
+            <script type="text/javascript" >
+            $(document).ready(function() {
+            $('#submit_image_upload').click(function() {
+            $("#viewimage").html('');
+            $("#viewimage").html('<img src="img/loading.gif" />');
+            $(".uploadform").ajaxForm({
+            target: '#viewimage'
+            }).submit();
+            });
+            });
+            </script>
+            <div id='viewimage'></div>
             <form enctype="multipart/form-data" action="" method="post">
-                    First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
-                    <hr/>
-                    <div id="filediv">
-                    <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
-                    
-                    <input type="submit" value="Upload File" name="submit_image_upload" id="upload" class="upload"/>
-                </form>
-                <br/>
-                <br/>
+              First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
+              <hr/>
+              <div id="filediv">
+              <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
+              
+              <input type="submit" value="Upload File" name="submit_image_upload" id="upload" class="upload"/>
+            </form>
+            <br/>
+            <br/>
             
             <!-------Including PHP Script here------>
             <?php include "functions/image_upload.php"; ?>
