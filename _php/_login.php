@@ -1,6 +1,5 @@
 <?php
 include('_session.php');
-print_r($_POST);
 $username = $_POST['userEmail'];
 $password = $_POST['userPassword'];
 
@@ -20,7 +19,7 @@ if($row['password'] == $password) {
 	$_SESSION['user_id'] = $row['user_id'];
 }
 else {
-	return false;
+	print 'UNSUCCESSFUL!';
 }
 header("location: http://triptags.azurewebsites.net/profile.php");
 ?>
