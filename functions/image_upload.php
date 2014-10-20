@@ -15,7 +15,7 @@ if (isset($_POST['submitbtn'])) {
 	  if (in_array($file_extension, $validextensions)) {
     
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
-                echo $j. ') <span class="noerror">Image uploaded successfully!.</span><br/><br/>';
+                echo $j. ') <span class="noerror">Image uploaded successfully!</span><br/><br/>';
             } else {//if file was not moved.
                 echo $j. ') <span class="error">Please try again!</span><br/><br/>';
             }

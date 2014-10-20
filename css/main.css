@@ -3,6 +3,11 @@
   font-weight: bold;
 }
 
+.noerror {
+  color: #00900E;
+  font-weight: bold;
+}
+
 #featured-trips .container #map-canvas {
   border: 2px solid; 
   width: 960px;
