@@ -276,7 +276,7 @@
                     },
                     afterUploadAll:function()
                     {
-                      alert("all images uploaded!!");
+                      alert(files);
                     },
                 onError: function(files,status,errMsg)
                 {        

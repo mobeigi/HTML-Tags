@@ -1,7 +1,7 @@
 <?php
 $output_dir = "uploads/";
 
-if(1)
+if(isset($_FILES["myfile"]))
 {
     $ret = array();
  
