@@ -140,7 +140,7 @@
         
     <!-- Create Image Groups -->
     <h2 style="display:inline-flex">Image Groups</h2> 
-        <button type="button" id="CreateImageHelp" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Help for image group"> 
+        <button type="button" id="CreateImageHelp" class="btn btn-default btn-group-xs" data-toggle="tooltip" data-placement="right" title="Help for image group"> 
             <script>$('#CreateImageHelp').tooltip();</script>
             help?
         </button>
