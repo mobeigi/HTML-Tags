@@ -270,7 +270,7 @@
             });
             });
             </script>
-            
+                  
             <form class="uploadform" method="post" enctype="multipart/form-data" 
             action='functions/image_upload.php'>
             Upload your image <input type="file" name="imagefile" />
