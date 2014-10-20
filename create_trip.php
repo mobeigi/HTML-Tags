@@ -91,7 +91,7 @@
     
     <!-- file upload -->
     <script src="js/upload.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/file_upload.css"
+    <link rel="stylesheet" type="text/css" href="css/file_upload.css" />
 </head>
 
 <body>
