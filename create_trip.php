@@ -92,6 +92,21 @@
     <!-- file upload -->
     <script src="js/jquery.form.js"></script>
     
+    <script>
+    function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -263,13 +278,21 @@
             <!-- content -->
             <script type="text/javascript" >
             $(document).ready(function() {
-            $('#submitbtn').click(function() {
-            $("#viewimage").html('');
-            $("#viewimage").html('<img src="img/loading.gif" />');
-            $(".uploadform").ajaxForm({
-            target: '#viewimage'
-            }).submit();
-            });
+              $('#submitbtn').click(function() {
+              $("#viewimage").html('');
+              $("#viewimage").html('<img src="img/loading.gif" />');
+              $(".uploadform").ajaxForm({
+              target: '#viewimage'
+              }).submit();
+              });
+              
+              $("#save_changes_2_btn").click(function(){
+                var links = getCookie("image_links");
+                
+                if (links != "") {
+                  alert(links);
+                }
+              });
             });
             </script>
                   
@@ -294,7 +317,7 @@
           
           <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" id="save_changes_btn" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+              <button type="button" id="save_changes_2_btn" class="btn btn-success" data-dismiss="modal">Save Changes</button>
           </div>
         </div>
       </div>

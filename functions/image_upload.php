@@ -32,7 +32,8 @@ if (isset($_POST['submitbtn'])) {
     }
     
     //Add urls to session
-    $_SESSION['image_links'] = $images;
+    setcookie('image_links') = json_encode($images);
+    
     
     exit();
 }
