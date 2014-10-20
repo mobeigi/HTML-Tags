@@ -167,7 +167,7 @@
         <button type="submit" class="btn btn-success">Save Trip</button>
         <button type="push" class="btn btn-success">Preview Trip</button>
     </div>  
-    
+    </form>
     
     <!-- Modal Windows -->
     
@@ -268,7 +268,7 @@
                 <br/>
                 <br/>
 				<!-------Including PHP Script here------>
-                <?php include "functions/image_upload.php"; ?>
+        <?php include "functions/image_upload.php"; ?>
             
           </div>
           
@@ -279,8 +279,7 @@
         </div>
       </div>
     </div>
-    
-    </form>
+
     
 </div>
 
