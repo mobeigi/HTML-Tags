@@ -90,7 +90,7 @@
     <script src="js/bootstrap.min.js"></script>
     
     <!-- file upload -->
-    <script src="js/upload.js"></script>
+    <!-- <script src="js/upload.js"></script> -->
     <script src="http://malsup.github.com/jquery.form.js"></script> 
     
 </head>
@@ -291,19 +291,6 @@
             <div id='viewimage'></div>
             
             <?php include_once('functions/image_upload.php'); ?>
-            
-            <!--
-            <form class="uploadform" enctype="multipart/form-data" action="functions/image_upload.php" method="post">
-              First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
-              <hr/>
-              <div id="filediv">
-              <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
-              
-              <input type="submit" value="Upload File" name="submit_image_upload" id="submit_image_upload" class="upload"/>
-            </form>
-            -->
-            
-            
             
           </div>
           
