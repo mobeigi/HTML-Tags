@@ -14,6 +14,8 @@ $num = $pg->_pg_num_rows($result);
 if($num == 0) return false;
 
 $row = $pg->_pg_fetch_row($result);
+print $row['user_password'];
+print $password;
 if(strcmp($row['user_password'],$password) == 0) {
 	print $row['user_id'];
 	$_SESSION['user_id'] = $row['user_id'];
