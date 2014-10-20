@@ -13,6 +13,9 @@ if (isset($_POST['submitbtn'])) {
         $j = $j + 1;//increment the number of uploaded images according to the files in array       
       
 	  if (in_array($file_extension, $validextensions)) {
+            echo $_FILES['file']['tmp_name'][$i] . " => " . $target_path;
+            
+    
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
                 echo $j. ').<span id="noerror">Image uploaded successfully!.</span><br/><br/>';
             } else {//if file was not moved.
