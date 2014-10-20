@@ -258,17 +258,15 @@
 
             <!-- content -->
             <div id="mulitplefileuploader">Upload</div>
- 
+
             <div id="status"></div>
             <script>
-             
             $(document).ready(function()
             {
-             
             var settings = {
-                url: "upload.php",
+                url: "functions/image_upload.php",
                 method: "POST",
-                allowedTypes:"jpg,png,gif,doc,pdf,zip",
+                allowedTypes:"jpg,png,gif",
                 fileName: "myfile",
                 multiple: true,
                 onSuccess:function(files,data,xhr)
