@@ -270,7 +270,16 @@
             });
             });
             </script>
+            
+            <form class="uploadform" method="post" enctype="multipart/form-data" 
+            action='upload.php'>
+            Upload your image <input type="file" name="imagefile" />
+            <input type="submit" value="Submit" name="submitbtn" id="submitbtn">
+            </form>
+            <!-- The uploaded image will display here -->
             <div id='viewimage'></div>
+            
+            <!--
             <form class="uploadform" enctype="multipart/form-data" action="functions/image_upload.php" method="post">
               First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
               <hr/>
@@ -279,8 +288,10 @@
               
               <input type="submit" value="Upload File" name="submit_image_upload" id="submit_image_upload" class="upload"/>
             </form>
-            <br/>
-            <br/>
+            -->
+            
+            
+            
           </div>
           
           <div class="modal-footer">
