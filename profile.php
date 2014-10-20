@@ -47,10 +47,6 @@
         } 
 
     </style>
-    
-        
-    <!-- Connect to DB -->
-    <?php include("/_php/_session.php"); ?>
 
 </head>
 
@@ -66,8 +62,7 @@
     
    <!-- include navbar -->
    <?php include_once "/includes/navbar.php"; 
-    print_r($_SESSION); ?>
-        
+    
     
     <!-- Welcome message -->
     <!-- retrieve the name --> 
