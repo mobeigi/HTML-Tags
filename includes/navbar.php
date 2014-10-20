@@ -34,7 +34,7 @@
                     </button>                     
                      
                  <?php } ?>
-                 <?php if (isset($_session['user_id'])) { ?>
+                 <?php if (isset($_SESSION['user_id'])) { ?>
 					  <form action="/_php/_logout.php">
                         <button type="submit" class="btn btn-success">Log out</button>
                       </form>
