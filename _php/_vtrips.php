@@ -6,13 +6,13 @@ $rows = $pg->_pg_fetch_all($result);
 $num_rows = $pg->_pg_num_rows($result);
 print $num_rows;
 //print_r($rows);
-print '<table border=1>';
+print '<table border=1><tr>';
 for($i=0;$i!=$num_rows;$i++){
 	foreach(array_keys($rows[$i]) as $key) {
-		print '<tr><td>';
+		print '<td>';
 		print $rows[$i][$key];
-		print '</td></tr>';
+		print '</td>';
 	}
 }
-print '</table>'
+print '</tr></table>'
 ?>
