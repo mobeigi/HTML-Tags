@@ -47,6 +47,7 @@
     <hr>
     
 <form role="form" action="_php/_register.php" method="post">
+<input type="hidden" name="page" value="register.php" />
     <div class="form-group">
         <label for="userEmail">Email address</label>
         <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
