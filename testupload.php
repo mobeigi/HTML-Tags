@@ -20,7 +20,7 @@
     <body>
         <h2>Upload Image Without Page Refresh!</h2>
  
-            <form class="uploadform" method="post" enctype="multipart/form-data" action='upload.php'>
+            <form class="uploadform" method="post" enctype="multipart/form-data" action='functions/image+upload.php'>
                 Upload your image <input type="file" name="imagefile" />
 				<input type="submit" value="Submit" name="submitbtn" id="submitbtn">
 			</form>
