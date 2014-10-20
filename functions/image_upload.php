@@ -6,7 +6,7 @@ if (isset($_POST['submitbtn'])) {
     for ($i = 0; $i < count($_FILES['file']['name']); $i++) {//loop to get individual element from the array
 
         $validextensions = array("jpeg", "jpg", "png");  //Extensions which are allowed
-        $ext = explode('.', basename($_FILES['file']['name'][1]));//explode file name from dot(.) 
+        $ext = explode('.', basename($_FILES['file']['name'][0]));//explode file name from dot(.) 
         $file_extension = end($ext); //store extensions in the variable
         
         echo $file_extension . "==";
