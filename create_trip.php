@@ -271,15 +271,6 @@
           });
           </script>
 
-            <form class="uploadform" method="post" enctype="multipart/form-data" action='functions/image_upload.php'>
-            Upload your image 
-            <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
-            <input type="submit" value="Submit" name="submit_image_upload" id="submitbtn">
-            </form>
-            <!-- The uploaded image will display here -->
-            <div id='viewimage'></div>
-
-            <!--
             <form enctype="multipart/form-data" action="functions/image_upload.php" method="post">
                     First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
                     <hr/>
@@ -290,7 +281,6 @@
                 </form>
                 <br/>
                 <br/>
-                -->
             
           </div>
           
