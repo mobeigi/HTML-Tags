@@ -4,9 +4,6 @@ if (isset($_POST['submitbtn'])) {
     
     $upload_dir = "D:\\home\\site\\wwwroot\\uploads\\"; //Declaring Path for uploaded images
     
-    //Collect uploaded names
-    $images = array();
-    
     for ($i = 0; $i < count($_FILES['file']['name']); $i++) {//loop to get individual element from the array
 
         $validextensions = array("jpeg", "jpg", "png");  //Extensions which are allowed
@@ -22,7 +19,6 @@ if (isset($_POST['submitbtn'])) {
     
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
                 echo $j. ') <span class="noerror">Image uploaded successfully!</span><br/><br/>';
-                array_push($images, $unique_name);
             } else {//if file was not moved.
                 echo $j. ') <span class="error">Please try again!</span><br/><br/>';
             }
@@ -30,10 +26,6 @@ if (isset($_POST['submitbtn'])) {
             echo $j. ') <span class="error">Invalid file type.</span><br/><br/>';
         }
     }
-    
-    //Add urls to session
-    setcookie('image_links', json_encode($images));
-    
     
     exit();
 }

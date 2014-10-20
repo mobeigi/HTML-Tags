@@ -93,18 +93,7 @@
     <script src="js/jquery.form.js"></script>
     
     <script>
-    function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-    }
+    window.imageGroupCount = 1;
     </script>
     
 </head>
@@ -235,8 +224,8 @@
             $("#create_image_group_btn").click(function(){
               if ($('#image_group_name').val() != "" &&
                   $('#image_group_location').val() ) {
-                  
-              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
+              
+              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
               
@@ -246,6 +235,9 @@
               
               //Clear previous errors
               $('#image_group_error').text("");
+              
+              //Increment count
+              ++window.imageGroupCount;
               
               }
               //Show error
