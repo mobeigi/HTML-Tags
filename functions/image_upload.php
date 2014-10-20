@@ -32,7 +32,7 @@ if (isset($_POST['submitbtn'])) {
     }
     
     //Add urls to session
-    setcookie('image_links') = json_encode($images);
+    setcookie('image_links', json_encode($images));
     
     
     exit();
