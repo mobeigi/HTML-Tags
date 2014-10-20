@@ -61,7 +61,7 @@
 
     
    <!-- include navbar -->
-   <?php include_once "/includes/navbar.php"; 
+   <?php include_once "/includes/navbar.php"; ?>
     
     
     <!-- Welcome message -->
