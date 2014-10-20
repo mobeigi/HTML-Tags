@@ -90,8 +90,7 @@
     <script src="js/bootstrap.min.js"></script>
     
     <!-- file upload -->
-    <script src="jquery.form.js"></script>
-    <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <script src="js/jquery.form.js"></script>
     
 </head>
 
