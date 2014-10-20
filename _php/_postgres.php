@@ -55,7 +55,7 @@ class postgres {
 		else {
 			$args = func_get_args();
 			$params = array_splice($args, 1);
-			print _pg_debug($query, $params);
+			print $this->_pg_debug($query, $params);
 			return pg_query_params($this->pg_connect_id, $query, $params);
 		}
 	}
@@ -75,7 +75,7 @@ class postgres {
 			$this->pg_connect_id = false;
 	}
 	// _pg_debug($arg1..$argn)
-	private function _pg_debug($query, $params) {
+	function _pg_debug($query, $params) {
 		echo preg_replace_callback('/\$(\d+)\b/', function($match) use ($params) {
 			$key = ($match[1] - 1);
 			return(is_null($params[$key]) ? 'NULL' : @pg_escape_literal($this->pg_connect_id, $params[$key]));
