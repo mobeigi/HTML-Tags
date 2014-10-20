@@ -62,7 +62,6 @@
     <!-- Navigation bar -->
     
    <!-- include navbar -->
-   <?php $loggedIn = true; ?>
    <?php include_once "/includes/navbar.php"; ?>
     
     <!-- connect to database -->
@@ -70,10 +69,7 @@
         
     
     <!-- Welcome message -->
-    <!-- retrieve the name -->
-    <?php
-        $_session['user_id'];
-    ?>  
+    <!-- retrieve the name --> 
     <h1>Welcome, name!</h1>
     <hr>
 
