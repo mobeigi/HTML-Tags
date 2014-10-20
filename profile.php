@@ -71,7 +71,7 @@
 
     
     <h3 style="display:inline-flex">My Trips:</h3>
-    <a href="http://triptags.azurewebsites.net/new_create_trip.php">
+    <a href="http://triptags.azurewebsites.net/create_trip.php">
     <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
     </a>
     <div class="row">
