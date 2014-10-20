@@ -271,13 +271,13 @@
             });
             </script>
             <div id='viewimage'></div>
-            <form enctype="multipart/form-data" action="" method="post">
+            <form class="uploadform" enctype="multipart/form-data" action="" method="post">
               First Field is Compulsory. Only JPEG,PNG,JPG Type Image Uploaded. Image Size Should Be Less Than 100KB.
               <hr/>
               <div id="filediv">
               <input name="file[]" type="file" id="file" multiple="true"/></div><br/>
               
-              <input type="submit" value="Upload File" name="submit_image_upload" id="upload" class="upload"/>
+              <input type="submit" value="Upload File" name="submit_image_upload" id="submit_image_upload" class="upload"/>
             </form>
             <br/>
             <br/>
