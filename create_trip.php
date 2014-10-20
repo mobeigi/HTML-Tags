@@ -265,7 +265,7 @@
             $(document).ready(function()
             {
             var settings = {
-                url: "functions/image_upload2.php",
+                url: "functions/image_upload.php",
                 method: "POST",
                 allowedTypes:"jpg,png,gif",
                 fileName: "myfile",
