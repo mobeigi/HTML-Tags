@@ -14,6 +14,7 @@ $num = $pg->_pg_num_rows($result);
 if($num == 0) return false;
 
 $row = $pg->_pg_fetch_row($result);
+print_r($row);
 if($row['user_password'] == $password) {
 	print $row['user_id'];
 	$_SESSION['user_id'] = $row['user_id'];
@@ -21,5 +22,5 @@ if($row['user_password'] == $password) {
 else {
 	print 'UNSUCCESSFUL!';
 }
-header("location: http://triptags.azurewebsites.net/profile.php");
+//header("location: http://triptags.azurewebsites.net/profile.php");
 ?>
