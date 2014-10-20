@@ -2,7 +2,7 @@
 
 $file_formats = array("jpg", "png", "gif", "bmp");
 
-$filepath = "uploads/";
+$filepath = "D:\\home\\site\\wwwroot\\uploads\\";
 
 if ($_POST['submitbtn']=="Submit") {
 
