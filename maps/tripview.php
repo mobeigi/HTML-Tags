@@ -55,8 +55,6 @@ var triptags = [];
 
 ImageOverlay.prototype = new google.maps.OverlayView();
 
-
-
 // Initialize the map and the custom overlays
 function initialize() {
   var mapOptions = {
@@ -81,6 +79,39 @@ function initialize() {
   var links = [];
   var hiddenTripTags = document.getElementById("hiddenTripTags");
 
+  var sw;
+  var ne;
+  var bounds = [];
+
+  
+  <?php
+    //Loop through image groups
+    $numImageGroups = sizeof($group_id);
+    for ($i = 0; $i < $numImageGroups; ++$i) {
+      ?>
+      
+      links.push('uploads/<?php echo $images[$i]; ?>');
+      
+      //Add image trips
+      var a = document.createElement('a');
+      a.id = 'triptag' + <?php echo $i; ?>;
+      a.href = 'uploads/' . $images[$i];
+      a.setAttribute("data-lightbox", "trip-1");
+      a.setAttribute("data-title", "My Trip Name!");
+      hiddenTripTags.appendChild(a);
+      
+      sw = new google.maps.LatLng(<?php echo $latitude[$i]; ?>, <?php echo $longitude[$i]; ?>);
+      ne = new google.maps.LatLng((<?php echo $latitude[$i]; ?>+ 1), (<?php echo $longitude[$i]; ?> + 1));
+      bounds.push(new google.maps.LatLngBounds(sw, ne));
+      
+      triptags.push(new ImageOverlay(bounds[<?php echo $i; ?>], links[<?php echo $i; ?>], map));
+      
+      <?php
+      
+    }
+  ?>
+  
+  /*
   for (j=1; j <= 8; j++) {
     links.push('img/featured1/' + j + '.jpg');
 
@@ -92,12 +123,10 @@ function initialize() {
     a.setAttribute("data-title", "My Trip Name!");
     hiddenTripTags.appendChild(a);
   }
-
-  var sw;
-  var ne;
-  var bounds = [];
+  */
 
   //Images
+  /*
   sw = new google.maps.LatLng(-32.8948358302915, 115.8457735197085);
   ne = new google.maps.LatLng(-31.8921378697085, 116.8484714802915);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
@@ -130,10 +159,14 @@ function initialize() {
   ne = new google.maps.LatLng(-21.996178, 150.648953);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
 
+  
+  
   // Create object to contain the overlay image, the bounds of the image and a reference to the map
   for (j=0; j < 8; j++) {
     triptags.push(new ImageOverlay(bounds[j], links[j], map));
   }
+  
+  */
 
 
   /*
