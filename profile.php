@@ -130,7 +130,7 @@
 
                     for($i = 0; $i != $row_size; $i++) {
                         print "<div class='col-md-3 col-md-2' style='width:210px;'>";
-                        print "<a class='thumbnail' href='view_trip.php?trip=";
+                        print "<a style='width:200px;' class='thumbnail' href='view_trip.php?trip=";
                         print $rows[$i]['trip_id'];
 			                    print "'>";
                         if(!empty($rows[$i]['cover_image'])) {
