@@ -281,6 +281,8 @@
                 document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
               });
               }
+              
+
 
             function codeAddress() {
                 var address = document.getElementById("gadres").value;
@@ -308,11 +310,6 @@
                 });
               }
               
-              
-             google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
-              google.maps.event.trigger(map, 'resize');
-             });
-              
               function loadScript() {
                     var script = document.createElement('script');
                     script.type = 'text/javascript';
@@ -323,6 +320,16 @@
 
                 window.onload = loadScript;
                 
+                
+                $('#latlongmap').on('show.bs.modal', function() {
+                 //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
+                 resizeMap();
+              })
+              
+              function resizeMap() {
+                 if(typeof map =="undefined") return;
+                 setTimeout( function(){resizingMap();} , 400);
+              }
             </script>
           </div>
           
