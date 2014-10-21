@@ -1,4 +1,7 @@
 <?php
+//
+// Generate Database Installation Script...
+//
 include('_session.php');
 
 $pg->_pg_query('DROP TABLE IF EXISTS images CASCADE');
@@ -20,8 +23,8 @@ $pg->_pg_query($query);
 // INSERT INTO image_groups(group_id, trip_id, name, longitude, latitude, cover_image) VALUES ($?)
 $query = '
 CREATE TABLE image_groups (
-	group_id serial PRIMARY KEY, 
-	trip_id integer REFERENCES trips(trip_id) NOT NULL,	
+	group_id serial PRIMARY KEY,
+	trip_id integer REFERENCES trips(trip_id) NOT NULL,
 	name varchar(64) NOT NULL,
 	longitude float(10) NOT NULL,
 	latitude float(10) NOT NULL
