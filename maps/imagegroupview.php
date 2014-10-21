@@ -59,8 +59,11 @@ loadTitle();
  }
  
  //Load title for image group
- function loadTitle() {
+function loadTitle() {
+    window.setTimeout(loadTitleB, 500);
+}
 
+function loadTitleB() {
     //Get bottom panel box
     var titleDiv = document.getElementById("lbc-title");
     
