@@ -22,6 +22,7 @@ for($i = 0; $i != $row_nums; $i++) {
   array_push($latitude, $row[$i]['latitude']);
   array_push($group_id, $row[$i]['group_id']);
   $query = "select path from images where group_id = $1";
+  print($group_id[$i]);
   $result = $pg->_pg_query($query, $group_id[$i]);
   $row = pg_fetch_assoc($result);
   array_push($images, $row['path']);
