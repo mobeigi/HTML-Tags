@@ -27,9 +27,11 @@ body:after {
 
 .lightbox .lb-image {
   display: block;
+  width: auto;
+  height: auto;
+  max-height: 510px;
+  max-width: 680px;
   float: left;
-  height: 510px;
-  width: 75%;
   border: 2px solid;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
