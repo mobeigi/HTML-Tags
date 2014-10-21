@@ -130,9 +130,9 @@
 
                     for($i = 0; $i != $row_size; $i++) {
                         print "<div class='col-md-3 col-md-2'>";
-                        print "<a href='view_trip.php?trip=";
+                        print "<a class='thumbnail' href='view_trip.php?trip=";
                         print $rows[$i]['trip_id'];
-			print "'>";
+			                    print "'>";
                         if(!empty($rows[$i]['cover_image'])) {
 				                     print "<img src=./uploads/";
                              print $rows[$i]['cover_image'];
