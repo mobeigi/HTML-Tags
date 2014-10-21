@@ -298,7 +298,7 @@
               $('#image_group_links_block').append("<input type=\"hidden\" name=\"image_group_links_" + window.curImageGroup + "\" value=\"" + url + "\" />");
               
               //If empty image group, update picture to first uploaded
-              if ($('image_group_display_pic_' + window.curImageGroup).src != "img/loading.gif") {
+              if ($('image_group_display_pic_' + window.curImageGroup).src == "img/loading.gif") {
                 $('image_group_display_pic_' + window.curImageGroup).src = "uploads/" + url;
               }
             }
