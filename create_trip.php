@@ -342,12 +342,12 @@
             <!-- content -->
             <div style="height:400px;width:600px;overflow:auto;">
               <script type="text/javascript">
-              for(var i = 0; i < window.imageGroupCount; ++i) {
+              for(var i = 1; i <= window.imageGroupCount; ++i) {
                 //For each image group, display its images
                 var input_list = document.getElementsByName('image_group_links_' + i);
                 
                 for(var j = 0; j < input_list.length; ++j) {
-                    console.log(input_list[i].value, input_list[i].getAttribute('value'));
+                    console.log(input_list[j].value, input_list[j].getAttribute('value'));
                 }
               }
               
