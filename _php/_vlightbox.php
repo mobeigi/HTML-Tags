@@ -9,6 +9,6 @@ $result = $pg->_pg_query($query, $group_id);
 $rows = pg_fetch_all($result);
 $row_nums = sizeof($rows);
 for($i = 0; $i != $row_nums; $i++) {
-  array_push($images,$rows['path']);
+  array_push($images,$rows[$i]['path']);
 }
 ?>
