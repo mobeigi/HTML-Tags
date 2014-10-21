@@ -14,14 +14,9 @@ $result = $pg->_pg_query($query, $trip_id);
 
 $row = pg_fetch_all($result);
 $row_nums = sizeof($row);
-print_r($row);
-for($i = 0; $i != $row_nums; $i++) {
-  print($row[1]['group_id']);
-  print($row[1]['longitude']);
-  print($row[1]['latitude']);
+print($row_nums);
 
-  //
-  if(array_key_exists($i, $row)) {
+for($i = 0; $i != $row_nums; $i++) {
     array_push($group_id, $row[$i]['group_id']);
     array_push($longitude, $row[$i]['longitude']);
     array_push($latitude, $row[$i]['latitude']);
