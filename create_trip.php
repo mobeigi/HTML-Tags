@@ -339,7 +339,7 @@
           <div class="modal-body">
             <!-- content -->
             <div id="coverPhotoBox" style="height:400px;width:550px;overflow:auto;">
-            <br/>
+            <br />
               <script type="text/javascript">
               function loadImages() {
                 //Clear coverphoto box
