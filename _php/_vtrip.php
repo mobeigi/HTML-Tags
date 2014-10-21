@@ -14,8 +14,8 @@ $result = $pg->_pg_query($query, $trip_id);
 
 $row = pg_fetch_all($result);
 $row_nums = $pg->_pg_num_rows($row);
-print($row_nums);
 
+print($row_nums);
 print_r($row);
 
 for($i = 0; $i != $row_nums; $i++) {
