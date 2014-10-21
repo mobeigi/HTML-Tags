@@ -334,7 +334,7 @@
           </div>
           <div class="modal-body">
             <!-- content -->
-            <div style="height:400px;width:600px;overflow:auto;">
+            <div id="coverPhotoBox" style="height:400px;width:600px;overflow:auto;">
               <script type="text/javascript">
               function loadImages() {
                 for(var i = 1; i <= window.imageGroupCount; ++i) {
@@ -342,8 +342,7 @@
                   var input_list = document.getElementsByName('image_group_links_' + i);
                   
                   for(var j = 0; j < input_list.length; ++j) {
-                    document.write(' <div class="col-md-3 col-md-2" onclick="setCover("' + input_list[j].value + '")"><img src="uploads/' + input_list[j].value + '"></div>');
-                      input_list[j].value
+                    $('#coverPhotoBox').text('<div class="col-md-3 col-md-2" onclick="setCover("' + input_list[j].value + '")"><img src="uploads/' + input_list[j].value + '"></div>');
                   }
                 }
               }
