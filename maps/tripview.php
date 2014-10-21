@@ -40,7 +40,7 @@ for($i = 0; $i != $row_nums; $i++) {
 
 ?>
 
-<script>
+<script type="text/javascript">
 // Set the custom overlay object's prototype to a new instance
 // of OverlayView. In effect, this will subclass the overlay class.
 // Note that we set the prototype to an instance, rather than the
