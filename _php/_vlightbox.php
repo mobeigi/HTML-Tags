@@ -1,5 +1,6 @@
 <?php
 include_once('_session.php');
+if(empty($_GET['group_id'])) header('location: http://triptags.azurewebsites.net/');
 $group_id = $_GET['group_id'];
 $images = array();
 $query = 'select path from images where group_id = $1';

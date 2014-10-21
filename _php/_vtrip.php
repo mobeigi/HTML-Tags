@@ -1,7 +1,7 @@
 <?php
 
 include_once('_session.php');
-
+if(empty($_GET['trip'])) header('location: http://triptags.azurewebsites.net/');
 $trip_id = $_GET['trip'];
 
 $longitude = array();
