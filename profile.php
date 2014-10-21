@@ -59,8 +59,8 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <!-- include navbar -->
                 <?php include_once "/includes/navbar.php"; ?>
                 <!-- Welcome message, retrieve email address -->
@@ -125,7 +125,7 @@
                     </div>            
                 </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-2"></div>
         </div>
     </div>
     <?php include_once "/includes/footer.php"; ?>   
