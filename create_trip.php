@@ -159,9 +159,9 @@
         </div>
    
     <!-- Select Cover photo for the trip -->
-    <h2>Cover Photo</h2>
+    <h2 style="display:inline-flex">>Cover Photo</h2>
     <button type="button" id="CoverPhotoHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Image Groups contain photographs of a general location to highlight the experiences you want to share."> 
-            <script>$('#CoverPhotoHelp').tooltip();</script>
+            <script>$('#CreateImageHelp').tooltip();</script>
                 <strong>?</strong>
         </button>
     <hr>
@@ -247,7 +247,7 @@
                   <input type="text" name="lng" id="lng" />
               </div>
 
-          <div id="latlongmap" style="420px; height:420px;"></div>
+          <div id="latlongmap" style="width:100%; height:420px;"></div>
      
              <!--google maps geocoder -->
              <script type="text/javascript">
@@ -303,7 +303,7 @@
                 });
 
                   } else {
-                    alert("Location could not be found.");
+                    alert("Lat and long cannot be found.");
                   }
                 });
               }
