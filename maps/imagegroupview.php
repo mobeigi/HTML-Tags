@@ -6,8 +6,8 @@ var image_group_desc = [];
 <?php
   for ($j = 0 ; $j < $numImageGroups; ++$j) {
   ?>
-  image_group_names.push(<?php echo $name[$j]; ?>);
-  image_group_desc.push(<?php echo $description[$j]; ?>);
+  image_group_names.push('<?php echo $name[$j]; ?>');
+  image_group_desc.push('<?php echo $description[$j]; ?>');
   <?php
   }
 ?>
