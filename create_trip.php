@@ -108,7 +108,7 @@
     
     <!-- User input for the trip details -->
     <h2 style="display:inline-flex">Trip Details</h2> 
-    <button type="button" id="TripDetailHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Add a bried description to your journey."> 
+    <button type="button" id="TripDetailHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Add a brief description to your journey."> 
             <script>$('#TripDetailHelp').tooltip();</script>
                 <strong>?</strong>
     </button>
