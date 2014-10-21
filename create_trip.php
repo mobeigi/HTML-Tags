@@ -362,7 +362,7 @@
               $('#save_changes_3_btn').click(function() {
                 //Set cover photo
                 $('#coverPhoto').val(window.coverPhoto);
-                $('#coverPreview').attr('src', window.coverPhoto);
+                $('#coverPreview').attr('src', 'uploads/' + window.coverPhoto);
               });
               });
               </script>
