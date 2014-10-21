@@ -169,7 +169,7 @@
             <button type="push" class="btn btn-default">Upload an image</button>
             <br />
             <div class="thumbnail" style="margin-top: 10px; width: 150px;">
-            <img id ="coverPreview" src="img/empty_image_group.jpg">
+            <img id ="coverPreview" src="img/placeholder.png">
             </div>
         </div>
         
