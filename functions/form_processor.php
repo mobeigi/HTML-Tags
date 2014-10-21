@@ -44,7 +44,7 @@ for($i = 0; $i != $image_group_num; $i++) {
   $image_group_id = $row['group_id'];
   // insert all of the uploaded images into the database
   $query = "insert into images (group_id, path) values ($1, $2)";
-  for($n = 0; $n != sizeof($_POST['image_group_links_'.$i]); $n++) {
+  for($n = 1; $n != sizeof($_POST['image_group_links_'.$i]); $n++) {
       $pg->_pg_query($query, $image_group_id, $_POST['image_group_links_'.$i][$n]);
       if(!$result) {
           $pg->_pg_transaction('rollback');
