@@ -1,4 +1,5 @@
 <?php
+include('_session.php');
 function login($username, $password) {
   if(empty($username)) return false;
   if(empty($password)) return false;
