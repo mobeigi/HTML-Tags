@@ -1,3 +1,12 @@
+<?php
+
+
+?>
+
+<script type="text/javascript">
+//Using DB variables, store required information in JS arrays
+
+
 //Sets main image to provided image url
  function setMainImage(obj) {
     var img = document.getElementById("lbc-image");
@@ -62,3 +71,4 @@
         botPanel.innerHTML = '<div id="comments"><img src="img/noprofilepic.png" /><p>' + commentText + '</p><br /><textarea id="text-input" rows="1"></textarea><button onclick="loadComments(document.getElementById(\'text-input\').value);">Submit</button></div>';
     }
  }
+ </script>
