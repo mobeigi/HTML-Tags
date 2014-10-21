@@ -10,6 +10,11 @@
 * Website: http://triptags.azurewebsites.net
 */
 
+//Create database calls and collect required data
+<?php
+include('/_session.php');
+
+?>
 
 // Set the custom overlay object's prototype to a new instance
 // of OverlayView. In effect, this will subclass the overlay class.
