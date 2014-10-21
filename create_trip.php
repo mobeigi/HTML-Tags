@@ -352,12 +352,15 @@
               function setCover(url) {
                 window.coverPhoto = url;
               }
+              </script>
               
+              <script type="text/javascript">
               $(document).ready(function() {
               $('#save_changes_3_btn').click(function() {
                 //Set cover photo
                 $('#coverPhoto').val(window.coverPhoto);
               }
+              </script>
               </script>
             </div>
             
