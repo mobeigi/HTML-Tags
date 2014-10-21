@@ -50,9 +50,9 @@ loadDescription();
     firstImg.onclick = function() { setMainImage(firstImg); };
     sideDiv.appendChild(firstImg);
     
-    for (i = 1; i < 4; ++i) {
+    for (i = 0; i < images[window.curImageNum - 1].length; ++i) {
         var img = document.createElement("img");
-        img.src = "img/placeholder.png";
+        img.src = images[window.curImageNum - 1][i];
         img.onclick = function() { setMainImage(img); };
         sideDiv.appendChild(img);
     }
