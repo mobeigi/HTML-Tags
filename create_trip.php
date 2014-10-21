@@ -159,7 +159,7 @@
         </div>
    
     <!-- Select Cover photo for the trip -->
-    <h2 style="display:inline-flex">>Cover Photo</h2>
+    <h2 style="display:inline-flex">Cover Photo</h2>
     <button type="button" id="CoverPhotoHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Image Groups contain photographs of a general location to highlight the experiences you want to share."> 
             <script>$('#CreateImageHelp').tooltip();</script>
                 <strong>?</strong>
@@ -226,7 +226,6 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="hidden" id="image_group_location" name="image_group_location" value="" />
             <input type="text" id="gadres" placeholder="" class="form-control" style="
             display: inline-block;
             ">
@@ -277,7 +276,8 @@
                 marker.setPosition(event.latLng);
                 
                 var yeri = event.latLng;
-                document.getElementById('image_group_location').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+                document.getElementById('lat').value=yeri.lat().toFixed(6);
+                document.getElementById('lng').value=yeri.lng().toFixed(6);
               });
               }
 
@@ -286,8 +286,8 @@
                 geocoder.geocode( { 'address': address}, function(results, status) {
                   if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
-                    
-                document.getElementById('image_group_location').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+                document.getElementById('lat').value=results[0].geometry.location.lat().toFixed(6);
+                document.getElementById('lng').value=results[0].geometry.location.lng().toFixed(6);
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
 
