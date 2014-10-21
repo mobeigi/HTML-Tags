@@ -242,7 +242,7 @@
                   <input type="text" name="lng" id="lng" />
               </div>
 
-          <div id="latlongmap" style="width:100%; height:420px;"></div>
+          <div id="latlongmap" style="420px; height:420px;"></div>
      
              <!--google maps geocoder -->
              <script type="text/javascript">
@@ -299,7 +299,7 @@
                 });
 
                   } else {
-                    alert("Lat and long cannot be found.");
+                    alert("Location could not be found.");
                   }
                 });
               }
