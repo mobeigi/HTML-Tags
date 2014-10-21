@@ -6,18 +6,18 @@ print_r($_POST);
 include_once('/../_php/_session.php');
 
 // check if trip.name has a name...
-if(empty($_POST['trip_name'])) return false;
-// we need the user to be logged in...
-if(!isset($_SESSION['user_id'])) return false;
+if(empty($_POST['trip_name'])) exit(1);
+// we need the user to be logged in...;
+if(!isset($_SESSION['user_id'])) exit(1);
 
 $pg->_pg_transaction('begin');
 // make a new trip
-$trip_hash = sha1($user_id + time());
+$trip_hash = sha1($_SESSION['user_id'] + time());
 $query = "insert into trips (name, description, privacy, owner_id, trip_hash) values ($1, $2, $3, $4, $5)";
 $result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['trip_privacy'], $_SESSION['user_id'], $trip_hash);
 if(!$result) {
   $pg->_pg_transaction('rollback');
-  return false;
+  exit(1);
 }
 
 // get the trip_id (we are going to need it)
@@ -36,7 +36,7 @@ for($i = 0; $i != $image_group_num; $i++) {
   $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $location[0], $location[1]);
   if(!$result) {
     $pg->_pg_transaction('rollback');
-    return false;
+    exit(1);
   }
   // get the image group id (we are going to need it)
   $query = "select group_id from image_groups where name = $1 and trip_id = $2";
@@ -49,7 +49,7 @@ for($i = 0; $i != $image_group_num; $i++) {
       $pg->_pg_query($query, $image_group_id, $_POST['image_group_links_'.$i][$n]);
       if(!$result) {
           $pg->_pg_transaction('rollback');
-          return false;
+          exit(1);
       }
   }
   // if the cover_image has been set, we update the trip record to reflect it
@@ -58,7 +58,7 @@ for($i = 0; $i != $image_group_num; $i++) {
     $result = $pg->_pg_query($query, $_SESSION['coverPhoto']);
     if(!$result) {
       $pg->_pg_transaction('rollback');
-      return false;
+      exit(1);
     }
     $row = pg_fetch_assoc($result);
     $query = 'update trips set cover_image = $1 where trip_hash = $2';
