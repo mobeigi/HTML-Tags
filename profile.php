@@ -119,8 +119,6 @@
                     </div>
                   -->
 
-
-
                   <?php
                   if(isset($_SESSION['user_id'])) {
                     $query = 'select trip_id, name, cover_image from trips where owner_id = $1';
