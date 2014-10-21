@@ -18,7 +18,9 @@ print_r($row);
 for($i = 0; $i != $row_nums; $i++) {
   print($row[1]['group_id']);
   print($row[1]['longitude']);
-  print($row[1]['longitude']);
+  print($row[1]['latitude']);
+
+  //
   array_push($group_id, $row[$i]['group_id']);
   array_push($longitude, $row[$i]['longitude']);
   array_push($latitude, $row[$i]['latitude']);
