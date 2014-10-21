@@ -40,23 +40,22 @@ loadDescription();
  function loadSidePanel() {
 
     /* Load 4 images into side panel */
-     /*
     var i;
     var sideDiv = document.getElementById("lbc-sidepanel");
     sideDiv.innerHTML = "<h4>Group images:</h4><div id=\"lbc-image-scroll\" class=\"scroll\"></div>";
-    
     sideDiv = document.getElementById("lbc-image-scroll");
     
+    /*
     var firstImg = document.createElement("img");
     firstImg.src = document.getElementById("lbc-image").src;
     firstImg.onclick = function() { setMainImage(firstImg); };
     sideDiv.appendChild(firstImg);
     */
     
-    /*
-    var imageLength = images[window.curImageNum - 1].length;
-    console.log(images[window.curImageNum - 1].length);
     
+    var imageLength = images[window.curImageNum - 1].length;
+    console.log(imageLength);
+    /*
     for (i = 0; i < imageLength; ++i) {
         var img = document.createElement("img");
         img.src = images[window.curImageNum - 1][i];
