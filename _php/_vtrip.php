@@ -2,7 +2,7 @@
 
 include_once('_session.php');
 
-$trip_id = $_GET['trip_id'];
+$trip_id = $_GET['trip'];
 
 $longitude = array();
 $latitude = array();
@@ -15,7 +15,7 @@ $query = "select group_id, longitude, latitude from image_groups where trip_id =
 $result = $pg->_pg_query($query, $trip_id);
 
 $row = pg_fetch_all($result);
-$row_nums = pg_num_rows($row);
+$row_nums = $pg->_pg_num_rows($row);
 
 print_r($row);
 
