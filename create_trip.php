@@ -334,6 +334,7 @@
               //Clear Image contents
               $('#image_group_name').val("");
               $('#image_group_location_temp').val("");
+              $('#gadres').val("");
               
               //Clear previous errors
               $('#image_group_error').text("");
