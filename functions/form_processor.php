@@ -1,5 +1,6 @@
 <?php
 
+print($_POST);
 // replace all the return (false|true) with error messages (and redirection?).
 // need to run triptags.azurewebsites.net/_php/_install.php again before using this script.
 include_once('/../_php/_session.php');
@@ -28,7 +29,7 @@ $trip_id = $row['trip_id'];
 $image_group_num = sizeof($_POST[image_group_name]);
 // insert all the image groups into the database
 for($i = 0; $i != $image_group_num; $i++) {
-  $query = "insert into image_groups (trip_id, name, location) values ($1, $2, $3)";
+  $query = "insert into image_groups (trip_id, name, longitude, latitude) values ($1, $2, $3, $4)";
   $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $_POST['image_group_location'][$i]);
   if(!$result) {
     $pg->transaction('rollback');
@@ -42,7 +43,7 @@ for($i = 0; $i != $image_group_num; $i++) {
   // insert all of the uploaded images into the database
   $query = "insert into images (group_id, path) values ($1, $2)";
   for($n = 0; $n != sizeof($_POST['image_group_links_'.$i]); $n++) {
-      $pg->_pg_query($query, $image_group_id, $_POST['image_group_links_'$i][$n]);
+      $pg->_pg_query($query, $image_group_id, $_POST['image_group_links_'.$i][$n]);
       if(!$result) {
           $pg->_pg_transaction('rollback');
           return false;
