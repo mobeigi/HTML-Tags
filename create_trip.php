@@ -163,8 +163,8 @@
     <hr>
         <input type="hidden" id="coverPhoto" name="coverPhoto" value="" />
         <div class="row" align="center" style="margin-bottom: 12px;">
-              <div onclick="loadImages()">
-              <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="thumbnail">Select an image</a>
+              <div onclick="loadImages()" style="display:inline;">
+              <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="btn btn-default">Select an image</a>
               </div>
             <button type="push" class="btn btn-default">Upload an image</button>
             <br />
