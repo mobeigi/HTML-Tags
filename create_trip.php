@@ -94,7 +94,7 @@
     
     <!-- helper js globals -->
     <script>
-    window.imageGroupCount = 1;
+    window.imageGroupCount = 0;
     window.curImageGroup = 0;
     </script>
     
@@ -472,7 +472,7 @@
                 $('#coverPhotoBox').html('');
                 var isEmpty = true;
                 
-                for(var i = 1; i < window.imageGroupCount; ++i) {
+                for(var i = 0; i < window.imageGroupCount; ++i) {
                   //For each image group, display its images
                   var input_list = document.getElementsByName('image_group_links_' + i + '[]');
                   
