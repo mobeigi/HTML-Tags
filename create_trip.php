@@ -231,6 +231,7 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
+            <input type="hidden" id="image_group_location_temp" name="image_group_location_temp" value="" />
             <input type="text" id="gadres" placeholder="" class="form-control" style="
             display: inline-block;
             ">
@@ -281,8 +282,7 @@
                 marker.setPosition(event.latLng);
                 
                 var yeri = event.latLng;
-                document.getElementById('lat').value=yeri.lat().toFixed(6);
-                document.getElementById('lng').value=yeri.lng().toFixed(6);
+                document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
               });
               }
 
@@ -291,8 +291,7 @@
                 geocoder.geocode( { 'address': address}, function(results, status) {
                   if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
-                document.getElementById('lat').value=results[0].geometry.location.lat().toFixed(6);
-                document.getElementById('lng').value=results[0].geometry.location.lng().toFixed(6);
+                document.getElementById('image_group_location_temp').value= results[0].geometry.location.lat().toFixed(6) + "," + results[0].geometry.location.lng().toFixed(6);
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
 
@@ -308,7 +307,7 @@
                 });
 
                   } else {
-                    alert("Lat and long cannot be found.");
+                    alert("Location could cannot be found.");
                   }
                 });
               }
