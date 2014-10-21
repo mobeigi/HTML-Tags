@@ -1,6 +1,6 @@
 <?php
 
-print($_POST);
+print_r($_POST);
 // replace all the return (false|true) with error messages (and redirection?).
 // need to run triptags.azurewebsites.net/_php/_install.php again before using this script.
 include_once('/../_php/_session.php');
