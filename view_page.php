@@ -27,6 +27,9 @@ $tripID = htmlspecialchars($_GET["trip"]);
       }
     </style>
 
+    <!-- insert maps code -->
+    <?php include_once("maps/viewtrip.php"); ?>
+    
   </head>
     
     <body>

@@ -18,7 +18,7 @@
 
 <!-- load map/tripviewer -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="js/tripview.js"></script>
+<!-- <script src="js/tripview.js"></script> -->
 
 <!-- load lightbox script/css -->
 <script src="js/lightbox.min.js"></script>
