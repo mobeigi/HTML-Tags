@@ -29,6 +29,7 @@ var images = [[]]; //2D array
 //Initial load
 loadTitle();
 loadDescription();
+loadSidePanel();
 
 //Sets main image to provided image url
  function setMainImage(obj) {
@@ -54,15 +55,13 @@ loadDescription();
     
     
     var imageLength = images[window.curImageNum - 1].length;
-    console.log(imageLength);
-    /*
+    
     for (i = 0; i < imageLength; ++i) {
         var img = document.createElement("img");
         img.src = images[window.curImageNum - 1][i];
         img.onclick = function() { setMainImage(img); };
         sideDiv.appendChild(img);
     }
-    */
     
 
     /*
