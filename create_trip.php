@@ -294,8 +294,6 @@
               
               //If empty image group, update picture to first uploaded
               if ($('#image_group_display_pic_' + window.curImageGroup).attr('src') == './img/empty_image_group.jpg') {
-                console.log(1);
-           
                 $('#image_group_display_pic_' + window.curImageGroup).attr('src', "uploads/" + url);
               }
             }
