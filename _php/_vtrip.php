@@ -29,13 +29,10 @@ for($i = 0; $i != $row_nums; $i++) {
   $result = $pg->_pg_query($query, $group_id[$i]);
   $row = pg_fetch_all($result);
   for($m = 0; $m != sizeof($row); $m++) {
-    array_push($images[$i], $row[$m]['path']);
+    $images[$i][$m] = $row[$m]['path']);
   }
 }
 
-print_r($group_id);
-print_r($latitude);
-print_r($longitude);
 print_r($images);
 
 ?>
