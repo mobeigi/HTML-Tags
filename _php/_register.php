@@ -1,6 +1,6 @@
 <?php
 include_once('_session.php');
-include_once('_login.php');
+include_once('_function.php');
 
 $username = $_POST['userEmail'];
 $password = $_POST['userPassword'];
