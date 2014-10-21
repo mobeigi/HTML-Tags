@@ -5,14 +5,16 @@ $tripID = htmlspecialchars($_GET["trip"]);
 <!DOCTYPE html >
 <html lang="en" ng-app>
   <head>
-        <title>TripTags | View trip #<?php echo $tripID; ?></title>
-       
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
+     <title>TripTags | View trip #<?php echo $tripID; ?></title>
+     
+     <?php include_once("includes/header.php"); ?>
+     
+    <style>
+      body {
+          padding-top: 50px;
+          padding-bottom: 20px;
+      }
+    </style>
         
      <style>
       #map-canvas {
