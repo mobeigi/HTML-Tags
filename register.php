@@ -31,41 +31,34 @@
 
 </head>
 
-<body>
-    
-    
-    <!-- Import the bootstrap files -->
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    
-<div class="container"> 
-    <!-- include navbar -->
-    <?php include_once "/includes/navbar.php"; ?>
-    
-    <!-- Heading -->
-    <h2>Register</h2>
-    <hr>
-    
-<form role="form" action="_php/_register.php" method="post">
-<input type="hidden" name="page" value="register.php" />
-    <div class="form-group">
-        <label for="userEmail">Email address</label>
-        <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-        <label for="userPassword">Password</label>
-        <input type="password" name="userPassword" class="form-control" id="userPassword" placeholder="Password">
-    </div>
+    <body>
+        <div class="container"> 
+            <!-- include navbar -->
+            <?php include_once "/includes/navbar.php"; ?>
+            <!-- Heading -->
+            <h2>Register</h2>
+            <hr>
+            <form role="form" action="_php/_register.php" method="post">
+            <input type="hidden" name="page" value="register.php" />
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input type="email" name="userEmail" class="form-control" id="userEmail" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" name="userPassword" class="form-control" id="userPassword" placeholder="Password">
+                </div>
 
-    <div class="row" align="right" style="margin-bottom: 12px;">
-        <button type="submit" name="cancel" class="btn btn-default">Cancel</button>
-        <button type="submit" name="register" class="btn btn-success">Register</button>
-    </div>
-</form>
-        
-</div>
+                <div class="row" align="right" style="margin-bottom: 12px;">
+                    <button type="submit" name="cancel" class="btn btn-default">Cancel</button>
+                    <button type="submit" name="register" class="btn btn-success">Register</button>
+                </div>
+            </form>
 
-</body>
+            </div>
 
+            <!-- include footer -->
+        <?php include_once "/includes/footer.php"; ?>
+    </body>
 </html>
 
