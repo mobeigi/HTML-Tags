@@ -87,10 +87,9 @@
                 <?php
                     $userEmail = $_SESSION['user_email'];
                     print "<h1>Welcome, $userEmail!</h1>\n";
-                    print "<hr>\n";
                 ?>
 
-                <h2 style="display:inline-flex">My Trips:</h2>
+                <h2 style="display:inline-flex">My Trips</h2>
                     <a href="http://triptags.azurewebsites.net/create_trip.php">
                         <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
                     </a> <hr>
