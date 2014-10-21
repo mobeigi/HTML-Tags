@@ -52,9 +52,14 @@ for($i = 0; $i != $image_group_num; $i++) {
           return false;
       }
   }
+  // if the cover_image has been set, we update the trip record to reflect it
   if(isset($_SESSION['coverPhoto'])) {
     $query = 'select image_id from images where path = $1';
     $result = $pg->_pg_query($query, $_SESSION['coverPhoto']);
+    if(!$result) {
+      $pg->_pg_transaction('rollback');
+      return false;
+    }
     $row = pg_fetch_assoc($result);
     $query = 'update trips set cover_image = $1 where trip_hash = $2';
     $pg->_pg_query($query, $row['image_id'], $trip_hash);
