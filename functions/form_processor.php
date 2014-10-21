@@ -12,16 +12,17 @@ if(!isset($_SESSION['user_id'])) return false;
 
 $pg->_pg_transaction('begin');
 // make a new trip
-$query = "insert into trips (name, description, privacy, owner_id) values ($1, $2, $3, $4)";
-$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['trip_privacy'], $_SESSION['user_id']);
+$trip_hash = sha1($user_id + time());
+$query = "insert into trips (name, description, privacy, owner_id, trip_hash) values ($1, $2, $3, $4, $5)";
+$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['trip_privacy'], $_SESSION['user_id'], $trip_hash);
 if(!$result) {
   $pg->_pg_transaction('rollback');
   return false;
 }
 
 // get the trip_id (we are going to need it)
-$query = "select trip_id from trips where name = $1";
-$result = $pg->_pg_query($query, $_POST['trip_name']);
+$query = "select trip_id from trips where trip_hash = $1";
+$result = $pg->_pg_query($query, $trip_hash);
 $row = pg_fetch_assoc($result);
 $trip_id = $row['trip_id'];
 
@@ -50,6 +51,13 @@ for($i = 0; $i != $image_group_num; $i++) {
           $pg->_pg_transaction('rollback');
           return false;
       }
+  }
+  if(isset($_SESSION['coverPhoto'])) {
+    $query = 'select image_id from images where path = $1';
+    $result = $pg->_pg_query($query, $_SESSION['coverPhoto']);
+    $row = pg_fetch_assoc($result);
+    $query = 'update trips set cover_image = $1 where trip_hash = $2';
+    $pg->_pg_query($query, $row['image_id'], $trip_hash);
   }
 }
 // commit all inserts into the database

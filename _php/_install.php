@@ -17,7 +17,8 @@ CREATE TABLE trips (
 	trip_id serial PRIMARY KEY,
 	name varchar(64) NOT NULL,
 	description varchar(256),
-	privacy varchar(64)
+	privacy varchar(64),
+	trip_hash varchar(128),
 )';
 $pg->_pg_query($query);
 // INSERT INTO image_groups(group_id, trip_id, name, longitude, latitude, cover_image) VALUES ($?)
@@ -42,8 +43,8 @@ CREATE TABLE images (
 $pg->_pg_query($query);
 $query = 'ALTER TABLE trips ADD COLUMN cover_image integer REFERENCES images(image_id)';
 $pg->_pg_query($query);
-$query = 'ALTER TABLE image_groups ADD COLUMN cover_image integer REFERENCES images(image_id)';
-$pg->_pg_query($query);
+//$query = 'ALTER TABLE image_groups ADD COLUMN cover_image integer REFERENCES images(image_id)';
+//$pg->_pg_query($query);
 // INSERT INTO comments (comment_id, image_id) VALUES ($?)
 $query = '
 CREATE TABLE comments (
