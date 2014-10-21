@@ -1,11 +1,16 @@
-<?php
-
-
-?>
-
 <script type="text/javascript">
 //Using DB variables, store required information in JS arrays
+var image_group_names = [];
+var image_group_desc = [];
 
+<?php
+  for ($j; $j < $numImageGroups; ++$j) {
+  ?>
+  image_group_names.push(<?php echo $name[$j]; ?>);
+  image_group_desc.push(<?php echo $description[$j]; ?>);
+  <?php
+  }
+?>
 
 //Sets main image to provided image url
  function setMainImage(obj) {

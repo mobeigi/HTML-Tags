@@ -49,6 +49,8 @@ for($i = 0; $i != $rows_nums; $i++) {
   }
 }
 
+$numImageGroups = sizeof($group_id);
+
 ?>
 
 <script type="text/javascript">
@@ -92,7 +94,6 @@ function initialize() {
   
   <?php
     //Loop through image groups
-    $numImageGroups = sizeof($group_id);
     for ($i = 0; $i < $numImageGroups; ++$i) {
       ?>
       
