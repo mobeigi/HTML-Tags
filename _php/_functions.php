@@ -16,7 +16,9 @@ function login($username, $password) {
   // check if the "plain-text" password is the same as the database
   // NEVER do this in a production environment...
   if(strcmp($row['user_password'],$password) == 0) {
+    // set session data
     $_SESSION['user_id'] = $row['user_id'];
+    $_SESSION['user_email'] = $row['user_email'];
     return true;
   }
   return false;
