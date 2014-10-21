@@ -167,6 +167,10 @@
               <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="thumbnail">Select an image</a>
               </div>
             <button type="push" class="btn btn-default">Upload an image</button>
+            
+            <div class="col-md-3 col-md-2 thumbnail">
+            <img id ="coverPreview" src="img/empty_image_group.jpg">
+            </div>
         </div>
 
     <!-- Finalisation buttons -->
@@ -358,6 +362,7 @@
               $('#save_changes_3_btn').click(function() {
                 //Set cover photo
                 $('#coverPhoto').val(window.coverPhoto);
+                $('#coverPreview').attr('src', window.coverPhoto);
               }
               </script>
               </script>
