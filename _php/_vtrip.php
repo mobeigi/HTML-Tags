@@ -37,6 +37,13 @@ for($i = 0; $i != $rows_nums; $i++) {
   }
 }
 
+
+
+print_r($longitude);
+print_r($latitude);
+print_r($group_id);
+print_r($description);
+print_r($name);
 print_r($images);
 
 ?>
