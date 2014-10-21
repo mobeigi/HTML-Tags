@@ -230,8 +230,8 @@
               if ($('#image_group_name').val() != "" &&
                   $('#image_group_location').val() ) {
               
-              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\" onclick=\"window.curImageGroup =" + window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img id=\"image_group_display_pic_" + window.imageGroupCount + "\" src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name\" value=\"" 
-              + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location\" value=\"" 
+              $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\" onclick=\"window.curImageGroup =" + window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img id=\"image_group_display_pic_" + window.imageGroupCount + "\" src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name[]\" value=\"" 
+              + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location[]\" value=\"" 
               + $('#image_group_location').val() + "\" /></div>");
               
               //Clear Image contents
@@ -290,7 +290,7 @@
             <script type="text/javascript">
            //Add image by appending a hidden input field to image_group_links_block
             function addImage(url) {
-              $('#image_group_links_block').append("<input type=\"hidden\" name=\"image_group_links_" + window.curImageGroup + "\" value=\"" + url + "\" />");
+              $('#image_group_links_block').append("<input type=\"hidden\" name=\"image_group_links_" + window.curImageGroup + "[]\" value=\"" + url + "\" />");
               
               //If empty image group, update picture to first uploaded
               if ($('#image_group_display_pic_' + window.curImageGroup).attr('src') == './img/empty_image_group.jpg') {
