@@ -226,7 +226,7 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="hidden" id="image_group_location" name="image_group_location" value="" />
+            <input type="hidden" id="image_group_location_temp" name="image_group_location_temp" value="" />
             <input type="text" id="gadres" placeholder="" class="form-control" style="
             display: inline-block;
             ">
@@ -277,7 +277,7 @@
                 marker.setPosition(event.latLng);
                 
                 var yeri = event.latLng;
-                document.getElementById('image_group_location').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+                document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
               });
               }
 
@@ -286,7 +286,7 @@
                 geocoder.geocode( { 'address': address}, function(results, status) {
                   if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
-                 document.getElementById('image_group_location').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+                 document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
 
@@ -325,11 +325,11 @@
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
               if ($('#image_group_name').val() != "" &&
-                  $('#image_group_location').val() != "" ) {
+                  $('#image_group_location_temp').val() != "" ) {
               
               $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\" onclick=\"window.curImageGroup =" + window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img id=\"image_group_display_pic_" + window.imageGroupCount + "\" src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name[]\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location[]\" value=\"" 
-              + $('#image_group_location').val() + "\" /></div>");
+              + $('#image_group_location_temp').val() + "\" /></div>");
               
               //Clear Image contents
               $('#image_group_name').val("");
