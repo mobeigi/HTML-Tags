@@ -46,14 +46,15 @@ $tripID = htmlspecialchars($_GET["trip"]);
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="shareTripModalLabel">Trip Link</h4>
+                <h4 class="modal-title" id="shareTripModalLabel">Select Image Group Cover Photo</h4>
               </div>
               <div class="modal-body">
-                  <p>Give the following link to your friends:</p>
-                  <input type="text" id="trip_name" value="http://triptags.azurewebsites.net/view_page.php?trip=19292" style="width: 100%; padding: 5px" readonly>
+                <p>Give the following link to your friends:</p>
+                <input type="text" id="trip_name" value="http://triptags.azurewebsites.net/view_page.php?trip=19292" style="width: 100%; padding: 5px" readonly>
               </div>
+                
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
