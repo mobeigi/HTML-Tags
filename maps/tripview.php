@@ -95,7 +95,7 @@ function initialize() {
       //Add image trips
       var a = document.createElement('a');
       a.id = 'triptag' + <?php echo $i; ?>;
-      a.href = 'uploads/' + <?php $images[$i]; ?>;
+      a.href = 'uploads/' + <?php echo $images[$i]; ?>;
       a.setAttribute("data-lightbox", "trip-1");
       a.setAttribute("data-title", "My Trip Name!");
       hiddenTripTags.appendChild(a);
