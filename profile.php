@@ -140,7 +140,7 @@
                         } else {
                             	print "<img src=\"./img/create_trip.jpg\">";
                         }
-			print "</a></div>";
+			                       print "</a></div>";
                     }
                   } else {
                     print '

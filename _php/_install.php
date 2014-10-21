@@ -29,7 +29,7 @@ CREATE TABLE image_groups (
 	name varchar(64) NOT NULL,
 	longitude float(10),
 	latitude float(10),
-	location varchar(256)
+ 	description varchar(256)
 )';
 $pg->_pg_query($query);
 // INSERT INTO images(image_id, group_id, description) VALUES ($?)
