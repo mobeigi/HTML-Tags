@@ -161,7 +161,7 @@
     <!-- Select Cover photo for the trip -->
     <h2>Cover Photo</h2>
     <hr>
-        <input type="hidden" name="coverPhoto" value="" />
+        <input type="hidden" id="coverPhoto" name="coverPhoto" value="" />
         <div class="row" align="center" style="margin-bottom: 12px;">
               <div onclick="loadImages()">
               <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="thumbnail">Select an image</a>
@@ -342,9 +342,21 @@
                   var input_list = document.getElementsByName('image_group_links_' + i);
                   
                   for(var j = 0; j < input_list.length; ++j) {
-                      console.log(input_list[j].value, input_list[j].getAttribute('value'));
+                    document.write(' <div class="col-md-3 col-md-2" onclick="setCover("' + input_list[j].value + '")"><img src="uploads/' + input_list[j].value + '"></div>');
+                      input_list[j].value
                   }
                 }
+              }
+              
+              //Store cover photo in global url
+              function setCover(url) {
+                window.coverPhoto = url;
+              }
+              
+              $(document).ready(function() {
+              $('#save_changes_3_btn').click(function() {
+                //Set cover photo
+                $('#coverPhoto').val(window.coverPhoto);
               }
               </script>
             </div>
