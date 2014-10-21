@@ -93,7 +93,7 @@
                 <h2 style="display:inline-flex">My Trips:</h2>
                     <a href="http://triptags.azurewebsites.net/create_trip.php">
                         <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
-                    </a>
+                    </a> <hr>
                 <div class="row">
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
