@@ -30,11 +30,7 @@
                     -->
 				 </ul>
 
-                 <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>   
-                    <!-- Button trigger share link modal -->
-                    <button class="btn btn-default" data-toggle="modal" data-target="#shareTripModal">
-                      Share Trip
-                    </button>                             
+                 <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>                          
                  <?php } ?>
                 
                  <?php if (isset($_SESSION['user_id'])) { ?>

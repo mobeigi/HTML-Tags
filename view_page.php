@@ -38,6 +38,11 @@
     	</section>
     
         
+    <!-- Button trigger share link modal -->
+    <button class="btn btn-default" data-toggle="modal" data-target="#shareTripModal">
+      Share Trip
+    </button>
+        
     <!-- Share link modal window -->
     <div class="modal fade" id="shareTripModal" tabindex="-1" role="dialog" aria-labelledby="shareTripModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -56,6 +61,7 @@
         </div>
       </div>
     </div>
+        
          <!-- include footer -->
         <?php include_once "/includes/footer.php"; ?>
     </body>          
