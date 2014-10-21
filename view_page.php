@@ -6,8 +6,6 @@ $tripID = htmlspecialchars($_GET["trip"]);
 <html lang="en" ng-app>
   <head>
         <title>TripTags | View trip #<?php echo $tripID; ?></title>
-        
-        <?php include_once("includes/header.php"); ?>
        
         <style>
             body {
