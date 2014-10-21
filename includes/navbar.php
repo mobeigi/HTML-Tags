@@ -18,10 +18,9 @@
 			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 				 <ul class="nav navbar-nav">
                     <?php if (isset($_SESSION['user_id'])){ ?>
-                        print '<li><a href="http://triptags.azurewebsites.net/profile.php">Profile</a></li>';
+                        <li><a href="http://triptags.azurewebsites.net/profile.php">Profile</a></li>
                     <?php } else { ?> 
-                        print "sadfsad";
-                        print '<li><a href="http://triptags.azurewebsites.net/register.php">Register</a></li>';
+                        <li><a href="http://triptags.azurewebsites.net/register.php">Register</a></li>
                     <?php   }?>
                     <!--
                     <li><a href="#">Tutorial</a></li>
