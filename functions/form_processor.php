@@ -27,6 +27,7 @@ $row = pg_fetch_assoc($result);
 $trip_id = $row['trip_id'];
 
 // how many image groups do we have?
+if($_POST['image_group_name']) {
 $image_group_num = sizeof($_POST['image_group_name']);
 // insert all the image groups into the database
 for($i = 0; $i != $image_group_num; $i++) {
@@ -64,6 +65,7 @@ for($i = 0; $i != $image_group_num; $i++) {
     $query = 'update trips set cover_image = $1 where trip_hash = $2';
     $pg->_pg_query($query, $row['image_id'], $trip_hash);
   }
+}
 }
 // commit all inserts into the database
 $pg->_pg_transaction('commit');
