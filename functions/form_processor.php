@@ -31,7 +31,7 @@ if(isset($_POST['image_group_name'])) {
 $image_group_num = sizeof($_POST['image_group_name']);
 // insert all the image groups into the database
 for($i = 0; $i != $image_group_num; $i++) {
-  $query = "insert into image_groups (trip_id, name, longitude, latitude, description) values ($1, $2, $3, $4, $5)";
+  $query = "insert into image_groups (trip_id, name, latitude, longitude, description) values ($1, $2, $3, $4, $5)";
   // split up the location into an array in format (longitude, latitude)
   $location = explode(",", $_POST['image_group_location'][$i]);
   $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $location[0], $location[1], $_POST['image_group_desc'][$i]);
