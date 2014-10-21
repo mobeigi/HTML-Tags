@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_id'])) return false;
 $pg->_pg_transaction('begin');
 // make a new trip
 $query = "insert into trips (name, description, privacy, owner_id) values ($1, $2, $3, $4)";
-$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['privacy'], $_SESSION['user_id']);
+$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['trip_privacy'], $_SESSION['user_id']);
 if(!$result) {
   $pg->_pg_transaction('rollback');
   return false;
@@ -21,24 +21,26 @@ if(!$result) {
 
 // get the trip_id (we are going to need it)
 $query = "select trip_id from trips where name = $1";
-$result = $pg->_pg_query($query, $_POST[trip_name]);
-$row = $pg->_pg_fetch_row($result);
+$result = $pg->_pg_query($query, $_POST['trip_name']);
+$row = pg_fetch_assoc($result);
 $trip_id = $row['trip_id'];
 
 // how many image groups do we have?
-$image_group_num = sizeof($_POST[image_group_name]);
+$image_group_num = sizeof($_POST['image_group_name']);
 // insert all the image groups into the database
 for($i = 0; $i != $image_group_num; $i++) {
   $query = "insert into image_groups (trip_id, name, longitude, latitude) values ($1, $2, $3, $4)";
-  $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $_POST['image_group_location'][$i]);
+  // split up the location into an array in format (longitude, latitude)
+  $location = explode(",", $_POST['image_group_location'][$i])
+  $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $location[0], $location[1]);
   if(!$result) {
-    $pg->transaction('rollback');
+    $pg->_pg_transaction('rollback');
     return false;
   }
   // get the image group id (we are going to need it)
   $query = "select group_id from image_groups where name = $1 and trip_id = $2";
   $result = $pg->_pg_query($query, $_POST['image_group_name'][$i], $trip_id);
-  $row = $pg->_pg_fetch_row($result);
+  $row = pg_fetch_assoc($result);
   $image_group_id = $row['group_id'];
   // insert all of the uploaded images into the database
   $query = "insert into images (group_id, path) values ($1, $2)";
