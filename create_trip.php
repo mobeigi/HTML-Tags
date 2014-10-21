@@ -135,7 +135,7 @@
         </div>
     </div>
 
-} else {?>
+<?php } else {?>
     
     <!-- User input for the trip details -->
     <h2 style="display:inline-flex">Trip Details</h2> 
