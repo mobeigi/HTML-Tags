@@ -12,8 +12,13 @@
 */
 
 //Create database calls and collect required data
-
 include_once('_php/_session.php');
+
+//Collect 1st image (cover image) from each image group in proper order
+//Also collect longitude, latitude
+$query = "select group_id, longitude from image_groups";
+$result = $pg->_pg_query($query);
+
 
 ?>
 
