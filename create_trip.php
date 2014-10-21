@@ -435,6 +435,7 @@
             </div><br/>
             <input type="submit" value="Upload" name="submitbtn" id="submitbtn" class="upload"/>
             <br />
+            <br />
             Click 'Save Changes' once all images have been uploaded.
             </form>
             <!-- The uploaded image will display here -->
