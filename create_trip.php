@@ -274,16 +274,7 @@
                 var yeri = event.latLng;
                 document.getElementById('lat').value=yeri.lat().toFixed(6);
                 document.getElementById('lng').value=yeri.lng().toFixed(6);
-                document.getElementById('coordinatesurl').value = 'http://www.latlong.net/c/?lat=' 
-                                    + yeri.lat().toFixed(6) + '&long='
-                                    + yeri.lng().toFixed(6);
               });
-                
-            google.maps.event.addListener(map, 'mousemove', function(event) {
-            var yeri = event.latLng;
-            document.getElementById("mlat").value = yeri.lat().toFixed(6);
-            document.getElementById("mlong").value = yeri.lng().toFixed(6);
-            });
               }
 
             function codeAddress() {
@@ -295,9 +286,6 @@
                 document.getElementById('lng').value=results[0].geometry.location.lng().toFixed(6);
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
-            document.getElementById('coordinatesurl').value = 'http://www.latlong.net/c/?lat=' 
-                                    + results[0].geometry.location.lat().toFixed(6) + '&long='
-                                    +results[0].geometry.location.lng().toFixed(6);
 
              var infowindow = new google.maps.InfoWindow({
                     content: latlong
