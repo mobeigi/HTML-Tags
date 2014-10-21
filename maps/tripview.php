@@ -101,7 +101,7 @@ function initialize() {
       hiddenTripTags.appendChild(a);
       
       sw = new google.maps.LatLng(<?php echo $latitude[$i]; ?>, <?php echo $longitude[$i]; ?>);
-      ne = new google.maps.LatLng((<?php echo $latitude[$i]; ?>+ 1), (<?php echo $longitude[$i]; ?> + 1));
+      ne = new google.maps.LatLng(<?php echo ($latitude[$i] + 1); ?>, <?php echo ($longitude[$i] + 1); ?>);
       bounds.push(new google.maps.LatLngBounds(sw, ne));
       
       triptags.push(new ImageOverlay(bounds[<?php echo $i; ?>], links[<?php echo $i; ?>], map));
