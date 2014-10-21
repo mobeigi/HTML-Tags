@@ -222,11 +222,13 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="text" id="image_group_location" placeholder="" class="form-control" style="
+            <input type="text" id="gadres" placeholder="" class="form-control" style="
             display: inline-block;
-            "></td>
+            ">
+            </td>
             <td class="col3" align="center">
                 <img src="./img/small_trip_tag.png">
+                <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
             </td>
             </tr>
             </tbody>
@@ -240,16 +242,7 @@
                   <input type="text" name="lng" id="lng" />
               </div>
 
-          <div>
-               <div class="box">
-                  <label for="gadres">Address</label>
-                  <input id="gadres" type="text" size="24" placeholder="Type address here" /> 
-                  <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
-
-              </div>
-              
-              <div id="latlongmap" style="width:100%; height:420px;">
-           </div>
+          <div id="latlongmap" style="width:100%; height:420px;"></div>
      
              <!--google maps geocoder -->
              <script type="text/javascript">
