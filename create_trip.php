@@ -186,7 +186,7 @@
     <!-- Finalisation buttons -->
     <div class="row" align="right" style="margin-bottom: 12px;">
         <input type="hidden" name="source" value="create_trip" />
-        <button type="push" id="cancel_trip_btn" class="btn">Cancel</button>
+        <button type="button" id="cancel_trip_btn" class="btn">Cancel</button>
         <button type="submit" class="btn btn-success">Save Trip</button>
         <button type="push" class="btn btn-success">Preview Trip</button>
     </div>  
