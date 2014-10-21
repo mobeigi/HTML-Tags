@@ -180,6 +180,7 @@
             <br />
             <div class="thumbnail" style="margin-top: 10px; width: 150px;">
             <img id ="coverPreview" src="img/placeholder.png">
+            <p style="font-weight: bold;">Cover Photo Preview</p>
             </div>
         </div>
         
