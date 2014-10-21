@@ -160,6 +160,10 @@
    
     <!-- Select Cover photo for the trip -->
     <h2>Cover Photo</h2>
+    <button type="button" id="CoverPhotoHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Image Groups contain photographs of a general location to highlight the experiences you want to share."> 
+            <script>$('#CoverPhotoHelp').tooltip();</script>
+                <strong>?</strong>
+        </button>
     <hr>
         <input type="hidden" id="coverPhoto" name="coverPhoto" value="" />
         <div class="row" align="center" style="margin-bottom: 12px;">
