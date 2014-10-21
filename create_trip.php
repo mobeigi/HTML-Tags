@@ -363,7 +363,8 @@
                 //Set cover photo
                 $('#coverPhoto').val(window.coverPhoto);
                 $('#coverPreview').attr('src', window.coverPhoto);
-              }
+              });
+              });
               </script>
             </div>
             
