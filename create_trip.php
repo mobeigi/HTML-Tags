@@ -156,7 +156,7 @@
     <p id ="image_group_error" class="error" ></p>
         <div id="image_groups" class="row">
             <div id="create_image_group_block" class="col-md-3 col-md-2">
-                    <a href="#crImageGroupModal" role="button" data-toggle="modal" class="thumbnail">   
+                    <a href="#crImageGroupModal" role="button" data-toggle="modal" class="thumbnail" onclick="resizeMap()">   
                         <img src="./img/create_image_group.jpg">
                     </a>
             </div> 
