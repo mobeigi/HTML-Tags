@@ -104,8 +104,26 @@
     
 <div class="container">
    <!-- include navbar -->
-   <?php $loggedIn = true; ?>
    <?php include_once "/includes/navbar.php"; ?>
+    
+<!-- Redirect user if they're not logged in -->
+<?php if (!isset($_SESSION['user_id'])) {
+    //Add some spacing
+    for ($x = 0; $x < 2; $x++) {
+        print '<br>';
+    }
+
+    //Print error message
+    print '<p><b>Oops! You must be logged in to view this page!</b></p>';
+    print '<p>You can log in through the menu bar in the top-right corner.</p>';
+    print '<a href="http://triptags.azurewebsites.net">Return to home page</a>';
+
+    //Add some spacing
+    for ($x = 0; $x < 5; $x++) {
+        print '<br>';
+    }
+
+} else {?>
     
     <!-- User input for the trip details -->
     <h2 style="display:inline-flex">Trip Details</h2> 
@@ -530,6 +548,9 @@
         </div>
       </div>
     </div>
+    
+<?php } ?>
+    
 </div>
         <?php include_once "/includes/footer.php"; ?>   
     </body>
