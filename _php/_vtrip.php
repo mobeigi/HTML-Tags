@@ -16,7 +16,7 @@ $result = $pg->_pg_query($query, $trip_id);
 $row = pg_fetch_assoc($result);
 $trip_name = $row['name'];
 
-$query = 'select group_id, title, description, longitude, latitude from image_groups where trip_id = $1';
+$query = 'select group_id, name, description, longitude, latitude from image_groups where trip_id = $1';
 $result = $pg->_pg_query($query, $trip_id);
 
 $rows = pg_fetch_all($result);
