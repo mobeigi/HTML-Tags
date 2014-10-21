@@ -60,7 +60,7 @@ loadTitle();
  
  //Load title for image group
 function loadTitle() {
-    window.setTimeout(loadTitleB, 500);
+    window.setTimeout(loadTitleB, 100);
 }
 
 function loadTitleB() {
