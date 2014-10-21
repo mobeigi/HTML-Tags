@@ -96,7 +96,6 @@
     <script>
     window.imageGroupCount = 1;
     window.curImageGroup = 0;
-    window.coverPhoto = 'img/placeholder.png';
     </script>
     
 </head>
@@ -249,7 +248,7 @@
             <button type="button" onclick="codeAddress();" class="btn btn-default">Find location</button>
             </div>
             
-          <div id="latlongmap" style="width:100%; height:420px;"></div>
+          <div id="latlongmap" style="width:550px; height:420px;"></div>
      
              <!--google maps geocoder -->
              <script type="text/javascript">
