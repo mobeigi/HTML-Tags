@@ -29,6 +29,7 @@ $tripID = htmlspecialchars($_GET["trip"]);
 
     <!-- insert maps code -->
     <?php include_once("maps/tripview.php"); ?>
+    <?php include_once('/maps/imagegroupview.php'); ?>
     
   </head>
     

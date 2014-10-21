@@ -24,5 +24,3 @@
 <script src="js/lightbox.min.js"></script>
 <!-- <script src="maps/imagegroupview.js"></script> -->
 <link href="css/lightbox.css" rel="stylesheet" />
-
-<?php include_once('/maps/imagegroupview.php'); ?>
