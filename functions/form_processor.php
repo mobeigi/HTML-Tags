@@ -31,7 +31,7 @@ $image_group_num = sizeof($_POST['image_group_name']);
 for($i = 0; $i != $image_group_num; $i++) {
   $query = "insert into image_groups (trip_id, name, longitude, latitude) values ($1, $2, $3, $4)";
   // split up the location into an array in format (longitude, latitude)
-  $location = explode(",", $_POST['image_group_location'][$i])
+  $location = explode(",", $_POST['image_group_location'][$i]);
   $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $location[0], $location[1]);
   if(!$result) {
     $pg->_pg_transaction('rollback');
