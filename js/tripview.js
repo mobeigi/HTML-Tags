@@ -12,7 +12,7 @@
 
 //Create database calls and collect required data
 <?php
-include('/_session.php');
+include_once('_php/_session.php');
 
 ?>
 
