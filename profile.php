@@ -120,7 +120,7 @@
                     </div>              
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/ccreate_image_group.jpg">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>            
                 </div>
