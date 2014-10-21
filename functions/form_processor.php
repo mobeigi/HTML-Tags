@@ -27,7 +27,7 @@ $row = pg_fetch_assoc($result);
 $trip_id = $row['trip_id'];
 
 // how many image groups do we have?
-if($_POST['image_group_name']) {
+if(isset($_POST['image_group_name'])) {
 $image_group_num = sizeof($_POST['image_group_name']);
 // insert all the image groups into the database
 for($i = 0; $i != $image_group_num; $i++) {
