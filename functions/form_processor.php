@@ -6,11 +6,13 @@ include('/../_php/_session.php');
 
 // check if trip.name has a name...
 if(empty($_POST['trip_name'])) return false;
+// we need the user to be logged in...
+if(!isset($_SESSION['user_id'])) return false;
 
 $pg->_pg_transaction('begin');
 // make a new trip
-$query = "insert into trips (name, description, privacy) values ($1, $2, $3)";
-$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['privacy']);
+$query = "insert into trips (name, description, privacy, owner_id) values ($1, $2, $3, $4)";
+$result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['privacy'], $_SESSION['user_id']);
 if(!$result) {
   $pg->_pg_transaction('rollback');
   return false;

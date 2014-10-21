@@ -18,8 +18,6 @@ function login($username, $password) {
     $_SESSION['user_id'] = $row['user_id'];
     return true;
   }
-  else {
-    return false;
-  }
+  else return false;
 }
 ?>
