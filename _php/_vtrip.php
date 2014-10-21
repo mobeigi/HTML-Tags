@@ -26,7 +26,6 @@ for($i = 0; $i != $row_nums; $i++) {
   $result = $pg->_pg_query($query, $group_id[$i]);
   $row = pg_fetch_assoc($result);
   array_push($images, $row['path']);
-}
 
 print_r($group_id);
 print_r($latitude);
