@@ -35,7 +35,6 @@ loadSidePanel();
  function setMainImage(url) {
     var img = document.getElementById("lbc-image");
     img.src = url;
-    console.log(url);
 }
  
  //Load side panel pictures
