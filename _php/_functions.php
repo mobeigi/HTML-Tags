@@ -1,6 +1,7 @@
 <?php
 include_once('_session.php');
 function login($username, $password) {
+  global $pg;
   if(empty($username)) return false;
   if(empty($password)) return false;
 
