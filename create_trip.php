@@ -345,6 +345,9 @@
                   //For each image group, display its images
                   var input_list = document.getElementsByName('image_group_links_' + i);
                   
+                  //Clear coverphoto box
+                  $('#coverPhotoBox').html('');
+                  
                   for(var j = 0; j < input_list.length; ++j) {
                     $('#coverPhotoBox').append('<div class="col-md-3 col-md-2 thumbnail" onclick="setCover(\'' + input_list[j].value + '\')"><img src="uploads/' + input_list[j].value + '"></div>');
                   }
