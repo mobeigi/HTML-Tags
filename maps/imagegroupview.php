@@ -13,9 +13,12 @@ var images = [[]]; //2D array
   image_group_names.push('<?php echo $name[$j]; ?>');
   image_group_desc.push('<?php echo $description[$j]; ?>');
   
+  <?php
   //Iterate over adding images for this image group
   for ($k = 0; $k < sizeof($images[$j]); ++$k) {
+    ?>
     images.push('<?php echo $images[$j][$k]; ?>');
+    <?php
   }
   <?php
   }
@@ -29,7 +32,7 @@ loadDescription();
  function setMainImage(obj) {
     var img = document.getElementById("lbc-image");
     img.src = obj.src;
- }
+}
  
  //Load side panel pictures
  function loadSidePanel() {
