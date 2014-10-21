@@ -172,11 +172,21 @@
             <img id ="coverPreview" src="img/empty_image_group.jpg">
             </div>
         </div>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $('#cancel_trip_btn').click(function(){
+          window.location.href = "profile.php";
+        });
+        
+        });
+        
+        </script>
 
     <!-- Finalisation buttons -->
     <div class="row" align="right" style="margin-bottom: 12px;">
         <input type="hidden" name="source" value="create_trip" />
-        <button type="push" class="btn">Cancel</button>
+        <button type="push" id="cancel_trip_btn" class="btn">Cancel</button>
         <button type="submit" class="btn btn-success">Save Trip</button>
         <button type="push" class="btn btn-success">Preview Trip</button>
     </div>  
