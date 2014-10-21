@@ -32,12 +32,12 @@
 
                  <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>   
                     <!-- Button trigger share link modal -->
-                        <button class="btn btn-default" data-toggle="modal" data-target="#shareTripModal">
+                        <button class="btn btn-default" data-toggle="modal" data-target="shareTripModal">
                           Share Trip
                         </button>
         
                     <!-- Share link modal window -->
-                    <div class="modal fade" id="shareTripModal" tabindex="-1" role="dialog" aria-labelledby="shareTripModalLabel" aria-hidden="true">
+                    <div class="modal fade" data-target="#shareTripModal" tabindex="-1" role="dialog" aria-labelledby="shareTripModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
