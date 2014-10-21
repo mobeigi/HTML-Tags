@@ -56,7 +56,11 @@ for($i = 0; $i != $image_group_num; $i++) {
   // if the cover_image has been set, we update the trip record to reflect it
   if(isset($_POST['coverPhoto'])) {
     $query = 'update trips set cover_image = $1 where trip_hash = $2';
-    $pg->_pg_query($query, $_POST['coverPhoto'], $trip_hash);
+    $result = $pg->_pg_query($query, $_POST['coverPhoto'], $trip_hash);
+    if(!$result) {
+        $pg->_pg_transaction('rollback');
+        header('location: http://triptags.azurewebsites.net/create_trip.php');
+    }
   }
 }
 }
