@@ -1,4 +1,7 @@
 <script type="text/javascript">
+// window.curImageNum is a global js helper which states which modal window is open
+// Starting from 1
+
 //Using DB variables, store required information in JS arrays
 var image_group_names = [];
 var image_group_desc = [];
@@ -60,7 +63,7 @@ var image_group_desc = [];
     var titleDiv = document.getElementById("lbc-title");
     
     //First childnode is h2 element
-    titleDiv.childNodes[0].innerHTML = image_group_names[window.curImageNum];
+    titleDiv.childNodes[0].innerHTML = image_group_names[window.curImageNum - 1];
  }
  
  //Load description box
