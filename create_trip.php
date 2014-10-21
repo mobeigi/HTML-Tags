@@ -339,6 +339,7 @@
           <div class="modal-body">
             <!-- content -->
             <div id="coverPhotoBox" style="height:400px;width:550px;overflow:auto;">
+            <br/>
               <script type="text/javascript">
               function loadImages() {
                 //Clear coverphoto box
@@ -349,7 +350,7 @@
                   var input_list = document.getElementsByName('image_group_links_' + i);
                   
                   for(var j = 0; j < input_list.length; ++j) {
-                    $('#coverPhotoBox').append('<div class="col-md-3 col-md-2 thumbnail" onclick="setCover(\'' + input_list[j].value + '\')"><img src="uploads/' + input_list[j].value + '"></div>');
+                    $('#coverPhotoBox').append('<div class="col-md-3 col-md-2 thumbnail" class="previewBlock" onclick="setCover(\'' + input_list[j].value + '\')"><img src="uploads/' + input_list[j].value + '"></div>');
                   }
                 }
               }
