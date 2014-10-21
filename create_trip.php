@@ -346,21 +346,29 @@
           </div>
           <div class="modal-body">
             <!-- content -->
-            <div id="coverPhotoBox" style="height:400px;width:550px;overflow:auto;">
+            <div id="coverPhotoBox" style="height:auto;width:550px;overflow:auto;">
             <br />
               <script type="text/javascript">
               function loadImages() {
                 //Clear coverphoto box
                 $('#coverPhotoBox').html('');
-                  
+                var isEmpty = true;
+                
                 for(var i = 1; i < window.imageGroupCount; ++i) {
                   //For each image group, display its images
                   var input_list = document.getElementsByName('image_group_links_' + i + '[]');
                   
                   for(var j = 0; j < input_list.length; ++j) {
+                    isEmpty = false;
                     $('#coverPhotoBox').append('<div class="col-md-3 col-md-2 thumbnail previewBlock" onclick="setCover(\'' + input_list[j].value + '\')"><a href="#"><img src="uploads/' + input_list[j].value + '"></a></div>');
                   }
                 }
+                
+                //Check if no images
+                if(isEmpty) {
+                  $('#coverPhotoBox').html('No images have been uploaded yet.');
+                }
+                
               }
               
               //Store cover photo in global url
