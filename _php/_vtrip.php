@@ -18,14 +18,13 @@ $row_nums = $pg->_pg_num_rows($row);
 print_r($row);
 
 for($i = 0; $i != $row_nums; $i++) {
-    array_push($longitude, $row[$i]['longitude']);
-    array_push($latitude, $row[$i]['latitude']);
-    array_push($group_id, $row[$i]['group_id']);
-    $query = "select path from images where group_id = $1";
-    $result = $pg->_pg_query($query, $group_id[$i]);
-    $row = pg_fetch_assoc($result);
-    array_push($images, $row['path']);
-  }
+  array_push($longitude, $row[$i]['longitude']);
+  array_push($latitude, $row[$i]['latitude']);
+  array_push($group_id, $row[$i]['group_id']);
+  $query = "select path from images where group_id = $1";
+  $result = $pg->_pg_query($query, $group_id[$i]);
+  $row = pg_fetch_assoc($result);
+  array_push($images, $row['path']);
 }
 
 print_r($group_id);
