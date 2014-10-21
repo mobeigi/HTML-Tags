@@ -227,6 +227,17 @@
             </tbody>
             </table>
               
+            <table id = "imageGroupDetails1">
+            <tbody><tr>
+            <td class="col1">
+            <label>Image Group Description:</label></td>
+            <td class="col2">
+            <textarea id="image_group_desc" rows="5" class="form-control"></textarea>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+              
             <table id = "imageGroupDetails2">
             <tbody><tr>             
             <td class="col1">
@@ -347,15 +358,18 @@
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
               if ($('#image_group_name').val() &&
-                  $('#image_group_location_temp').val() ) {
+                  $('#image_group_location_temp').val() &&
+                  $('#image_group_desc').val() ) {
               
               $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\" onclick=\"window.curImageGroup =" + window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img id=\"image_group_display_pic_" + window.imageGroupCount + "\" src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name[]\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location[]\" value=\"" 
-              + $('#image_group_location_temp').val() + "\" /></div>");
+              + $('#image_group_location_temp').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_desc[]\" value=\"" 
+              + $('#image_group_desc').val() + "\" /></div>");
               
               //Clear Image contents
               $('#image_group_name').val("");
               $('#image_group_location_temp').val("");
+              $('#image_group_desc').val("");
               $('#gadres').val("");
               
               //Clear previous errors
