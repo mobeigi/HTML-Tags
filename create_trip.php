@@ -323,7 +323,7 @@
                 google.maps.event.addDomListener(window, 'load', initialize);
                 google.maps.event.addDomListener(window, "resize", resizingMap());
 
-                $('#latlongmap').on('shown', function() {
+                $('#modal-body').on('shown', function() {
                  //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
                  resizeMap();
               })
