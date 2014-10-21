@@ -55,7 +55,7 @@ class postgres {
 		else {
 			$args = func_get_args();
 			$params = array_splice($args, 1);
-			print $this->_pg_debug($query, $params);
+			//print $this->_pg_debug($query, $params);
 			return pg_query_params($this->pg_connect_id, $query, $params);
 		}
 	}
