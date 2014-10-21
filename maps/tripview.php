@@ -88,12 +88,14 @@ function initialize() {
       links.push('uploads/<?php echo $images[$i]; ?>');
       
       //Add image trips
+      /*
       a = document.createElement('a');
       a.id = 'triptag<?php echo $i; ?>';
       a.href = 'uploads/<?php echo $images[$i]; ?>';
       a.setAttribute("data-lightbox", "trip-1");
       a.setAttribute("data-title", "My Trip Name!");
       hiddenTripTags.appendChild(a);
+      */
       
       sw = new google.maps.LatLng(<?php echo $latitude[$i]; ?>, <?php echo $longitude[$i]; ?>);
       ne = new google.maps.LatLng(<?php echo ($latitude[$i] + 1); ?>, <?php echo ($longitude[$i] + 1); ?>);
