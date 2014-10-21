@@ -26,8 +26,9 @@ CREATE TABLE image_groups (
 	group_id serial PRIMARY KEY,
 	trip_id integer REFERENCES trips(trip_id) NOT NULL,
 	name varchar(64) NOT NULL,
-	longitude float(10) NOT NULL,
-	latitude float(10) NOT NULL
+	longitude float(10),
+	latitude float(10),
+	location varchar(256)
 )';
 $pg->_pg_query($query);
 // INSERT INTO images(image_id, group_id, description) VALUES ($?)
