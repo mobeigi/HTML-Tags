@@ -92,9 +92,11 @@
     <!-- file upload -->
     <script src="js/jquery.form.js"></script>
     
+    <!-- helper js globals -->
     <script>
     window.imageGroupCount = 1;
     window.curImageGroup = 0;
+    window.coverPhoto = 'img/placeholder.png';
     </script>
     
 </head>
@@ -476,6 +478,7 @@
               <script type="text/javascript">
               $(document).ready(function() {
               $('#save_changes_3_btn').click(function() {
+              
                 //Set cover photo
                 $('#coverPhoto').val(window.coverPhoto);
                 $('#coverPreview').attr('src', 'uploads/' + window.coverPhoto);
