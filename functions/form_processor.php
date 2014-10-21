@@ -6,9 +6,9 @@ print_r($_POST);
 include_once('/../_php/_session.php');
 
 // check if trip.name has a name...
-if(empty($_POST['trip_name'])) header('location: http://triptags.azurewebsites.net/create_trip.php');
+if(empty($_POST['trip_name'])) //header('location: http://triptags.azurewebsites.net/create_trip.php');
 // we need the user to be logged in...
-if(!isset($_SESSION['user_id'])) header('location: http://triptags.azurewebsites.net/');
+if(!isset($_SESSION['user_id'])) //header('location: http://triptags.azurewebsites.net/');
 
 $pg->_pg_transaction('begin');
 // make a new trip
@@ -17,7 +17,7 @@ $query = "insert into trips (name, description, privacy, owner_id, trip_hash) va
 $result = $pg->_pg_query($query, $_POST['trip_name'], $_POST['trip_desc'], $_POST['trip_privacy'], $_SESSION['user_id'], $trip_hash);
 if(!$result) {
   $pg->_pg_transaction('rollback');
-  header('location: http://triptags.azurewebsites.net/create_trip.php');
+  //header('location: http://triptags.azurewebsites.net/create_trip.php');
 }
 
 // get the trip_id (we are going to need it)
@@ -37,7 +37,7 @@ for($i = 0; $i != $image_group_num; $i++) {
   $result = $pg->_pg_query($query, $trip_id, $_POST['image_group_name'][$i], $location[0], $location[1], $_POST['image_group_desc'][$i]);
   if(!$result) {
     $pg->_pg_transaction('rollback');
-    header('location: http://triptags.azurewebsites.net/create_trip.php');
+    //header('location: http://triptags.azurewebsites.net/create_trip.php');
   }
   // get the image group id (we are going to need it)
   $query = "select group_id from image_groups where name = $1 and trip_id = $2";
@@ -50,7 +50,7 @@ for($i = 0; $i != $image_group_num; $i++) {
       $pg->_pg_query($query, $image_group_id, $_POST['image_group_links_'.$i][$n]);
       if(!$result) {
           $pg->_pg_transaction('rollback');
-          header('location: http://triptags.azurewebsites.net/create_trip.php');
+          //header('location: http://triptags.azurewebsites.net/create_trip.php');
       }
   }
   // if the cover_image has been set, we update the trip record to reflect it
@@ -59,7 +59,7 @@ for($i = 0; $i != $image_group_num; $i++) {
     $result = $pg->_pg_query($query, $_POST['coverPhoto'], $trip_hash);
     if(!$result) {
         $pg->_pg_transaction('rollback');
-        header('location: http://triptags.azurewebsites.net/create_trip.php');
+        //header('location: http://triptags.azurewebsites.net/create_trip.php');
     }
   }
 }
@@ -67,5 +67,5 @@ for($i = 0; $i != $image_group_num; $i++) {
 // commit all inserts into the database
 $pg->_pg_transaction('commit');
 // redirect user to their profile page
-//header('location: http://triptags.azurewebsites.net/profile.php');
+////header('location: http://triptags.azurewebsites.net/profile.php');
 ?>
