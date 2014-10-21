@@ -168,7 +168,7 @@
               </div>
             <button type="push" class="btn btn-default">Upload an image</button>
             <br />
-            <div class="thumbnail" style="width: 150px;">
+            <div class="thumbnail" style="margin-top: 10px; width: 150px;">
             <img id ="coverPreview" src="img/empty_image_group.jpg">
             </div>
         </div>
@@ -341,12 +341,12 @@
             <div id="coverPhotoBox" style="height:400px;width:600px;overflow:auto;">
               <script type="text/javascript">
               function loadImages() {
+                //Clear coverphoto box
+                $('#coverPhotoBox').html('');
+                  
                 for(var i = 1; i < window.imageGroupCount; ++i) {
                   //For each image group, display its images
                   var input_list = document.getElementsByName('image_group_links_' + i);
-                  
-                  //Clear coverphoto box
-                  $('#coverPhotoBox').html('');
                   
                   for(var j = 0; j < input_list.length; ++j) {
                     $('#coverPhotoBox').append('<div class="col-md-3 col-md-2 thumbnail" onclick="setCover(\'' + input_list[j].value + '\')"><img src="uploads/' + input_list[j].value + '"></div>');
