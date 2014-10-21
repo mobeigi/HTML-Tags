@@ -15,11 +15,13 @@ $result = $pg->_pg_query($query, $trip_id);
 $row = pg_fetch_all($result);
 $row_nums = sizeof($result);
 
-print($row_nums);
-print_r($row);
-
 for($i = 0; $i != $row_nums; $i++) {
-  print_r($row[$i]);
+  array_push($group_id, $row[$i]['group_id']);
+  array_push($longitude, $row[$i]['longitude']);
+  array_push($latitude, $row[$i]['latitude']);
 }
 
+print_r($group_id);
+print_r($latitude);
+print_r($longitude);
 ?>
