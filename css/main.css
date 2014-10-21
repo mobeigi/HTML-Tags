@@ -1,3 +1,11 @@
+div.scroll {
+  height: 390px;
+  width: 150px;
+  overflow: auto;
+  border: 1px solid #666;
+  padding: 8px;
+}
+
 .previewBlock {
   margin-left: 5px;
   margin-right: 5px;
