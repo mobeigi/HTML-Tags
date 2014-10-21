@@ -4,6 +4,8 @@
 <title>TripTags</title>
 <!-- include header -->
 <?php include_once "/includes/header.php"; ?>
+
+<script src="js/tripview.js"></script>
 </head>
 
 <body>
