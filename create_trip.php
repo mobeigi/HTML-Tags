@@ -287,13 +287,16 @@
                   alert(links);
                 }
               });
-              
-              //Add image by appending a hidden input field to image_group_links_block
-              function addImage (url) {
-                $('#image_group_links_block').append("<input type=\"hidden\" name=\"" + window.curImageGroup + "\" value=\"" + url + "\" />");
-              }
-              
+             
             });
+            </script>
+            
+            
+            <script type="text/javascript">
+           //Add image by appending a hidden input field to image_group_links_block
+            function addImage(url) {
+              $('#image_group_links_block').append("<input type=\"hidden\" name=\"" + window.curImageGroup + "\" value=\"" + url + "\" />");
+            }
             </script>
                   
             <form class="uploadform" method="post" enctype="multipart/form-data" 
