@@ -34,6 +34,7 @@ function initialize() {
     //TODO: Set zoom to be determined by images span
     zoom: 10,
     center: new google.maps.LatLng(62.303907, -150.109291),
+    mapTypeId: google.maps.MapTypeId.SATELLITE
    };
 
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
