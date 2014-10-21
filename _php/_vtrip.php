@@ -27,7 +27,7 @@ for($i = 0; $i != $row_nums; $i++) {
   array_push($images, $row['path']);
 }
 
-// debug
+// Array ( [0] => 1 ) Array ( [0] => 147.832 ) Array ( [0] => -21.7799 ) Array ( [0] => 6dce033bd40fee85beab8944143b144b.png )
 print_r($group_id);
 print_r($latitude);
 print_r($longitude);
