@@ -238,20 +238,14 @@
             </td>
             <td class="col3" align="center">
                 <img src="./img/small_trip_tag.png">
-                <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
             </td>
             </tr>
             </tbody>
             </table>
+            <div style="float:right;">
+            <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
+            </div>
             
-          <div>
-                  <label for="lat">Latitude</label>
-                  <input type="text" name="lat" id="lat" />
-
-                  <label for="lng">Longitude</label>
-                  <input type="text" name="lng" id="lng" />
-              </div>
-
           <div id="latlongmap" style="width:100%; height:420px;"></div>
      
              <!--google maps geocoder -->
