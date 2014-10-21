@@ -7,6 +7,8 @@ $trip_id = $_GET['trip'];
 $longitude = array();
 $latitude = array();
 $group_id = array();
+$title = array();
+$description = array();
 $images = array(array());
 
 $query = 'select name from trips where trip_id = $1';
