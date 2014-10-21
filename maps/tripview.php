@@ -82,7 +82,7 @@ function initialize() {
   var sw;
   var ne;
   var bounds = [];
-
+  var a;
   
   <?php
     //Loop through image groups
@@ -93,7 +93,7 @@ function initialize() {
       links.push('uploads/<?php echo $images[$i]; ?>');
       
       //Add image trips
-      var a = document.createElement('a');
+      a = document.createElement('a');
       a.id = 'triptag<?php echo $i; ?>';
       a.href = 'uploads/<?php echo $images[$i]; ?>';
       a.setAttribute("data-lightbox", "trip-1");
