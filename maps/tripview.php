@@ -47,7 +47,6 @@ for($i = 0; $i != $row_nums; $i++) {
 // parent class itself, because we do not wish to modify the parent class.
 
 var map;
-var geocoder;
 var triptag = 1;
 
 //Store trip tags in an array for easy access
@@ -67,15 +66,11 @@ function initialize() {
 
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  geocoder = new google.maps.Geocoder();
-
-
 
   //Collect required images in a call to the database
   //TODO: Loop and DB call
 
   //Get static images in a loop
-  var j;
   var links = [];
   var hiddenTripTags = document.getElementById("hiddenTripTags");
 
@@ -313,20 +308,6 @@ ImageOverlay.prototype.onRemove = function() {
   this.div_.parentNode.removeChild(this.div_);
   this.div_ = null;
 };
-
-/*
-function codeAddress(address, callback) {
-
-geocoder.geocode( { 'address': address}, function(results, status) {
-  if (status == google.maps.GeocoderStatus.OK) {
-    callback(results[0].geometry.location);
-  } else {
-    alert("Geocode was not successful for the following reason: " + status);
-  }
-});
-
-}
-*/
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
