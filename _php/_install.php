@@ -2,7 +2,7 @@
 //
 // Generate Database Installation Script...
 //
-include('_session.php');
+include_once('_session.php');
 
 $pg->_pg_query('DROP TABLE IF EXISTS images CASCADE');
 $pg->_pg_query('DROP TABLE IF EXISTS image_groups CASCADE');

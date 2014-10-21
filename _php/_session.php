@@ -2,7 +2,7 @@
 //
 // Website Session Handler
 //
-include('_postgres.php');
+include_once('_postgres.php');
 
 $pg = new postgres();
 

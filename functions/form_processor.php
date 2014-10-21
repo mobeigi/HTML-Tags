@@ -2,7 +2,7 @@
 
 // replace all the return (false|true) with error messages (and redirection?).
 // need to run triptags.azurewebsites.net/_php/_install.php again before using this script.
-include('/../_php/_session.php');
+include_once('/../_php/_session.php');
 
 // check if trip.name has a name...
 if(empty($_POST['trip_name'])) return false;
