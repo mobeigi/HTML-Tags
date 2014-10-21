@@ -41,7 +41,7 @@ CREATE TABLE images (
 	path varchar(256) unique
 )';
 $pg->_pg_query($query);
-$query = 'ALTER TABLE trips ADD COLUMN cover_image varchar(256) REFERENCES images(path)';
+$query = 'ALTER TABLE trips ADD COLUMN cover_image varchar(256)';
 $pg->_pg_query($query);
 //$query = 'ALTER TABLE image_groups ADD COLUMN cover_image integer REFERENCES images(image_id)';
 //$pg->_pg_query($query);
