@@ -11,4 +11,6 @@ $row_nums = sizeof($rows);
 for($i = 0; $i != $row_nums; $i++) {
   array_push($images,$rows[$i]['path']);
 }
+
+print_r($images);
 ?>
