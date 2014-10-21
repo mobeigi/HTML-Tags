@@ -22,7 +22,7 @@ if (isset($_POST['submitbtn'])) {
                 
                 //Use js to add link to form
                 echo '<script type="text/javascript">'
-                     , 'addImage(', $unique_name, ');'
+                     , 'addImage("', $unique_name, '");'
                      , '</script>';
                 
             } else {//if file was not moved.
