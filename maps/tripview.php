@@ -38,6 +38,12 @@ for($i = 0; $i != $row_nums; $i++) {
   array_push($images, $row['path']);
 }
 
+//Get trip name
+$query = 'select name from trips where trip_id = $1';
+$result = $pg->_pg_query($query, $trip_id);
+$row = pg_fetch_assoc($result);
+$trip_name = $row['name'];
+
 ?>
 
 <script type="text/javascript">
@@ -92,7 +98,7 @@ function initialize() {
       a.id = 'triptag<?php echo ($i+1); ?>';
       a.href = 'uploads/<?php echo $images[$i]; ?>';
       a.setAttribute("data-lightbox", "trip-1");
-      a.setAttribute("data-title", "My Trip Name!");
+      a.setAttribute("data-title", "<?php echo $trip_name; ?>");
       hiddenTripTags.appendChild(a);
       
       sw = new google.maps.LatLng(<?php echo $latitude[$i]; ?>, <?php echo $longitude[$i]; ?>);
