@@ -107,7 +107,12 @@
    <?php include_once "/includes/navbar.php"; ?>
     
     <!-- User input for the trip details -->
-    <h2>Trip Details</h2> 
+    <h2 style="display:inline-flex">Trip Details</h2> 
+    <button type="button" id="TripDetailHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Add a bried description to your journey."> 
+            <script>$('#TripDetailHelp').tooltip();</script>
+                <strong>?</strong>
+    </button>
+
     <hr>
     
     <form action="/functions/form_processor.php" method="post">
@@ -226,7 +231,6 @@
             <td class="col1">
             <label>Location:</label></td>
             <td class="col2">
-            <input type="hidden" id="image_group_location_temp" name="image_group_location_temp" value="" />
             <input type="text" id="gadres" placeholder="" class="form-control" style="
             display: inline-block;
             ">
@@ -277,8 +281,8 @@
                 marker.setPosition(event.latLng);
                 
                 var yeri = event.latLng;
-                document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
-                console.log("1)" + yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6));
+                document.getElementById('lat').value=yeri.lat().toFixed(6);
+                document.getElementById('lng').value=yeri.lng().toFixed(6);
               });
               }
 
@@ -287,8 +291,8 @@
                 geocoder.geocode( { 'address': address}, function(results, status) {
                   if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
-                 document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
-            console.log("2)" + yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6));
+                document.getElementById('lat').value=results[0].geometry.location.lat().toFixed(6);
+                document.getElementById('lng').value=results[0].geometry.location.lng().toFixed(6);
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
 
@@ -304,7 +308,7 @@
                 });
 
                   } else {
-                    alert("Location could cannot be found.");
+                    alert("Lat and long cannot be found.");
                   }
                 });
               }
@@ -327,11 +331,11 @@
           $(document).ready(function(){
             $("#create_image_group_btn").click(function(){
               if ($('#image_group_name').val() != "" &&
-                  $('#image_group_location_temp').val() != "" ) {
+                  $('#image_group_location').val() ) {
               
               $("#create_image_group_block").before("<div class=\"col-md-3 col-md-2\" id=\"imagegroup-"+ window.imageGroupCount + "\" onclick=\"window.curImageGroup =" + window.imageGroupCount + "\"><a href=\"#addImagesToImageGroup\" role=\"button\" data-toggle=\"modal\" class=\"thumbnail\"><img id=\"image_group_display_pic_" + window.imageGroupCount + "\" src=\"./img/empty_image_group.jpg\"></a><input class=\"form-control\" type=\"hidden\" name=\"image_group_name[]\" value=\"" 
               + $('#image_group_name').val() + "\" /><input class=\"form-control\" type=\"hidden\" name=\"image_group_location[]\" value=\"" 
-              + $('#image_group_location_temp').val() + "\" /></div>");
+              + $('#image_group_location').val() + "\" /></div>");
               
               //Clear Image contents
               $('#image_group_name').val("");
