@@ -19,6 +19,12 @@ if (isset($_POST['submitbtn'])) {
     
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
                 echo $j. ') <span class="noerror">Image uploaded successfully!</span><br/><br/>';
+                
+                //Use js to add link to form
+                echo '<script type="text/javascript">'
+                     , 'addImage(', $unique_name, ');'
+                     , '</script>';
+                
             } else {//if file was not moved.
                 echo $j. ') <span class="error">Please try again!</span><br/><br/>';
             }
