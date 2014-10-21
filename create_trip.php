@@ -429,14 +429,12 @@
                   
             <form class="uploadform" method="post" enctype="multipart/form-data" 
             action='functions/image_upload.php'>
-            
-            Upload your image 
-           
+            Upload the images for this image group and click 'Upload'.
             <div id="filediv">
             <input name="file[]" type="file" id="file" multiple="true" />
             </div><br/>
-            
-            <input type="submit" value="Upload File" name="submitbtn" id="submitbtn" class="upload"/>
+            Click 'Save Changes' once all images have been uploaded.
+            <input type="submit" value="Upload" name="submitbtn" id="submitbtn" class="upload"/>
             
             </form>
             <!-- The uploaded image will display here -->
