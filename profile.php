@@ -77,22 +77,22 @@
                 <div class="row">
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="/img/create_image_group.jpg">
                         </a>
                     </div>            
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>            
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>              
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>            
                 </div>
@@ -105,22 +105,22 @@
                 <div class="row">
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>            
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>            
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/create_image_group.jpg">
                         </a>
                     </div>              
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
-                            <img src="./img/create_image_group_icon.png">
+                            <img src="./img/ccreate_image_group.jpg">
                         </a>
                     </div>            
                 </div>
