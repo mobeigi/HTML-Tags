@@ -157,18 +157,15 @@
             <div id="image_group_links_block"></div>
             
         </div>
-    
+   
     <!-- Select Cover photo for the trip -->
     <h2>Cover Photo</h2>
     <hr>
-
+        <input type="hidden" name="coverPhoto" value="" />
         <div class="row" align="center" style="margin-bottom: 12px;">
-            <button type="push" class="btn btn-default">Select an image</button>
+              <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="thumbnail">Select an image</a>
             <button type="push" class="btn btn-default">Upload an image</button>
-        </div> 
-            <a href="#" class="thumbnail" style="width: 160px; margin: 0 auto;margin-bottom: 15px;">
-                <img src="./img/create_image_group.jpg">
-            </a>
+        </div>
 
     <!-- Finalisation buttons -->
     <div class="row" align="right" style="margin-bottom: 12px;">
@@ -332,6 +329,43 @@
         </div>
       </div>
     </div>
+    
+    <!-- Select cover photo modal window -->
+    <div class="modal fade" id="selectImageGroupCover" tabindex="-1" role="dialog" aria-labelledby="selectImageGroupCoverLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="selectImageGroupCoverLabel">Select Image Group Cover Photo</h4>
+          </div>
+          <div class="modal-body">
+            <!-- content -->
+            <div style="height:400px;width:600px;overflow:auto;">
+              <script>
+              for(var i = 0; i < window.imageGroupCount; ++i) {
+                //For each image group, display its images
+                var input_list = document.getElementsByName('image_group_links_' + i);
+                
+                for(var j = 0; j < input_list.length; ++j) {
+                    console.debug(input_list[i].value, input_list[i].getAttribute('value'));
+                }
+              }
+              
+              </script>
+            </div>
+            
+          </div>
+          
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" id="save_changes_3_btn" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
 
     
 </div>
