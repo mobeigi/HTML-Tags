@@ -39,6 +39,10 @@ loadSidePanel();
  
  //Load side panel pictures
  function loadSidePanel() {
+    window.setTimeout(loadSidePanelB, 100);
+ }
+ 
+ function loadSidePanelB() {
 
     /* Load 4 images into side panel */
     var i;
