@@ -27,7 +27,7 @@ body:after {
 
 .lightbox .lb-image {
   display: block;
-  width: 680px;
+  width: 680px !important;
   height: auto;
   max-height: 510px;
   max-width: 680px;
