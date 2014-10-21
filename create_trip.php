@@ -507,7 +507,7 @@
             </div>
             
           </div>
-          
+            
           <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
               <button type="button" id="save_changes_3_btn" class="btn btn-success" data-dismiss="modal">Save Changes</button>
@@ -515,11 +515,6 @@
         </div>
       </div>
     </div>
-    
-    
-    
-
-    
 </div>
         <?php include_once "/includes/footer.php"; ?>   
     </body>

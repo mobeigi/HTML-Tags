@@ -1,8 +1,11 @@
+<?php
+$tripID = htmlspecialchars($_GET["trip"]);
+?>
 
 <!DOCTYPE html >
 <html lang="en" ng-app>
   <head>
-        <title>TripTags</title>
+        <title>TripTags | View trip: <?php echo $tripID; ?></title>
         
         <?php include_once("includes/header.php"); ?>
        
