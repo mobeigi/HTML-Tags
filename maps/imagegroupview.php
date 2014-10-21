@@ -17,6 +17,9 @@ var images = [[]]; //2D array
     //Iterate over adding images for this image group
     for ($k = 0; $k < sizeof($images[$j]); ++$k) {
       ?>
+      if (!images[<?php echo $j; ?>]) 
+        a[<?php echo $j; ?>] = []
+        
       images[<?php echo $j; ?>][<?php echo $k; ?>] = '<?php echo $images[$j][$k]; ?>';
       <?php
     }
