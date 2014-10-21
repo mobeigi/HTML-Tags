@@ -32,9 +32,9 @@ loadDescription();
 loadSidePanel();
 
 //Sets main image to provided image url
- function setMainImage(obj) {
+ function setMainImage(url) {
     var img = document.getElementById("lbc-image");
-    img.src = obj.src;
+    img.src = url;
 }
  
  //Load side panel pictures
@@ -55,7 +55,7 @@ loadSidePanel();
     for (i = 0; i < imageLength; ++i) {
         var img = document.createElement("img");
         img.src = 'uploads/' + images[window.curImageNum - 1][i];
-        img.onclick = function() { setMainImage(img); };
+        img.onclick = function() { setMainImage(img.src); };
         sideDiv.appendChild(img);
     }
  }
