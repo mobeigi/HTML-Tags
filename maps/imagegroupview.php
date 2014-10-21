@@ -72,14 +72,10 @@ function loadTitleB() {
  }
  
  //Load description box
- function loadDescription(description) {
-     if (typeof description === 'undefined') {
-        description = "";
-    }
-    
+ function loadDescription() {
     //Get bottom panel box
     var botPanel = document.getElementById("lbc-bottompanel-box");
-    botPanel.innerHTML = '<div id="description"><p>' + description + '</p></div>';
+    botPanel.innerHTML = '<div id="description"><p>' + image_group_desc[window.curImageNum - 1] + '</p></div>';
  }
  
   //Load comments box with static comment for n ow
