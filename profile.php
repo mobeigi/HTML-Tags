@@ -57,79 +57,80 @@
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
-<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+        <!-- include navbar -->
+        <?php include_once "/includes/navbar.php"; ?>
 
-    
-   <!-- include navbar -->
-   <?php include_once "/includes/navbar.php"; ?>
-    
-    
-    <!-- Welcome message -->
-    <!-- retrieve the name --> 
-    <?php
-        $userEmail = $_SESSION['user_email'];
-        print $_SESSION['user_email'];
-        print "<h1>Welcome, $userEmail!</h1>\n";
-        print "<hr>\n";
-    ?>
-    
-    <h3 style="display:inline-flex">My Trips:</h3>
-    <a href="http://triptags.azurewebsites.net/create_trip.php">
-    <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
-    </a>
-    <div class="row">
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>              
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-    </div>
-        
-    
-    <!-- Select Cover photo for the trip -->
-    <h2>Recently Viewed Trips</h2>
-    <hr>
-    
-    <div class="row">
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>              
-        <div class="col-md-3 col-md-2">
-            <a href="#" class="thumbnail">
-                <img src="./img/create_image_group_icon.png">
-            </a>
-        </div>            
-    </div>
 
-    
-</div>
+        <!-- Welcome message -->
+        <!-- retrieve the name --> 
+        <?php
+            $userEmail = $_SESSION['user_email'];
+            print "<h1>Welcome, $userEmail!</h1>\n";
+            print "<hr>\n";
+        ?>
+
+        <h3 style="display:inline-flex">My Trips:</h3>
+        <a href="http://triptags.azurewebsites.net/create_trip.php">
+        <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
+        </a>
+        <div class="row">
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>              
+            <div class="col-md-3 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="./img/create_image_group_icon.png">
+                </a>
+            </div>            
+        </div>
+
+
+        <!-- Select Cover photo for the trip -->
+        <h2>Recently Viewed Trips</h2>
+        <hr>
+
+                <div class="row">
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group_icon.png">
+                        </a>
+                    </div>            
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group_icon.png">
+                        </a>
+                    </div>            
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group_icon.png">
+                        </a>
+                    </div>              
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group_icon.png">
+                        </a>
+                    </div>            
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
     <?php include_once "/includes/footer.php"; ?>   
 </body>
 </html>
