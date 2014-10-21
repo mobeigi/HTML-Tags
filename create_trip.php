@@ -231,6 +231,109 @@
             </tr>
             </tbody>
             </table>
+            
+          <div>
+                  <label for="lat">Latitude</label>
+                  <input type="text" name="lat" id="lat" />
+
+                  <label for="lng">Longitude</label>
+                  <input type="text" name="lng" id="lng" />
+              </div>
+
+          <div>
+               <div class="box">
+                  <label for="gadres">Address</label>
+                  <input id="gadres" type="text" size="24" placeholder="Type address here" /> 
+                  <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
+
+              </div>
+              
+              <div id="latlongmap" style="width:100%; height:420px;">
+           </div>
+     
+             <!--google maps geocoder -->
+             <script type="text/javascript">
+              var map;
+              var geocoder;
+              var marker;
+              
+              function initialize() {
+                var latlng = new google.maps.LatLng(1.10, 1.10);
+                var myOptions = {
+                  zoom: 5,
+                  center: latlng,
+                  scrollwheel: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP 
+                };
+                map = new google.maps.Map(document.getElementById("latlongmap"),
+                    myOptions);
+              geocoder = new google.maps.Geocoder();
+              marker = new google.maps.Marker({
+                  position: latlng, 
+                  map: map
+              });
+              
+            map.streetViewControl=false;
+
+              google.maps.event.addListener(map, 'click', function(event) {
+                marker.setPosition(event.latLng);
+                
+                var yeri = event.latLng;
+                document.getElementById('lat').value=yeri.lat().toFixed(6);
+                document.getElementById('lng').value=yeri.lng().toFixed(6);
+                document.getElementById('coordinatesurl').value = 'http://www.latlong.net/c/?lat=' 
+                                    + yeri.lat().toFixed(6) + '&long='
+                                    + yeri.lng().toFixed(6);
+              });
+                
+            google.maps.event.addListener(map, 'mousemove', function(event) {
+            var yeri = event.latLng;
+            document.getElementById("mlat").value = yeri.lat().toFixed(6);
+            document.getElementById("mlong").value = yeri.lng().toFixed(6);
+            });
+              }
+
+            function codeAddress() {
+                var address = document.getElementById("gadres").value;
+                geocoder.geocode( { 'address': address}, function(results, status) {
+                  if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                document.getElementById('lat').value=results[0].geometry.location.lat().toFixed(6);
+                document.getElementById('lng').value=results[0].geometry.location.lng().toFixed(6);
+            var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
+              + results[0].geometry.location.lng().toFixed(6) + ")";
+            document.getElementById('coordinatesurl').value = 'http://www.latlong.net/c/?lat=' 
+                                    + results[0].geometry.location.lat().toFixed(6) + '&long='
+                                    +results[0].geometry.location.lng().toFixed(6);
+
+             var infowindow = new google.maps.InfoWindow({
+                    content: latlong
+                });
+
+                    marker.setPosition(results[0].geometry.location);
+                    map.setZoom(16);
+
+            google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.open(map,marker);
+                });
+
+                  } else {
+                    alert("Lat and long cannot be found.");
+                  }
+                });
+              }
+              
+              function loadScript() {
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'https://maps.googleapis.com/maps/api/js?sensor=false&' +
+                            'callback=initialize';
+                    document.body.appendChild(script);
+                }
+
+                window.onload = loadScript;
+                
+            </script>
           </div>
           
           <!-- Script to add image groups to form for processing -->
