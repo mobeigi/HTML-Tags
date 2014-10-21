@@ -18,7 +18,7 @@ CREATE TABLE trips (
 	name varchar(64) NOT NULL,
 	description varchar(256),
 	privacy varchar(64),
-	trip_hash varchar(128),
+	trip_hash varchar(128)
 )';
 $pg->_pg_query($query);
 // INSERT INTO image_groups(group_id, trip_id, name, longitude, latitude, cover_image) VALUES ($?)
