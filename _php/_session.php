@@ -11,4 +11,5 @@ if(!$result) return false;
 session_start();
 
 $_SESSION['session_start_time'] = time();
+
 ?>
