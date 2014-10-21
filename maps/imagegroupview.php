@@ -5,12 +5,18 @@
 //Using DB variables, store required information in JS arrays
 var image_group_names = [];
 var image_group_desc = [];
+var images = [[]]; //2D array
 
 <?php
   for ($j = 0 ; $j < $numImageGroups; ++$j) {
   ?>
   image_group_names.push('<?php echo $name[$j]; ?>');
   image_group_desc.push('<?php echo $description[$j]; ?>');
+  
+  //Iterate over adding images for this image group
+  for ($k = 0; $k < sizeof($images[$j]); ++$k) {
+    images.push('<?php echo $images[$j][$k]; ?>');
+  }
   <?php
   }
 ?>
