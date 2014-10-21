@@ -260,7 +260,7 @@
                 //Default latlng
                 var latlng = new google.maps.LatLng(-25.274398, 133.775136);
                 var myOptions = {
-                  zoom: 5,
+                  zoom: 3,
                   center: latlng,
                   scrollwheel: false,
                   mapTypeId: google.maps.MapTypeId.SATELLITE 
