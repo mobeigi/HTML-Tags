@@ -66,9 +66,21 @@
                 
                 <!-- Redirect user if they're not logged in -->
                 <?php if (!isset($_SESSION['user_id'])) {
+                    //Add some spacing
+                    for ($x = 0; $x < 2; $x++) {
+                        print '<br>';   
+                    }
+    
+                    //Print error message
                     print '<p><b>Oops! You must be logged in to view this page!</b></p>';
                     print '<p>You can log in through the menu bar, located in the top-right corner.</p>';
-                    print '<a href=""http://triptags.azurewebsites.net">Return to home page</a>';
+                    print '<a href="http://triptags.azurewebsites.net">Return to home page</a>';
+    
+                    //Add some spacing
+                    for ($x = 0; $x < 5; $x++) {
+                        print '<br>';   
+                    }
+                    
                 } else {?>
                 
                 <!-- Welcome message, retrieve email address -->
