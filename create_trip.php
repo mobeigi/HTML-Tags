@@ -166,7 +166,7 @@
    
     <!-- Select Cover photo for the trip -->
     <h2 style="display:inline-flex">Cover Photo</h2>
-    <button type="button" id="CoverPhotoHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Assign a cover photo to highlight journeys and memories."> 
+    <button type="button" id="CoverPhotoHelp" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="right" title="Assign a cover photo to highlight your entire trip."> 
             <script>$('#CoverPhotoHelp').tooltip();</script>
                 <strong>?</strong>
         </button>
