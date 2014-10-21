@@ -70,5 +70,5 @@ for($i = 0; $i != $image_group_num; $i++) {
 // commit all inserts into the database
 $pg->_pg_transaction('commit');
 // redirect user to their profile page
-//header('location: http://triptags.azurewebsites.net/profile.php');
+header('location: http://triptags.azurewebsites.net/profile.php');
 ?>
