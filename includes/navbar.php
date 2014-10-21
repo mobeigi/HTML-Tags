@@ -22,10 +22,12 @@
                     <?php } else { ?> 
                         print '<li><a href="http://triptags.azurewebsites.net/register.php">Register</a></li>';
                     <?php   }?>
+                    <!--
                     <li><a href="#">Tutorial</a></li>
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">About</a></li>
+                    -->
 				 </ul>
 
                  <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>
