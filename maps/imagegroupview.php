@@ -45,12 +45,15 @@ loadDescription();
     
     sideDiv = document.getElementById("lbc-image-scroll");
     
+    /*
     var firstImg = document.createElement("img");
     firstImg.src = document.getElementById("lbc-image").src;
     firstImg.onclick = function() { setMainImage(firstImg); };
     sideDiv.appendChild(firstImg);
+    */
     
     var imageLength = images[window.curImageNum - 1].length;
+    console.log(images[window.curImageNum - 1].length);
     
     for (i = 0; i < imageLength; ++i) {
         var img = document.createElement("img");
