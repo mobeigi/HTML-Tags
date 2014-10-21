@@ -14,7 +14,6 @@ $result = $pg->_pg_query($query, $trip_id);
 
 $rows = pg_fetch_all($result);
 $row_nums = sizeof($rows);
-print($row_nums);
 
 for($i = 0; $i != $row_nums; $i++) {
   array_push($group_id, $rows[$i]['group_id']);
