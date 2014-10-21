@@ -337,7 +337,7 @@
             <div id="coverPhotoBox" style="height:400px;width:600px;overflow:auto;">
               <script type="text/javascript">
               function loadImages() {
-                for(var i = 1; i <= window.imageGroupCount; ++i) {
+                for(var i = 1; i < window.imageGroupCount; ++i) {
                   //For each image group, display its images
                   var input_list = document.getElementsByName('image_group_links_' + i);
                   
