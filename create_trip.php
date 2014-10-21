@@ -163,7 +163,9 @@
     <hr>
         <input type="hidden" name="coverPhoto" value="" />
         <div class="row" align="center" style="margin-bottom: 12px;">
+              <div onclick="loadImages()">
               <a href="#selectImageGroupCover" role="button" data-toggle="modal" class="thumbnail">Select an image</a>
+              </div>
             <button type="push" class="btn btn-default">Upload an image</button>
         </div>
 
@@ -276,14 +278,6 @@
               target: '#viewimage'
               }).submit();
               });
-              
-              $("#save_changes_2_btn").click(function(){
-                var links = getCookie("image_links");
-                
-                if (links != "") {
-                  alert(links);
-                }
-              });
              
             });
             </script>
@@ -342,15 +336,16 @@
             <!-- content -->
             <div style="height:400px;width:600px;overflow:auto;">
               <script type="text/javascript">
-              for(var i = 1; i <= window.imageGroupCount; ++i) {
-                //For each image group, display its images
-                var input_list = document.getElementsByName('image_group_links_' + i);
-                
-                for(var j = 0; j < input_list.length; ++j) {
-                    console.log(input_list[j].value, input_list[j].getAttribute('value'));
+              function loadImages() {
+                for(var i = 1; i <= window.imageGroupCount; ++i) {
+                  //For each image group, display its images
+                  var input_list = document.getElementsByName('image_group_links_' + i);
+                  
+                  for(var j = 0; j < input_list.length; ++j) {
+                      console.log(input_list[j].value, input_list[j].getAttribute('value'));
+                  }
                 }
               }
-              
               </script>
             </div>
             
