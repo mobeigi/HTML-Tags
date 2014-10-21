@@ -7,7 +7,7 @@ $trip_id = $_GET['trip'];
 $longitude = array();
 $latitude = array();
 $group_id = array();
-$title = array();
+$name = array();
 $description = array();
 $images = array(array());
 
@@ -26,7 +26,7 @@ for($i = 0; $i != $rows_nums; $i++) {
   array_push($group_id, $rows[$i]['group_id']);
   array_push($longitude, $rows[$i]['longitude']);
   array_push($latitude, $rows[$i]['latitude']);
-  array_push($title, $rows[$i]['title']);
+  array_push($name, $rows[$i]['name']);
   array_push($description, $rows[$i]['description']);
   $query = 'select path from images where group_id = $1';
   $result = $pg->_pg_query($query, $group_id[$i]);
