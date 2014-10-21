@@ -96,14 +96,10 @@ function initialize() {
       a.setAttribute("data-title", "My Trip Name!");
       hiddenTripTags.appendChild(a);
       */
-      /*
+      
       sw = new google.maps.LatLng(<?php echo $latitude[$i]; ?>, <?php echo $longitude[$i]; ?>);
       ne = new google.maps.LatLng(<?php echo ($latitude[$i] + 1); ?>, <?php echo ($longitude[$i] + 1); ?>);
       bounds.push(new google.maps.LatLngBounds(sw, ne));
-      */
-      
-      sw = new google.maps.LatLng(-32.8948358302915, 115.8457735197085);
-      ne = new google.maps.LatLng(-31.8921378697085, 116.8484714802915);
   
       triptags.push(new ImageOverlay(bounds[<?php echo $i; ?>], links[<?php echo $i; ?>], map));
       
