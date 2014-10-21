@@ -39,7 +39,7 @@ loadSidePanel();
  
  //Load side panel pictures
  function loadSidePanel() {
-    window.setTimeout(loadSidePanelB, 100);
+    window.setTimeout(loadSidePanelB, 500);
  }
  
  function loadSidePanelB() {
@@ -62,7 +62,7 @@ loadSidePanel();
     
     for (i = 0; i < imageLength; ++i) {
         var img = document.createElement("img");
-        img.src = images[window.curImageNum - 1][i];
+        img.src = 'uploads/' + images[window.curImageNum - 1][i];
         img.onclick = function() { setMainImage(img); };
         sideDiv.appendChild(img);
     }
