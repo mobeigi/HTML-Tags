@@ -181,7 +181,7 @@
             <script>$('#CreateImageHelp').tooltip();</script>
                 <strong>?</strong>
         </button>
-    <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button>
+    <!-- <button style="float:right;margin-top:45px;"type="push" class="btn btn-default">Import Image Group</button> -->
     <hr>
     <p id ="image_group_error" class="error" ></p>
         <div id="image_groups" class="row">
