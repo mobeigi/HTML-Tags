@@ -15,6 +15,8 @@ var image_group_desc = [];
   }
 ?>
 
+loadTitle();
+
 //Sets main image to provided image url
  function setMainImage(obj) {
     var img = document.getElementById("lbc-image");
