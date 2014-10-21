@@ -10,7 +10,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 <!--    font to be used for the web page (Open Sans)-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -20,11 +20,11 @@
             padding-bottom: 20px;
             padding-right: 20px;
         }
-        
+
         textarea {
             resize: none;
         }
-        
+
         hr {
             -moz-border-bottom-colors: none;
             -moz-border-image: none;
@@ -33,56 +33,56 @@
             -moz-border-top-colors: none;
             border: 2px solid #E4E4E4;
         }
-        
+
         h1 {
             text-align: left;
         }
-        
+
         h3 {
             margin-top: 20px;
         }
-        
+
         th {
             text-align: left;
-        } 
+        }
 
     </style>
 
 </head>
 
 <body>
-    
-    
+
+
     <!-- Import the bootstrap files -->
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <!-- include navbar -->
                 <?php include_once "/includes/navbar.php"; ?>
-                
+
                 <!-- Redirect user if they're not logged in -->
                 <?php if (!isset($_SESSION['user_id'])) {
                     //Add some spacing
                     for ($x = 0; $x < 2; $x++) {
-                        print '<br>';   
+                        print '<br>';
                     }
-    
+
                     //Print error message
                     print '<p><b>Oops! You must be logged in to view this page!</b></p>';
                     print '<p>You can log in through the menu bar in the top-right corner.</p>';
                     print '<a href="http://triptags.azurewebsites.net">Return to home page</a>';
-    
+
                     //Add some spacing
                     for ($x = 0; $x < 5; $x++) {
-                        print '<br>';   
+                        print '<br>';
                     }
-                    
+
                 } else {?>
-                
+
                 <!-- Welcome message, retrieve email address -->
                 <?php
                     $userEmail = $_SESSION['user_email'];
@@ -93,27 +93,56 @@
                     <a href="http://triptags.azurewebsites.net/create_trip.php">
                         <button style="float:right;margin-top:25px;"type="push" class="btn btn-default">Create New Trip</button>
                     </a> <hr>
+
                 <div class="row">
+
+                  <!---
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="/img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>              
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
+                  -->
+
+
+
+                  <?php
+                  if(isset($_SESSION['user_id'])) {
+                    $query = 'select trip_id, cover_image from trips where owner_id = $1';
+                    $result = $pg->_pg_query($query, $_SESSION['user_id']);
+                    $rows = pg_fetch_all($result);
+                    $row_size = sizeof($rows);
+
+                    for($i = 0; $i != $row_size; $i++) {
+                        print "<div class='col-md-3 col-md-2'>";
+                        print "<a href='view_trip.php?trip='";
+                        print $row[$i]['trip_id'];
+			print ">";
+                        if(!empty($row[$i]['cover_image'])) {
+				print "<img src=./uploads/$row[$i]['cover_image']>";
+                        } else {
+                            	print "<img src=\"./img/create_trip.jpg\">";
+                        }
+			print "</a></div>";
+                    }
+                  }
+
+                  ?>
                 </div>
 
 
@@ -126,29 +155,28 @@
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>              
+                    </div>
                     <div class="col-md-3 col-md-2">
                         <a href="#" class="thumbnail">
                             <img src="./img/create_image_group.jpg">
                         </a>
-                    </div>            
+                    </div>
                 </div>
             <?php } ?>
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
-    <?php include_once "/includes/footer.php"; ?>   
+    <?php include_once "/includes/footer.php"; ?>
 </body>
 </html>
-
