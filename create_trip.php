@@ -242,7 +242,7 @@
             </tr>
             </tbody>
             </table>
-            <div style="float:right;">
+            <div style="float:right;margin-bottom: 10px;">
             <button title="Find Lat & Long" onclick="codeAddress();" />Find location</button>
             </div>
             
