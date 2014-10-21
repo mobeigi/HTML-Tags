@@ -278,6 +278,7 @@
                 
                 var yeri = event.latLng;
                 document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+                console.log("1)" + yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6));
               });
               }
 
@@ -287,6 +288,7 @@
                   if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
                  document.getElementById('image_group_location_temp').value= yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6);
+            console.log("2)" + yeri.lat().toFixed(6) + "," + yeri.lng().toFixed(6));
             var latlong = "(" + results[0].geometry.location.lat().toFixed(6) + " , " +
               + results[0].geometry.location.lng().toFixed(6) + ")";
 
@@ -302,7 +304,7 @@
                 });
 
                   } else {
-                    alert("Lat and long cannot be found.");
+                    alert("Location could cannot be found.");
                   }
                 });
               }
