@@ -18,7 +18,7 @@ var images = [[]]; //2D array
     for ($k = 0; $k < sizeof($images[$j]); ++$k) {
       ?>
       if (!images[<?php echo $j; ?>]) 
-        a[<?php echo $j; ?>] = []
+        images[<?php echo $j; ?>] = []
         
       images[<?php echo $j; ?>][<?php echo $k; ?>] = '<?php echo $images[$j][$k]; ?>';
       <?php
