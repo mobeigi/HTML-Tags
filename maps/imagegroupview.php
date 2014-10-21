@@ -15,7 +15,9 @@ var image_group_desc = [];
   }
 ?>
 
+//Initial load
 loadTitle();
+loadDescription();
 
 //Sets main image to provided image url
  function setMainImage(obj) {
@@ -73,6 +75,10 @@ function loadTitleB() {
  
  //Load description box
  function loadDescription() {
+    window.setTimeout(loadDescriptionB, 100);
+}
+
+ function loadDescriptionB() {
     //Get bottom panel box
     var botPanel = document.getElementById("lbc-bottompanel-box");
     botPanel.innerHTML = '<div id="description"><p>' + image_group_desc[window.curImageNum - 1] + '</p></div>';
