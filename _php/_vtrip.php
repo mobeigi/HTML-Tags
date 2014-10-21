@@ -1,6 +1,6 @@
 <?php
 
-include_once('_php/_session.php');
+include_once('_session.php');
 
 $trip_id = $_GET['trip_id'];
 
