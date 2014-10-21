@@ -12,7 +12,7 @@
 */
 
 //Create database calls and collect required data
-include_once('_session.php');
+include_once('/../_php/_session.php');
 if(empty($_GET['trip'])) header('location: http://triptags.azurewebsites.net/');
 $trip_id = $_GET['trip'];
 
