@@ -3,7 +3,7 @@
 // Website Session Handler
 //
 include('_postgres.php');
-global $pg;
+
 $pg = new postgres();
 
 $result = $pg->_pg_connect('23.102.176.176', 'azureuser', 'RLSfTv3Ewx', 'test', 5432);
@@ -28,7 +28,6 @@ function login($username, $password) {
   // check if the "plain-text" password is the same as the database
   // NEVER do this in a production environment...
   if(strcmp($row['user_password'],$password) == 0) {
-    print $row['user_id'];
     $_SESSION['user_id'] = $row['user_id'];
     return true;
   }
