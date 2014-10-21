@@ -33,4 +33,5 @@ function login($username, $password) {
     return true;
   }
   else return false;
+}
 ?>
