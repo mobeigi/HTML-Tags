@@ -131,7 +131,7 @@
                     for($i = 0; $i != $row_size; $i++) {
                         print "<div class='col-md-3 col-md-2'>";
                         print "<a href='view_trip.php?trip='";
-                        print $row[$i]['trip_id'];
+                        print $rows[$i]['trip_id'];
 			                  print ">";
                         if(!empty($row[$i]['cover_image'])) {
 				                     print "<img src=./uploads/";
