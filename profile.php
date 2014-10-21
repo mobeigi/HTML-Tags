@@ -140,8 +140,8 @@
                         } else {
                             	print "<img src=\"./img/create_trip.jpg\">";
                         }
-                        print "<p>$rows[$i]['name']</p>";
-                        		                       print "</a></div>";
+                        print "<p>".$rows[$i]['name']."</p>";
+                        print "</a></div>";
                     }
                   } else {
                     print '
