@@ -65,7 +65,7 @@
                 <?php include_once "/includes/navbar.php"; ?>
                 
                 <!-- Redirect user if they're not logged in -->
-                <?php if (!isset($_SESSION['user_id']) {
+                <?php if (!isset($_SESSION['user_id'])) {
                     print '<p><b>Oops! You must be logged in to view this page!</b></p>';
                     print '<p>You can log in through the menu bar, located in the top-right corner.</p>';
                     print '<a href=""http://triptags.azurewebsites.net">Return to home page</a>';
