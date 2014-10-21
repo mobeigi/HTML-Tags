@@ -13,7 +13,7 @@ $query = "select group_id, longitude, latitude from image_groups where trip_id =
 $result = $pg->_pg_query($query, $trip_id);
 
 $row = pg_fetch_all($result);
-$row_nums = sizeof($result);
+$row_nums = sizeof($row);
 
 for($i = 0; $i != $row_nums; $i++) {
   array_push($group_id, $row[$i]['group_id']);
