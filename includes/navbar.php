@@ -30,14 +30,13 @@
                     -->
 				 </ul>
 
-                 <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>
-                     
+                 <?php if (isset($tripViewer) && ($tripViewer == true)){ ?>   
                     <!-- Button trigger share link modal -->
-                    <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                    <button class="btn btn-default" data-toggle="modal" data-target="#shareTripModal">
                       Share Trip
-                    </button>                     
-                     
+                    </button>                             
                  <?php } ?>
+                
                  <?php if (isset($_SESSION['user_id'])) { ?>
 					  <form class="navbar-form navbar-right" action="/_php/_logout.php">
                         <button type="submit" class="btn btn-success">Log out</button>
