@@ -132,14 +132,39 @@
                         print "<div class='col-md-3 col-md-2'>";
                         print "<a href='view_trip.php?trip='";
                         print $row[$i]['trip_id'];
-			print ">";
+			                  print ">";
                         if(!empty($row[$i]['cover_image'])) {
-				print "<img src=./uploads/$row[$i]['cover_image']>";
+				                     print "<img src=./uploads/";
+                             print $row[$i]['cover_image'];
+                            print ">";
                         } else {
                             	print "<img src=\"./img/create_trip.jpg\">";
                         }
 			print "</a></div>";
                     }
+                  } else {
+                    print '
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="/img/create_image_group.jpg">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group.jpg">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group.jpg">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-md-2">
+                        <a href="#" class="thumbnail">
+                            <img src="./img/create_image_group.jpg">
+                        </a>
+                    </div>
+                    ';
                   }
 
                   ?>
