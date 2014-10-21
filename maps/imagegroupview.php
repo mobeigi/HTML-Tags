@@ -38,20 +38,22 @@ loadDescription();
  
  //Load side panel pictures
  function loadSidePanel() {
+
     /* Load 4 images into side panel */
+     /*
     var i;
     var sideDiv = document.getElementById("lbc-sidepanel");
     sideDiv.innerHTML = "<h4>Group images:</h4><div id=\"lbc-image-scroll\" class=\"scroll\"></div>";
     
     sideDiv = document.getElementById("lbc-image-scroll");
     
-    /*
     var firstImg = document.createElement("img");
     firstImg.src = document.getElementById("lbc-image").src;
     firstImg.onclick = function() { setMainImage(firstImg); };
     sideDiv.appendChild(firstImg);
     */
     
+    /*
     var imageLength = images[window.curImageNum - 1].length;
     console.log(images[window.curImageNum - 1].length);
     
@@ -61,7 +63,9 @@ loadDescription();
         img.onclick = function() { setMainImage(img); };
         sideDiv.appendChild(img);
     }
+    */
     
+
     /*
     <div class="scroll">
     <img src="http://triptags.azurewebsites.net/uploads/8ccaa4a2320836ed9fb5465418ce19e4.jpg">
