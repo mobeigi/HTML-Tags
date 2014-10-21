@@ -381,6 +381,14 @@
               }).submit();
               });
              
+             $('#save_changes_2_btn').click(function() {
+              $("#viewimage").html('');
+              
+              //Replace file so it doesn't show pending uploads
+              var control = $('#file');
+              control.replaceWith( control = control.clone( true ) );
+             });
+             
             });
             </script>
             
