@@ -261,7 +261,7 @@
                   zoom: 5,
                   center: latlng,
                   scrollwheel: false,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP 
+                  mapTypeId: google.maps.MapTypeId.SATELLITE 
                 };
                 map = new google.maps.Map(document.getElementById("latlongmap"),
                     myOptions);
