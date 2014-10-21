@@ -1,6 +1,6 @@
 <?php
 /*
-* Javascript TripViewer which is used to display trip tags and 
+* Javascript TripViewer which is used to display trip tags and
 * visualise trip data from a database.
 *
 * This script utilises the Google Maps Javascript V3 API.
@@ -14,16 +14,32 @@
 //Create database calls and collect required data
 include_once('_php/_session.php');
 
+$longitude = array();
+$latitude = array();
+$group_id = array();
+
+
 //Collect 1st image (cover image) from each image group in proper order
 //Also collect longitude, latitude
-$query = "select group_id, longitude, latitude from image_groups";
-$result = $pg->_pg_query($query);
+$query = "select group_id, longitude, latitude from image_groups where trip_id = $1";
+$result = $pg->_pg_query($query, $trip_id);
 
 $row = pg_fetch_all($result);
+$row_nums = pg_num_rows($row);
 
-$longitude = $row['longitude'];
-$latitude = $row['latitude'];
+for($i = 0; $i != $row_nums; $i++) {
+  array_push($longitude, $row[$i]['longitude']);
+  array_push($latitude, $row[$i]['latitude']);
+  array_push($group_id, $row[$i]['group_id']);
+}
 
+$query = "select image_id, path from images where group_id = $1";
+$images = array(array());
+for($i = 0; $i != $row_nums; $i++) {
+  $result = $pg->_pg_query($query, $group_id[$i]);
+  $row = pg_fetch_all($result);
+  $image_nums = pg_num_rows($row)
+}
 
 
 
@@ -50,29 +66,29 @@ ImageOverlay.prototype = new google.maps.OverlayView();
 function initialize() {
   var mapOptions = {
     //Set default centering location and zoom
-    
+
     //TODO: Set zoom to be determined by images span
     zoom: 10,
     center: new google.maps.LatLng(62.303907, -150.109291),
    };
 
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  
+
   geocoder = new google.maps.Geocoder();
-  
-  
-  
+
+
+
   //Collect required images in a call to the database
   //TODO: Loop and DB call
-  
+
   //Get static images in a loop
   var j;
   var links = [];
   var hiddenTripTags = document.getElementById("hiddenTripTags");
-  
+
   for (j=1; j <= 8; j++) {
     links.push('img/featured1/' + j + '.jpg');
-    
+
     //Add image trips
     var a = document.createElement('a');
     a.id = 'triptag' + j;
@@ -85,12 +101,12 @@ function initialize() {
   var sw;
   var ne;
   var bounds = [];
-  
+
   //Images
   sw = new google.maps.LatLng(-32.8948358302915, 115.8457735197085);
   ne = new google.maps.LatLng(-31.8921378697085, 116.8484714802915);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-26.137487, 130.378899);
   ne = new google.maps.LatLng(-25.133487, 131.381899);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
@@ -98,63 +114,63 @@ function initialize() {
   sw = new google.maps.LatLng(-26.320370, 133.982449);
   ne = new google.maps.LatLng(-25.316370, 134.985449);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-32.944844, 144.924832);
   ne = new google.maps.LatLng(-31.944844, 145.924832);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-34.8563188, 151.2158898);
   ne = new google.maps.LatLng(-33.8563188, 152.2158898);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-34.056696, 152.109890);
   ne = new google.maps.LatLng(-33.056696, 153.109890);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-28.481130, 153.296414);
   ne = new google.maps.LatLng(-27.481130, 154.296414);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
-  
+
   sw = new google.maps.LatLng(-22.996178, 149.648953);
   ne = new google.maps.LatLng(-21.996178, 150.648953);
   bounds.push(new google.maps.LatLngBounds(sw, ne));
 
   // Create object to contain the overlay image, the bounds of the image and a reference to the map
-  for (j=0; j < 8; j++) {	
+  for (j=0; j < 8; j++) {
     triptags.push(new ImageOverlay(bounds[j], links[j], map));
   }
- 
- 
+
+
   /*
   *  Main Loop through triptag elements
   */
-  
+
   //Also collect information about bounds of triptags
   tripBounds = new google.maps.LatLngBounds();
-  
+
   //Add linear lines connecting adjacent trip locations
   var i;
   var prev = triptags[0];
-  
+
   //Loop through triptags
   for (i in triptags) {
     //Set current triptag
     var cur = triptags[i];
     var bounds = cur.bounds_;
     var width = bounds.getSouthWest().lng() + bounds.getNorthEast().lng();
-    
+
     //Extent boundary
     tripBounds.extend(bounds.getCenter());
-    
+
     //Create marker for this location
     var marker = new google.maps.Marker({
-      
+
       position: new google.maps.LatLng(bounds.getNorthEast().lat(), width/2),
       map: map,
       icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' +
             (parseInt(i)+1) + '|ccffcc|000000'
     });
-    
+
     //Create line between previous trip tag and current trip tag
     //Line will go start and end from the centers of each image
     var pline = new google.maps.Polyline({
@@ -163,19 +179,19 @@ function initialize() {
       strokeOpacity:0.85,
       strokeWeight:5
     });
-    
+
     //Set line to map
     pline.setMap(map);
-    
+
     //Update prev  trip
     prev = cur;
   }
-  
+
   //Ensure map fits tripBounds
   map.fitBounds(tripBounds);
 }
 
-/** @constructor 
+/** @constructor
 *   Given the bounds and src of an image, initilise its values and set it to the map
 */
 function ImageOverlay(bounds, image, map) {
@@ -215,17 +231,17 @@ ImageOverlay.prototype.onAdd = function() {
   div.appendChild(img);
 
   this.div_ = div;
-  
+
   // Add the element to the "overlayImage" pane
   // So that it can recieve DOM elements
   var panes = this.getPanes();
   panes.overlayImage.appendChild(div);
-  
+
   // set this as locally scoped var so event does not get confused
   var me = this;
-  
+
   var tag = '#triptag' + triptag;
-  
+
   //Attach a click listerner to this image, invoking lightbox onclick
   google.maps.event.addDomListener(div, 'dblclick', function() {
     $(tag).trigger('click');
@@ -233,7 +249,7 @@ ImageOverlay.prototype.onAdd = function() {
 
   //Increment trip tag number
  ++triptag;
-  
+
 };
 
 ImageOverlay.prototype.draw = function() {
