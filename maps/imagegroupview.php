@@ -54,16 +54,13 @@ var image_group_desc = [];
  }
  
  //Load title for image group
- function loadTitle(title) {
-    if (typeof title === 'undefined') {
-        title = "";
-    }
-    
+ function loadTitle() {
+
     //Get bottom panel box
     var titleDiv = document.getElementById("lbc-title");
     
     //First childnode is h2 element
-    titleDiv.childNodes[0].innerHTML = title;
+    titleDiv.childNodes[0].innerHTML = image_group_names[window.curImageNum];
  }
  
  //Load description box
