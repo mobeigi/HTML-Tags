@@ -308,6 +308,11 @@
                 });
               }
               
+              
+             google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+              google.maps.event.trigger(map, 'resize');
+             });
+              
               function loadScript() {
                     var script = document.createElement('script');
                     script.type = 'text/javascript';
