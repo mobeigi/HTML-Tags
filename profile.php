@@ -123,14 +123,14 @@
 
                   <?php
                   if(isset($_SESSION['user_id'])) {
-                    $query = 'select trip_id, cover_image from trips where owner_id = $1';
+                    $query = 'select trip_id, name, cover_image from trips where owner_id = $1';
                     $result = $pg->_pg_query($query, $_SESSION['user_id']);
                     $rows = pg_fetch_all($result);
                     $row_size = sizeof($rows);
 
                     for($i = 0; $i != $row_size; $i++) {
                         print "<div class='col-md-3 col-md-2'>";
-                        print "<a style='width:200px;' class='thumbnail' href='view_trip.php?trip=";
+                        print "<a class='thumbnail' href='view_trip.php?trip=";
                         print $rows[$i]['trip_id'];
 			                    print "'>";
                         if(!empty($rows[$i]['cover_image'])) {
@@ -140,7 +140,8 @@
                         } else {
                             	print "<img src=\"./img/create_trip.jpg\">";
                         }
-			                       print "</a></div>";
+                        print "<p>$rows[$i]['name']</p>";
+                        		                       print "</a></div>";
                     }
                   } else {
                     print '
