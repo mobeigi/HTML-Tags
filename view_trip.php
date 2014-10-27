@@ -1,4 +1,5 @@
 <?php
+header('location: https://www.google.com.au');
 include_once('_php/_session.php');
 $tripID = htmlspecialchars($_GET["trip"]);
 
@@ -9,9 +10,9 @@ $row = pg_fetch_assoc($result);
 print_r($row);
 
 if(strcmp($row['privacy'], 'onlyme') == 0) {
-	if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] == $row['owner_id']) {
+	if(!isset($_SESSION['user_id']) || !$_SESSION['user_id'] == $row['owner_id']) {
 		// do something here
-		header('location: https://www.google.com.au');
+
 	}
 }
 
