@@ -5,7 +5,14 @@ $query = 'select privacy, owner_id from trips where trip_id = $1';
 $result = $pg->_pg_query($query, $trip_id);
 $row = pg_fetch_assoc($result);
 
-
+if(strcmp($row['privacy'], 'onlyme') == 0) {
+	if(!isset($_SESSION['user_id']) {
+		header('location: http://triptags.azurewebsites.net/');
+	}
+	else if(!$_SESSION['user_id'] == $row['owner_id']) {
+		header('location: http://triptags.azurewebsites.net/profile.php');
+	}
+}
 
 ?>
 
