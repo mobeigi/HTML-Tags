@@ -11,7 +11,7 @@ print_r($row);
 if(strcmp($row['privacy'], 'onlyme') == 0) {
 	if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] == $row['owner_id']) {
 		// do something here
-		exit();
+		header('location: https://www.google.com.au');
 	}
 }
 
