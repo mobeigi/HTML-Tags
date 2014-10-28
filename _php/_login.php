@@ -5,7 +5,7 @@ $username = $_POST['userEmail'];
 $password = $_POST['userPassword'];
 
 if(!login($username, $password)) {
-		header("location: http://triptags.azurewebsites.net/");
+		header("location: http://triptags.azurewebsites.net/?error=2");
 } else {
 		header("location: http://triptags.azurewebsites.net/profile.php");
 }

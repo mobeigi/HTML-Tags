@@ -8,7 +8,7 @@ include_once('/../_php/_session.php');
 // check if trip.name has a name...
 if(empty($_POST['trip_name'])) header('location: http://triptags.azurewebsites.net/create_trip.php');
 // we need the user to be logged in...
-if(!isset($_SESSION['user_id'])) header('location: http://triptags.azurewebsites.net/');
+if(!isset($_SESSION['user_id'])) header('location: http://triptags.azurewebsites.net/?error=1');
 
 $pg->_pg_transaction('begin');
 // make a new trip
