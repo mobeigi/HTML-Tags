@@ -75,7 +75,7 @@
                   }
 
                   //Print error message
-                  print '<div style="background-color: #feefb3; border: 1px solid #9f6000; padding: 15px 10px;">';
+                  print '<div style="background-color: #ff8080; border: 1px solid #ff0000; padding: 15px 10px;">';
                   print '<p><b>Oops! You do not have permission to view this page</b></p></div>';
 
                   //Add some spacing
