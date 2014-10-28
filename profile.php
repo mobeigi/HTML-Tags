@@ -75,8 +75,8 @@
                   }
 
                   //Print error message
-                  print '<p><b>Oops! You do not have permission to view this page</b></p>';
-                  print '<a href="http://triptags.azurewebsites.net">Return to home page</a>';
+                  print '<div style="background-color: red;">';
+                  print '<p><b>Oops! You do not have permission to view this page</b></p></div>';
 
                   //Add some spacing
                   for ($x = 0; $x < 5; $x++) {
