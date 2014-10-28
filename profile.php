@@ -67,14 +67,15 @@
                 <!-- Redirect user if they're not logged in -->
                 <?php
                 if(isset($_GET['error'])) {
-                  switch($_GET['error']) {
+                  $error = $_GET['error'];
+                  switch($error) {
                   case 1:
                   for ($x = 0; $x < 2; $x++) {
                       print '<br>';
                   }
 
                   //Print error message
-                  print '<p><b>Oops! You do not have permission to view this page</b></p>'
+                  print '<p><b>Oops! You do not have permission to view this page</b></p>';
                   print '<a href="http://triptags.azurewebsites.net">Return to home page</a>';
 
                   //Add some spacing
