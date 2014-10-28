@@ -12,41 +12,42 @@
 	<!-- include navbar -->
     <?php include_once "/includes/navbar.php"; ?>
 
-    <?php
-    if(isset($_GET['error'])) {
-      $error = $_GET['error'];
-      switch($error) {
-        case 1:
-            //Add some spacing
-            for ($x = 0; $x < 2; $x++) {
-                print '<br>';
-              }
-              //Print error message
-              print '<p><b>Oops! You must be logged in to view this page!</b></p>';
-              print '<p>You can log in through the menu bar in the top-right corner.</p>';
-              //Add some spacing
-              for ($x = 0; $x < 5; $x++) {
-                print '<br>';
-              }
-          break;
-          case 2:
-          //Add some spacing
-          for ($x = 0; $x < 2; $x++) {
-              print '<br>';
-            }
-            //Print error message
-            print '<p><b>Oops! Incorrect Username/Password</b></p>';
-            print '<p>Please try to log in through the menu bar in the top-right corner again.</p>';
-            //Add some spacing
-            for ($x = 0; $x < 5; $x++) {
-              print '<br>';
-            }
-          break;
-    }
-  }
-    ?>
+
 
  <div class="jumbotron">
+   <?php
+   if(isset($_GET['error'])) {
+     $error = $_GET['error'];
+     switch($error) {
+       case 1:
+           //Add some spacing
+           for ($x = 0; $x < 2; $x++) {
+               print '<br>';
+             }
+             //Print error message
+             print '<p><b>Oops! You must be logged in to view this page!</b></p>';
+             print '<p>You can log in through the menu bar in the top-right corner.</p>';
+             //Add some spacing
+             for ($x = 0; $x < 5; $x++) {
+               print '<br>';
+             }
+         break;
+         case 2:
+         //Add some spacing
+         for ($x = 0; $x < 2; $x++) {
+             print '<br>';
+           }
+           //Print error message
+           print '<p><b>Oops! Incorrect Username/Password</b></p>';
+           print '<p>Please try to log in through the menu bar in the top-right corner again.</p>';
+           //Add some spacing
+           for ($x = 0; $x < 5; $x++) {
+             print '<br>';
+           }
+         break;
+   }
+ }
+   ?>
 	  <div class="container">
 			<div class="row">
 				<div class="col-lg-2"></div>
