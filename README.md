@@ -1,5 +1,7 @@
 TripTags Project
 =========
+**This was the project outcome for the SENG2021 course in Semester 2, 2014**
+
 
 Everyone takes photographs on their trips, whether it is a short trip to the mall or a round the world adventure. Photographs are an integral component of everyone’s trips. It allows people to share memories and experiences with friends and family in a way words cannot describe. 
 However, it is difficult to share ones experiences on a trip by showcasing images in an album. There is no connection between trip locations and images taken at a location.  This makes judging a tourist location difficult which can lead to misinterpretation of the area. 
